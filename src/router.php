@@ -1,5 +1,6 @@
 <?php 
 require __DIR__.'/install.php';
+echo 'routes'; 
 class Route{
 
     private static $uri_list = array();
