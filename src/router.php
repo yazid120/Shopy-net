@@ -1,8 +1,7 @@
 <?php 
 require __DIR__.'/install.php';
-echo 'routes'; 
-class Route{
 
+class Route{
     private static $uri_list = array();
     private static $uriCallback = array(); 
 

@@ -1,7 +1,12 @@
 <?php 
 require_once __DIR__ .'/router.php';
 
-echo 'index page'; 
+
+$uri =$_SERVER['REQUEST_URI']; 
+ECHO $uri;
+if($uri == '/'){
+    require __DIR__. '/views/home.php';
+}
 
 
 Route::add('/' ,function(){
@@ -22,6 +27,7 @@ Route::add('/logout', function(){
 
 Route::add('/about',function(){
     require __DIR__ .'/views/about.php';
-})
+}); 
+
 
 ?>
