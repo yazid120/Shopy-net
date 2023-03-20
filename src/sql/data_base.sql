@@ -17,3 +17,4 @@ SET time_zone = "+00:00";
 --
 DROP DATABASE IF EXISTS `Shopy_net`; 
 CREATE DATABASE `Shopy_net`;
+
