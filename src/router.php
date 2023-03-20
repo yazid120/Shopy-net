@@ -5,15 +5,6 @@ function get_uri(){
     return $_SERVER['REQUEST_URI'];
 }
 
-
-
-
-
-
-
-
-
-
 class Router{
 
     public $uriNormal = array();
