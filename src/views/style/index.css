@@ -4,8 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 :root{
-    --Black_Color:#0000;
+    --Black_Color:#000;
     --White_Color:#ffff;
+    --Footer-Background-colorBg: #c4d9e0; 
     --Center: 'center'; 
     --HTDglobalefont:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,
   "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; 
@@ -19,11 +20,66 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
-    background-color: rgb(222, 230, 244);
+    background-color: rgb(232, 234, 238);
 }
 ul{
   list-style: none;
 }
 a{
   text-decoration: none;
+}
+
+/*** Header style ***/
+.menu_navigation{
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0rem; 
+padding: 5px 5px;
+display:flex; 
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+height: 5.4rem;
+width: 100%; 
+background-color: var(--White_Color);
+box-shadow: 1px 1px 1px gray;
+}
+.head_wrapp_menu{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.head_wrapp_menu 
+.elment_dir_header_local{
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+.head_wrapp_menu 
+.elment_dir_header_local li a{
+  font-size: 18.5px; 
+  color: var(--Black_Color);
+}
+
+
+
+
+
+
+/*** Footer style ***/
+.footer_nav_sider{
+  -webkit-box-direction: normal;
+  -webkit-box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  box-sizing: border-box; 
+  display: flex;
+  align-items:center;
+  justify-content: center; 
+  background-color:var(--Footer-Background-colorBg);
+  width: 100%; 
+  height: 6.5rem; 
+  overflow: none;
+  margin: 0rem auto -50px; 
+  z-index: 1000;  
+  position: absolute;
+  bottom: 0;
 }
