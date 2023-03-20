@@ -30,7 +30,7 @@ CREATE TABLE `users`(
     `email` varchar(128) NOT NULL, 
     `gender` varchar(20) NOT NULL, 
     `password` varchar(128) NOT NULL,
-    `data_inscr` timestamp
+    `date_inscr` timestamp
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `users`
@@ -39,6 +39,10 @@ ADD PRIMARY KEY (`id`);
 ALTER TABLE `users`
 MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
+
+--
+-- CREATE `admin` TABLE inside `Shopy_net` database
+--
 DROP TABLE IF EXISTS `admin`; 
 CREATE TABLE `admin`(
     `id` int(10) NOT NULL,
@@ -56,5 +60,52 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 INSERT INTO `admin` VALUES(
     (null,'abedellah mebarka','mebarka','***'), 
     (null,'ziad yazid','yazid.ziad2000@gmail.com','***')
-)
+);
 
+
+--
+-- CREATE `product` TABLE inside `Shopy_net` database
+--
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product`(
+  `id` int(12) NOT NULL,
+  `id_cat_prod` int(8) NOT NULL,
+  `price_unit` int(8) NOT NULL,
+  `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
+  `description` varchar(256) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `product`
+ADD PRIMARY KEY (`id`),
+ADD KEY `id_cat_prod` (`id_cat_prod`); 
+
+ALTER TABLE `product`
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
+
+--
+-- CREATE `service` TABLE inside `Shopy_net` database
+--
+DROP TABLE IF EXISTS `service`;
+CREATE TABLE `service`(
+  `id` int(12) NOT NULL,
+  `id_cat_serv` int(8) NOT NULL,
+  `price_unit` int(8) NOT NULL,
+  `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
+  `description` varchar(256) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `service`
+ADD PRIMARY KEY (`id`),
+ADD KEY `id_cat_serv` (`id_cat_serv`); 
+
+ALTER TABLE `service` 
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
+
+--
+--- `date_service` TABLE STORE START AND END dates of a service
+--
+CREATE TABLE `date_service`(
+    `id` int(12) NOT NULL PRIMARY KEY, 
+    `date_debut` timestamp, 
+    `date_fin` timestamp
+); 

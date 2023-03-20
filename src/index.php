@@ -31,8 +31,8 @@ $router->add('/infos',function(){
     require __DIR__ .'/view/infos.php';
 }); 
 
-$router->add('',function(){
-
+$router->add('/contact',function(){
+  require __DIR__ .'view/contact.php'; 
 }); 
 
 $router->resolve();

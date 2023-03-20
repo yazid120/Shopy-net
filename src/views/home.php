@@ -1,5 +1,5 @@
 <?PHP 
-
+include_once './actions/db_conn.php'; 
 $sub_module = 'bienvenu sur shopy net';
 
 ?>
