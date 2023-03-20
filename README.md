@@ -5,14 +5,13 @@ our platform offers a variety of products for all users and for each category to
 and find the affer de l'annes at shopy net.
 
 You will find in this project Concepts such as: 
-.Routing page in PHP
 
-    Simple, fast routing engine.
-    Powerful dependency injection container.
+    Routing page in PHP.
+    Login and Registration system.
     Multiple back-ends for session and cache storage.
-    Expressive, intuitive database ORM.
+    SQL DataBase design and creation
     Database agnostic schema migrations.
     Robust background job processing.
-    Real-time event broadcasting.
+    Admin Panel with privileges (CREATE,MODIFY,DELETE,UPDATE) Products.
 
 
