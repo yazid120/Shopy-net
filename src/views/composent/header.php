@@ -2,7 +2,6 @@
 define('APP_NAME','Shopy_net'); 
 define('AUTHOR_NAME','kevin_mak');
 
-
 ?>
 <html>
 <head>
@@ -30,7 +29,7 @@ let head_Object =[
 </script>
     <nav class="menu_navigation">
         <div class="logo_main">
-
+         <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"/>
         </div>
         <div>
             <ul>
