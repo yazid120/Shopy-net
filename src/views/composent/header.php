@@ -21,9 +21,7 @@ define('AUTHOR_NAME','kevin_mak');
     <script>
 let head_Object =[
     {name :'home',id:'mod_home', class:'list_navigation_Module'},
-    {name :'article',id:'mod_article', class:'list_navigation_Module'},
     {name :'contact',id:'mod_contact', class:'list_navigation_Module'},
-    {name :'about',id:'mod_about', class:'list_navigation_Module'},
     {name :'infos',id:'mod_infos', class:'list_navigation_Module'},
      {registration:{
          name:'Sign-in',id:'login_module',class:'insc_wrapp_mod'
@@ -39,6 +37,13 @@ let head_Object =[
          style="width:41%"/>
         </div>
         <div class="head_wrapp_menu">
+            <form method="GET" action="">
+                <div class="find_srch_product">
+                  <input type="text" class="search_box_classic" placeholder="Trouver un produit, un service , un offre"
+                  aria-label="Search"/>
+                  <img class="" src="http://localhost/Shopy-net/src/views/images/search.png"/>
+                </div>
+            </form>
             <ul class="elment_dir_header_local">
                 <li> 
                     <a href="/"> 
@@ -46,34 +51,31 @@ let head_Object =[
                    </a>
                </li>
                 <li> 
-                    <a href="/article"> 
-                        <script>document.write(head_Object[1].name)</script> 
-                    </a>
-                </li>
-                <li> 
                     <a href="/contact">
-                        <script>document.write(head_Object[2].name)</script>
-                    </a>
-                </li>
-                <li> 
-                    <a href="/about"> 
-                        <script>document.write(head_Object[3].name)</script>
+                        <script>document.write(head_Object[1].name)</script>
                     </a>
                 </li>
                 <li> 
                     <a href="/infos"> 
-                        <script>document.write(head_Object[4].name)</script>
+                        <script>document.write(head_Object[2].name)</script>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="inscription_container_infos">
             <div>
-                <button><a>sign-in</a></button>
+              <a href='/register'>
+                <button class="inscr_btn">
+                 <script>document.write(head_Object[3].registration.name)</script>
+            </button>
+            </a>
             </div>
             <div>
-                <button><a>login</a></button>
+            <a href="/login">
+                <button class="inscr_btn">
+                    <script> document.write(head_Object[3].login.name)</script>
+               </button>
+            </a>
             </div>
         </div>
     </nav>
-    <script>console.log(head_Object[0].name);</script>

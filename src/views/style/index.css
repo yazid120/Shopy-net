@@ -47,19 +47,56 @@ box-shadow: 1px 1px 1px gray;
 .head_wrapp_menu{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .head_wrapp_menu 
 .elment_dir_header_local{
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 3.8rem; 
+  padding: 0rem; 
+  margin: 0rem; 
+}
+.head_wrapp_menu 
+.elment_dir_header_local li{
+  margin: 0.2rem; 
 }
 .head_wrapp_menu 
 .elment_dir_header_local li a{
-  font-size: 18.5px; 
+  font-size: 20.5px; 
   color: var(--Black_Color);
 }
 
+/** Search bar style **/
+.find_srch_product{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+
+
+.inscription_container_infos{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0.5rem; 
+}
+.inscription_container_infos
+.inscr_btn{
+  box-sizing: border-box;
+  width: 4rem; 
+  height: 2.2rem; 
+  cursor: pointer;
+}
 
 
 

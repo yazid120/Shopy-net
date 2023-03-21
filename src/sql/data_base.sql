@@ -109,3 +109,12 @@ CREATE TABLE `date_service`(
     `date_debut` timestamp, 
     `date_fin` timestamp
 ); 
+
+--
+-- CREATE `categories` TABLE inside `Shopy_net` database (categories of articles).
+--
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE `categories`(
+  `id` int(8) NOT NULL,
+  `cat_name` varchar(48) NOT NULL, 
+)
