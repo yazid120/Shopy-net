@@ -70,9 +70,12 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product`(
   `id` int(12) NOT NULL,
   `id_cat_prod` int(8) NOT NULL,
-  `price_unit` decimal(7,2) NOT NULL,
-  `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
-  `description` varchar(256) NOT NULL
+  `name_prod` varchar(168) NOT NULL,
+  `description` text NOT NULL, 
+  `price_unit` decimal(5,3) NOT NULL,
+  `image_ur` varchar(255) NOT NULL,
+  `quantity` int(4) NOT NULL,
+  `date_added` timestamp
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `product`
@@ -82,9 +85,19 @@ ADD KEY `id_cat_prod` (`id_cat_prod`);
 ALTER TABLE `product`
 MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 
-INSERT INTO `product` (id, id_cat_prod, price_unit, image_ur, description) VALUES( 
+--
+-- insert articals(products) `products` table 
+--
+INSERT INTO `product` (id, id_cat_prod, name_prod, description, price_unit, image_ur, quantity,  date_added) VALUES
+(1, 1 ,'apple airPods pro' ,'Nouveau arriver des airPods pro original couleur blanc',42.500,'airPods_Pro.jpg',10, CURRENT_TIMESTAMP),
+(2, 4 ,'Televiseur LG  55' ,'Téléviseur LG 55 pouces avec qualites de 4k et garantie de ans', 89.000 , 'LG_Tv_55UP77006LB.jpg',3, CURRENT_TIMESTAMP),
+(3, 7, 'montre Garmin fenix 7', 'montre Garmin', 32.000 ,'Garminfenix7.jpeg', 6, CURRENT_TIMESTAMP), 
+(4, 2, 'laptop acer Aspire 3 A315','acer aspire 3 avec un processeur i3 10th,8gb de ram et 256gb de stokage', 78.000 ,'acerAspire3_A315_2.jpg', 3, CURRENT_TIMESTAMP),
+(5, 3, 'Sony Ps4 Pro' , 'Ps4 pro dispose de 1 To de stokage ', 68.000, 'Ps4_Pro.jpg', 2, CURRENT_TIMESTAMP),
+(6, 4, 'Nespresso Machine InissiaKrups', 'Machine a café Nespresso', 21.000, 'Nespresso_InissiaKrups_Machine.jpg', 8, CURRENT_TIMESTAMP),
+(), 
+(),
 
-)
 --
 -- CREATE `service` TABLE inside `Shopy_net` database
 --
@@ -92,9 +105,10 @@ DROP TABLE IF EXISTS `service`;
 CREATE TABLE `service`(
   `id` int(12) NOT NULL,
   `id_cat_serv` int(8) NOT NULL,
-  `price_unit` decimal(7,2) NOT NULL,
+  `price_unit` decimal(5,3) NOT NULL,
   `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
-  `description` varchar(256) NOT NULL
+  `description` varchar(256) NOT NULL, 
+  `date_added` timestamp
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `service`
@@ -103,7 +117,6 @@ ADD KEY `id_cat_serv` (`id_cat_serv`);
 
 ALTER TABLE `service` 
 MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
-
 --
 --- `date_service` TABLE STORE START AND END dates of a service
 --
@@ -124,10 +137,14 @@ CREATE TABLE `categories`(
 ALTER TABLE `categories`
 ADD PRIMARY KEY (`id`); 
 
-ALTER TABLE `categories`
-MODIFY `id` int(8) NOT NULL AUTO_INCREMENT;
-
-
+INSERT INTO `categories` (id,cat_name) VALUES
+(1,'Appareil électronique'),
+(2,'informatique'),
+(3,'console & jeux video'),
+(4,'electromenager & Tv'), 
+(5,'livre & e-books'),
+(6,'vêtements et accessoires')
+(7,'montre et bijoux'); 
 --
 -- CREATE `panier` TABLE inside `Shopy_net` database
 --
