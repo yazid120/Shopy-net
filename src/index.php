@@ -6,9 +6,7 @@ $uri = REQUEST_URI;
 $router = new Router();
 
 $router->add('/' ,function(){
-    include_once './views/composent/header.php';
   require __DIR__. '/views/home.php';
-    include_once './views/composent/footer.php';
 });
 
 $router->add('/register' ,function(){
@@ -23,16 +21,16 @@ $router->add('/logout', function(){
     require __DIR__ .'/views/logout.php';
 }); 
 
-$router->add('/about',function(){
+/*$router->add('/about',function(){
     require __DIR__ .'/views/about.php';
-}); 
+}); */
 
 $router->add('/infos',function(){
-    require __DIR__ .'/view/infos.php';
+    require __DIR__ .'/views/infos.php';
 }); 
 
 $router->add('/contact',function(){
-  require __DIR__ .'view/contact.php'; 
+  require __DIR__ .'/views/contact.php'; 
 }); 
 
 $router->resolve();

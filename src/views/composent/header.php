@@ -37,11 +37,12 @@ let head_Object =[
          style="width:41%"/>
         </div>
         <div class="head_wrapp_menu">
-            <form method="GET" action="">
+            <form method="GET" action="" class="formul_search_classd">
                 <div class="find_srch_product">
                   <input type="text" class="search_box_classic" placeholder="Trouver un produit, un service , un offre"
                   aria-label="Search"/>
-                  <img class="" src="http://localhost/Shopy-net/src/views/images/search.png"/>
+                  <img class="" src="http://localhost/Shopy-net/src/views/images/search.png" style="width:20px; cursor:pointer;
+                  padding:0.2rem"/>
                 </div>
             </form>
             <ul class="elment_dir_header_local">
@@ -61,6 +62,12 @@ let head_Object =[
                     </a>
                 </li>
             </ul>
+        </div>
+
+        <div class="shpping_cart_element">
+            <img class="cart_article_list" src="http://localhost/Shopy-net/src/views/images/shopping-cart.png"
+            style="width:23px"/>
+            <span class="cart_par_st">cart</span>
         </div>
         <div class="inscription_container_infos">
             <div>

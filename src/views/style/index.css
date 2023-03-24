@@ -52,12 +52,13 @@ box-shadow: 1px 1px 1px gray;
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin: 0.4rem;
 }
 .head_wrapp_menu 
 .elment_dir_header_local{
   display: flex;
   align-items: center;
-  gap: 3.8rem; 
+  gap: 5.8rem; 
   padding: 0rem; 
   margin: 0rem; 
 }
@@ -67,17 +68,50 @@ box-shadow: 1px 1px 1px gray;
 }
 .head_wrapp_menu 
 .elment_dir_header_local li a{
-  font-size: 20.5px; 
+  font-size: 15.5px; 
   color: var(--Black_Color);
 }
 
 /** Search bar style **/
+.formul_search_classd{
+  margin-bottom: 0.5rem;
+  width: 100%; 
+}
 .find_srch_product{
 display: flex;
 align-items: center;
 justify-content: center;
-height: 100%;
+height: 1.8rem;
+border: 1px solid var(--Black_Color); 
+border-radius: 2px;
 }
+.search_box_classic{
+  border: none;
+  height: 100%;
+  border-right: 1px solid var(--Black_Color);
+  width: 90%; 
+}
+.search_box_classic:focus{
+  outline: none;
+}
+
+/*** cart article head ***/
+.shpping_cart_element{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display:flex;
+  width: auto;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;  
+  cursor: pointer;
+}
+.cart_par_st:hover{
+  color: rgb(90, 90, 90);
+}
+
+
 
 
 .inscription_container_infos{

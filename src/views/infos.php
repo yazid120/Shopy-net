@@ -1,5 +1,6 @@
 <?php 
 include_once './views/composent/header.php';
-echo 'register page';
 
-?>
+
+?> 
+<h1> infos page</h1>

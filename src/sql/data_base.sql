@@ -70,7 +70,7 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product`(
   `id` int(12) NOT NULL,
   `id_cat_prod` int(8) NOT NULL,
-  `price_unit` int(8) NOT NULL,
+  `price_unit` decimal(7,2) NOT NULL,
   `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
   `description` varchar(256) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -82,6 +82,9 @@ ADD KEY `id_cat_prod` (`id_cat_prod`);
 ALTER TABLE `product`
 MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 
+INSERT INTO `product` (id, id_cat_prod, price_unit, image_ur, description) VALUES( 
+
+)
 --
 -- CREATE `service` TABLE inside `Shopy_net` database
 --
@@ -89,7 +92,7 @@ DROP TABLE IF EXISTS `service`;
 CREATE TABLE `service`(
   `id` int(12) NOT NULL,
   `id_cat_serv` int(8) NOT NULL,
-  `price_unit` int(8) NOT NULL,
+  `price_unit` decimal(7,2) NOT NULL,
   `image_ur` varchar(255) NOT NULL DEFAULT 'default_img.png',
   `description` varchar(256) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -111,10 +114,30 @@ CREATE TABLE `date_service`(
 ); 
 
 --
--- CREATE `categories` TABLE inside `Shopy_net` database (categories of articles).
+-- CREATE `categories` TABLE inside `Shopy_net` database (categories of articles = produit ou service).
 --
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories`(
   `id` int(8) NOT NULL,
-  `cat_name` varchar(48) NOT NULL, 
+  `cat_name` varchar(48) NOT NULL
+);
+ALTER TABLE `categories`
+ADD PRIMARY KEY (`id`); 
+
+ALTER TABLE `categories`
+MODIFY `id` int(8) NOT NULL AUTO_INCREMENT;
+
+
+--
+-- CREATE `panier` TABLE inside `Shopy_net` database
+--
+DROP TABLE IF EXISTS `panier`; 
+
+
+--
+-- CREATE `commande` TABLE inside `Shopy_net` database 
+--
+DROP TABLE IF EXISTS `commande`; 
+CREATE TABLE `commande`(
+  `id` int()
 )
