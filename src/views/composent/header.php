@@ -1,5 +1,5 @@
 <?php 
-define('APP_NAME','Shopy_net'); 
+//define('APP_NAME','Shopy_net'); 
 define('AUTHOR_NAME','kevin_mak');
 
 ?>
@@ -15,6 +15,7 @@ define('AUTHOR_NAME','kevin_mak');
 
     <!-- Css media link -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    
 
 </head>
 <body>

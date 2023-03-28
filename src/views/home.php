@@ -7,6 +7,11 @@ $sub_module = 'bienvenu sur shopy net';
 <?='<h1>'.$sub_module.'</h1>'?>
 </section>
 
+<div>
+<?php 
+include_once __DIR__.'/products.php';
+?>
+
 
 <?php 
 include_once './views/composent/footer.php';
