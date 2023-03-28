@@ -1,7 +1,7 @@
 <?php 
+
 //define('APP_NAME','Shopy_net'); 
 define('AUTHOR_NAME','kevin_mak');
-
 ?>
 <html>
 <head>
@@ -15,8 +15,6 @@ define('AUTHOR_NAME','kevin_mak');
 
     <!-- Css media link -->
     <link rel="stylesheet" href="views/style/index.css"/>
-    
-
 </head>
 <body>
     <script>
@@ -35,7 +33,7 @@ let head_Object =[
     <nav class="menu_navigation">
         <div class="logo_main">
          <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"
-         style="width:41%"/>
+         style="width:41%" id="Shopy_net_logo"/>
         </div>
         <div class="head_wrapp_menu">
             <form method="GET" action="" class="formul_search_classd">

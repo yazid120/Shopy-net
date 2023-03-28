@@ -1,1 +1,1 @@
-php -S localhost:8888 -t src
+php -S localhost:8080 -t src

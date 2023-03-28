@@ -25,8 +25,7 @@ CREATE DATABASE `Shopy_net`;
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`(
     `id` bigint(20) NOT NULL, 
-    `first_name` varchar(35) NOT NULL, 
-    `last_name` varchar(45) NOT NULL, 
+    `user_name` varchar(45) NOT NULL, 
     `email` varchar(128) NOT NULL, 
     `gender` varchar(20) NOT NULL, 
     `password` varchar(128) NOT NULL,
