@@ -111,7 +111,17 @@ border-radius: 2px;
   color: rgb(90, 90, 90);
 }
 
-
+/** Cart Box **/
+.cart-box{
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  height: 100%;
+  position: absolute;
+  right: 1; 
+  background-color: #f9f9f9;
+  align-items: center;
+  }
 
 
 .inscription_container_infos{

@@ -8,7 +8,6 @@ $sub_module = 'bienvenu sur shopy net';
 </section>
 
 <div class="cart-box"> 
-
     <!-- datails cart (products) -->
     <div class="details_box_cart">
         <div class="article_name"></div>
@@ -21,7 +20,7 @@ $sub_module = 'bienvenu sur shopy net';
    <div class="total_price_cart">
     <span>total:</span>
    </div>
-<div>
+</div>
 
 <?php 
 include_once __DIR__.'/products.php';
