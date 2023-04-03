@@ -7,6 +7,7 @@
     --Black_Color:#000;
     --White_Color:#ffff;
     --Footer-Background-colorBg: #c4d9e0; 
+    --red_Color: rgb(255, 15, 15); 
     --Center: 'center'; 
     --HTDglobalefont:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,
   "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; 
@@ -106,23 +107,103 @@ border-radius: 2px;
   justify-content: center;
   gap: 0.2rem;  
   cursor: pointer;
+  border: 1px solid var(--Black_Color); 
+  padding: 1.2rem; 
 }
 .cart_par_st:hover{
   color: rgb(90, 90, 90);
 }
 
 /** Cart Box **/
+.closing_cart_icon{
+  position: absolute;
+  right: 18; 
+}
+
 .cart-box{
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 20% 20% 20%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   position: absolute;
   right: 1; 
-  background-color: #f9f9f9;
+  background-color: #b5cbc0f5;
   align-items: center;
-  }
+  padding: 5px 20px;
+  margin: 0rem; 
+  width: 25%;
+  transition: 1.8s all ease-in;
+}
+.cart_title{
+  margin: 0rem; 
+  margin-top: 0.6rem; 
+}
+.details_box_cart{
+  display: flex;
+  margin: 5px; 
+  padding: 15px 10px; 
+}
+.quantity_article{
+   border: 1px solid gray; 
+   width: 2.8rem; 
+   padding: 5px; 
+   font-size: 16px; 
+   border-radius: 5px;
+}
+.cart_products_elements{
+width: 65%;
+display: flex;
+flex-direction: column;
+padding: 10px;
+gap: 11px;
+}
+.cart_article_mode{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.close_cart_btn{
+  cursor: pointer;
+}
+.close_cart_btn:hover{
+  fill: var(--red_Color);
+}
+.remove_article{
+  cursor: pointer;
+  fill: #f35a5a; 
+  position: absolute;
+  top: 8rem; 
+  right: 5rem;
+}
+.remove_article:hover{
+  fill: #f54b4b; 
+}
 
+.total_price_cart{
+  margin: 0.2rem; 
+  width: 100%; 
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid var(--Black_Color);
+}
+.total_price_cart b{
+  font-size: 24px; 
+}
+.total_price_cart .price_total{
+  font-size: 21px;
+  margin: 0.3rem;  
+}
+
+.buy_shops{
+  box-sizing: border-box;
+  font-size: 18px; 
+  width: 6.8rem; 
+  height: 2.8rem; 
+  cursor: pointer;
+  background-color: rgb(91, 154, 248);
+  border: 1px solid var(--Black_Color);
+}
 
 .inscription_container_infos{
   -webkit-box-sizing: border-box;
@@ -158,6 +239,7 @@ border-radius: 2px;
   height: 6.5rem; 
   overflow: none;
   margin: 0rem auto -50px; 
+  position: absolute;
   z-index: 1000;  
 }
 

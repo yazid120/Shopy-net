@@ -63,7 +63,7 @@ let head_Object =[
             </ul>
         </div>
 
-        <div class="shpping_cart_element">
+        <div class="shpping_cart_element" id="shop_cart_dir">
             <img class="cart_article_list" src="http://localhost/Shopy-net/src/views/images/shopping-cart.png"
             style="width:23px"/>
             <span class="cart_par_st">cart</span>
