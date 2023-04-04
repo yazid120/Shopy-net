@@ -17,6 +17,7 @@ include_once './views/composent/header.php';
     
             
     <div class="details_box_cart"> 
+      <div class="cart_box">
       <img src="http://localhost/Shopy-net/src/views/images/Ps4_Pro.jpg" style="width:25%"  />
 
       <!-- Remove article form cart (products) -->
@@ -26,18 +27,18 @@ include_once './views/composent/header.php';
 
         <div class="cart_products_elements">
           <div class="article_name">article name</div>
-          <div class="article_price">32.000 DA</div>
-          
-          <div class="cart_article_mode">
-              <input type="number" class="quantity_article" value="1" id=""/>
-            </div>
-            
+          <div class="article_price">32000 DaA</div>
+          <!-- product quantity -->
+          <input type="number" class="quantity_article" value="1" id=""/>
         </div>
+
+      </div>
     </div>
    
    <!-- Total price products -->
    <div class="total_price_cart">
-    <span class="price_total" id="total_cart_price"><b>total:</b> 0$</span>
+    <span class="price_total" id="total_cart_price"><b>total:</b></span>
+    <div class="article_price_total">0$</div>
    </div>
 
    <button class="buy_shops" id="buy_allShops"> buy now! </button>
