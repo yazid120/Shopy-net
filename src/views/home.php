@@ -17,22 +17,22 @@ include_once './views/composent/header.php';
     
             
     <div class="details_box_cart"> 
-      <div class="cart_box">
+      <!--<div class="cart_box">
       <img src="http://localhost/Shopy-net/src/views/images/Ps4_Pro.jpg" style="width:25%"  />
 
-      <!-- Remove article form cart (products) -->
-          <svg class="remove_article" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
+     
+        <svg class="remove_article" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
             ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
         12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
 
         <div class="cart_products_elements">
           <div class="article_name">article name</div>
-          <div class="article_price">32000 DaA</div>
-          <!-- product quantity -->
+          <div class="article_price">32000 DA</div>
+          
           <input type="number" class="quantity_article" value="1" id=""/>
         </div>
 
-      </div>
+      </div>-->
     </div>
    
    <!-- Total price products -->
