@@ -41,7 +41,7 @@ include_once './views/composent/header.php';
     <div class="article_price_total">0$</div>
    </div>
 
-   <button class="buy_shops" id="buy_allShops"> buy now! </button>
+   <button class="buy_shops_btn" id="buy_allShops"> buy now! </button>
 </div>
 
 <?php 

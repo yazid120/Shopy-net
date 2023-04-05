@@ -40,7 +40,19 @@ function ready(){
         var button_add = addCart[i]; 
         button_add.addEventListener('click',Add_aricle_cart); 
     }
+
+    //buy articles button 
+    let buy_button = document.getElementsByClassName('buy_shops_btn')[0];
+    buy_button.addEventListener('click',buy_itemsFunc); 
+
 }
+
+//buy Shops 
+function buy_itemsFunc(){
+  axios.post('')
+  .then()
+}
+
 
 //remove item cart
 function removeCart_item(event){
@@ -79,29 +91,26 @@ function Add_Product_toCart(title, price, image){
     Cart_box_Shop.classList.add('cart_box')
     let cart_items = document.getElementsByClassName('details_box_cart')[0]; 
     let items_title = cart_items.getElementsByClassName('article_name');
-    
-    console.log(items_title.length); 
 
     for(let i=0; i<items_title.length; i++){
      if(items_title[i].innerText == title){
-        alert('alert 123');
+        alert('item already selected');
        return; 
      }
     }
 
 
 let Cart_Shops = `
-     <img src="http://localhost/Shopy-net/src/views/images/Ps4_Pro.jpg" style="width:25%"  />
-      
+       <img src="${image}" style="width:25%"  />
           <svg class="remove_article" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
             ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
         12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
 
         <div class="cart_products_elements">
-          <div class="article_name">article name</div>
-          <div class="article_price">32000 DA</div>
+          <div class="article_name">${title}</div>
+          <div class="article_price">${price} DA</div>
           <!-- product quantity -->
-          <input type="number" class="quantity_article" value="1" id=""/>
+          <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
 `; 
 
