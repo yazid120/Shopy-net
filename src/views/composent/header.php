@@ -1,6 +1,4 @@
 <?php 
-
-//define('APP_NAME','Shopy_net'); 
 define('AUTHOR_NAME','kevin_mak');
 ?>
 <html>
@@ -15,9 +13,14 @@ define('AUTHOR_NAME','kevin_mak');
 
     <!-- Css media link -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    <?php 
+      if($_SERVER['PHP_SELF'] == '/index.php/login' || $_SERVER['PHP_SELF'] == '/index.php/register'){
+        echo'<link rel="stylesheet" href="views/style/login_s.css"/>';
+      }
+    ?>
 </head>
 <body>
-    <script>
+    <script type="text/javascript">
 let head_Object =[
     {name :'home',id:'mod_home', class:'list_navigation_Module'},
     {name :'contact',id:'mod_contact', class:'list_navigation_Module'},

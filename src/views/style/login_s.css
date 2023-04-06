@@ -4,6 +4,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0rem; 
@@ -16,5 +17,12 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    }
+}
+
+.form_login_nd_registration{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
     

@@ -3,7 +3,8 @@ include_once './views/composent/header.php';
 echo 'login page';
 ?>
 <section class="login_page_box_container">
-    <form action="http://localhost/Shopy-net/src/views/action/login_auth.php" method="POST" >
+    <form action="http://localhost/Shopy-net/src/views/action/login_auth.php" method="POST" 
+        class="form_login_nd_registration">
      <lable>User mail</lable>
      <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
      <label>User Password</label>

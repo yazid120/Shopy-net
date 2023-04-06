@@ -49,8 +49,7 @@ function ready(){
 
 //buy Shops 
 function buy_itemsFunc(){
-  axios.post('')
-  .then()
+  alert('select payment method paiment'); 
 }
 
 

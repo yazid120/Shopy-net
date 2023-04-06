@@ -11,6 +11,7 @@ function empty_inputs($userName,$email,$gender,$password){
     }
     return $return_result;
 }
+
 function invalid_userName($userName){
     $return_result = false; 
     if(!preg_match('/^[a-zA-Z0-9]*$/',$userName)){
@@ -20,6 +21,7 @@ function invalid_userName($userName){
     }
     return $return_result;
 }
+
 function invalid_email($email){
     $return_result = false; 
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
@@ -29,6 +31,7 @@ function invalid_email($email){
     }
     return $return_result;
 }
+
 function inmatched_password($password,$repassword){
     $return_result = false; 
     if($password !== $repassword){
@@ -38,6 +41,18 @@ function inmatched_password($password,$repassword){
     }
     return $return_result;
 }
+
+function user_Existense($connection,$email,$name){
+  $sql ="SELECT * FROM `users` WHERE user_name = ? OR email = ?;"; 
+  $stmt = mysqli_stmt_init($connection);
+  if(!mysqli_stmt_prepare($stmt,$sql)){
+    return 'Error: Technical error statement'; 
+    exit(); 
+  }
+  mysqli_stmt_bind_param($stmt,'ss',$email,$name); 
+  mysqli_stmt_execute($stmt); 
+
+} 
 
 
 
