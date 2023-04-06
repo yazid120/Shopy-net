@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     margin: 0rem; 
-    padding: 0.1rem;
+    padding: 0.8rem;
     margin-top: 0.356568rem; 
     overflow: hidden; 
     }
@@ -24,5 +24,20 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+}
+.form_login_nd_registration
+.sign_logs_Boxes{
+    padding: 0.4rem; 
+}
+.form_login_nd_registration
+.log_strtProced{
+    height: 2.5rem;
+    margin: 0rem; 
+    margin-top: 0.8rem; 
+    cursor: pointer;
+    background-color: var(--blue_log_Color);
+    border: 1px solid var(--Black_Color); 
+    border-radius: 3.8px;
+    font-size: 15.4px;
 }
     

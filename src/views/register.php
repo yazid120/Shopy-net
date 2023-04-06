@@ -1,17 +1,18 @@
 <?php 
 include_once './views/composent/header.php';
-echo 'register page';
+echo '<h1>register page</h1>';
 
 ?>
 <section class="login_page_box_container">
     <form action="http://localhost/Shopy-net/src/views/action/sign_up_auth.php" method="POST" 
         class="form_login_nd_registration">
+    <div>
      <label>User name</label>
-     <input type="text" name="user_name"/>
+     <input type="text" name="user_name" class="sign_logs_Boxes"/>
 
-     <lable>User mail</lable>
+     <lable>User email</lable>
      <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
-
+    </div>
      <label>sexe</label>
      <div>
      <label>homme</label>
@@ -24,9 +25,15 @@ echo 'register page';
      <label>User Password</label>
      <input type="password" name="user_password" class="sign_logs_Boxes" id="usr_passwrdBox" />
 
-     <label>re-password</label>
+     <label>re-Password</label>
      <input type="password" name="repassword" class="sign_logs_Boxes" id="usr_repassword" />
+     <div>
+       <p><a> already have an account !!</a></p>
+    </div>
 
-     <button type="submit" class="log_strtProced" name="signin">register</button>
+     <button type="submit" class="log_strtProced" name="submit">register</button>
 </form>
 </section>
+<?php 
+//include_once './views/composent/footer.php';
+?>
