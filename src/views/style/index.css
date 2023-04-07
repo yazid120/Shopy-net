@@ -224,8 +224,8 @@ gap: 11px;
 .inscription_container_infos
 .inscr_btn{
   box-sizing: border-box;
-  width: 4rem; 
-  height: 2.2rem; 
+  width: 5rem; 
+  height: 2.4rem; 
   cursor: pointer;
 }
 
@@ -275,7 +275,7 @@ align-items: center;
 justify-content: center;
 padding: 10px;
 margin: 2.2rem;
-width: 70%;
+width: 68%;
 }
 .add_artCart_product{
   height: 2rem; 

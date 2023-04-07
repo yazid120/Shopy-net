@@ -9,9 +9,28 @@ echo '<h1 class="rest_top_elementCent">login</h1>';
 </div>
     <form action="http://localhost/Shopy-net/src/views/action/login_auth.php" method="POST" 
         class="form_login_nd_registration log">
-     <lable>User email</lable>
+    <div class="error_success_wrapp_handle">
+    <!-- SUCCESSFUL SUBMITON REDIRECTION login-->
+    <?php 
+    if(isset($_GET['success'])){
+        if($_GET['success'] == 'user created successfuly'){
+            echo'<div class="success_sub_element">User created successfuly</div>';
+        }
+    }
+    ?>
+    <!-- ERROR HANDLING login-->
+    <?php 
+    if(isset($_GET['error'])){
+        if($_GET['error'] == 'empty fields'){
+            echo'<div class="error_log_section">Error: empty fields !!</div>';
+        }
+    }
+    ?>
+    </div>
+     <lable for="user_email" class="lab_form">User email</lable>
      <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
-     <label>User Password</label>
+
+     <label for="user_password" class="lab_form">User Password</label>
      <input type="password" name="user_password" class="sign_logs_Boxes" id="usr_passwrdBox" />
 
      <div>

@@ -38,15 +38,16 @@ if(isset($_POST['submit'])){
       header('location: http://localhost:8080/register?error='.$unmatched_pwd); 
       exit(); 
     }
-    else if(user_infosExistense($connection,$email,$name) !== true){
+    if(user_infosExistense($connection,$email) !== false){
       $user_alreadyExist = 'User already exists'; 
       array_push($error,$user_alreadyExist); 
       header('location: http://localhost:8080/register?error='.$user_alreadyExist); 
       exit(); 
     }
 
+    #submiting new user by errors count
     if(count($error) <=0){
-        //Create_user($connection,$name,$email,$sexe,$password)
+        Create_user($connection,$name,$email,$sexe,$password);
     }
 
 }

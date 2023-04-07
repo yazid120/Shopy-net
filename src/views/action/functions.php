@@ -42,14 +42,14 @@ function inmatched_password($password,$repassword){
     return $return_result;
 }
 
-function user_infosExistense($connection,$email,$name){
+function user_infosExistense($connection,$email){
   $sql ="SELECT * FROM `users` WHERE user_name = ? OR email = ?;"; 
   $stmt = mysqli_stmt_init($connection);
   if(!mysqli_stmt_prepare($stmt,$sql)){
     return 'Error: Technical error statement'; 
     exit(); 
   }
-  mysqli_stmt_bind_param($stmt,'ss',$email,$name); 
+  mysqli_stmt_bind_param($stmt,'ss',$email,$email); 
   mysqli_stmt_execute($stmt); 
   
   #get data (user) if exists
@@ -66,8 +66,8 @@ function user_infosExistense($connection,$email,$name){
 } 
 
 function Create_user($connection,$name,$email,$sexe,$password){
-
-    $sql ="INSERT INTO `users`(user_name,email,gender,password) VALUES(?,?,?,?,?) ;"; 
+    $success_message= 'user created successfuly'; 
+    $sql ="INSERT INTO `users`(user_name,email,gender,password) VALUES(?,?,?,?) ;"; 
     $stmt = mysqli_stmt_init($connection); 
     if(!mysqli_stmt_prepare($stmt,$sql)){
       header('location: http://localhost:8080/register?error=Error_Technical_error_Statement'); 
@@ -79,7 +79,8 @@ function Create_user($connection,$name,$email,$sexe,$password){
     mysqli_stmt_bind_param($stmt,'ssss',$name,$email,$sexe,$hashed_pwd); 
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt); 
-    header('location: http://localhost:8080/profile'); 
+    #redirect user to login page once created
+    header('location: http://localhost:8080/login?success='.$success_message); 
     exit(); 
 }
 
@@ -89,16 +90,38 @@ function Create_user($connection,$name,$email,$sexe,$password){
 /*** Login function ***/
 function empty_input_login($username,$password){
     $return_result = false; 
-    if(empty($userName) || empty($userName)){
+    if(empty($username) || empty($password)){
         $return_result = true;
     }else{
         $return_result = false;
     }
     return $return_result;
 }
-function invalid_pwd($connection){
-    $sql="SELECT * FROM `users`"; 
 
+function invalid_pwd($connection, $password){
+    $return_result =false; 
+    $sql="SELECT password FROM `users` WHERE password = ? ;"; 
+    $stmt = mysqli_stmt_init($connection); 
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+       header('location: http://localhost:8080/login?error=Technical_error');
+       exit();
+    }
+    mysqli_stmt_bind_param($stmt,'s',$password); 
+    mysqli_stmt_execute($stmt); 
+    
+    $result_pwd = mysqli_stmt_get_result($stmt); 
+    var_dump(mysqli_fetch_assoc($result_pwd)); 
+    if($row = mysqli_fetch_assoc($result_pwd)){
+        $pwd_getted = $row; 
+    }
+
+    if($pwd_getted == $password){ 
+        $return_result = false; 
+    }else{
+        $result_pwd = true; 
+    }
+    echo $return_result; 
+    mysqli_stmt_close($connection); 
 }
 
 ?> 
