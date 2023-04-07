@@ -33,6 +33,9 @@ $router->add('/contact',function(){
   require __DIR__ .'/views/contact.php'; 
 }); 
 
+$router->add('/profile',function(){
+    require __DIR__ .'/views/profile.php';
+});
 $router->resolve();
 
 

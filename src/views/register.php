@@ -1,9 +1,14 @@
 <?php 
 include_once './views/composent/header.php';
-echo '<h1>register page</h1>';
+echo '<h1 class="rest_top_elementCent">register</h1>';
 
 ?>
+
 <section class="login_page_box_container">
+    <div class="local_wrapp_iconMain">
+    <img class="simple_icon_login" src="http://localhost/Shopy-net/src/views/images/4957136_4957136.jpg"
+    style="width:29%"/>
+</div>
     <form action="http://localhost/Shopy-net/src/views/action/sign_up_auth.php" method="POST" 
         class="form_login_nd_registration">
     <div>

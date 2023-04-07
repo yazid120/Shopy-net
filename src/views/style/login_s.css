@@ -1,5 +1,13 @@
-
+body{
+    background-color: #fff;
+}
 /**** login system style ****/
+.rest_top_elementCent{
+    text-align: center;
+    font-size:  45px;
+    color: rgba(70, 98, 255, 0.96);
+    margin-bottom: 0rem;
+}
 .login_page_box_container{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -10,7 +18,7 @@
     margin: 0rem; 
     padding: 0.8rem;
     margin-top: 0.356568rem; 
-    overflow: hidden; 
+    overflow: hidden;
     }
 .login_page_box_container
  .form_loginContain_side{
@@ -24,6 +32,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    position: absolute; 
+}
+.log{
+    width: 30%; 
 }
 .form_login_nd_registration
 .sign_logs_Boxes{
@@ -40,4 +52,3 @@
     border-radius: 3.8px;
     font-size: 15.4px;
 }
-    
