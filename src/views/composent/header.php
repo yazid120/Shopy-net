@@ -1,4 +1,10 @@
 <?php 
+if(session_status() == 1)
+session_start(); 
+
+
+//var_dump($_SESSION);
+
 define('AUTHOR_NAME','kevin_mak');
 ?>
 <html>
@@ -29,6 +35,9 @@ let head_Object =[
          name:'Sign-in',id:'login_module',class:'insc_wrapp_mod'
      },login:{
         name:'login',id:'register_module',class:'insc_wrapp_mod'
+     }, 
+     logout:{ 
+        name:'logout',id:'logout_module',class:'insc_wrapp_mod'
      }
      }
 ];
@@ -72,6 +81,22 @@ let head_Object =[
             <span class="cart_par_st">cart</span>
         </div>
         <div class="inscription_container_infos">
+            <?php 
+            
+              if(isset($_SESSION['id'])){ 
+                echo $_SESSION['id'];
+            ?>
+            <div>
+                <button class="inscr_btn">
+                    <a href="/logout">
+                 <script>document.write(head_Object[3].logout.name)</script>
+                </a>
+                </button>
+            </div>
+            <?php 
+              }
+              else{ 
+            ?>
             <div>
               <a href='/register'>
                 <button class="inscr_btn">
@@ -86,5 +111,8 @@ let head_Object =[
                </button>
             </a>
             </div>
+            <?php 
+              }
+            ?>
         </div>
     </nav>

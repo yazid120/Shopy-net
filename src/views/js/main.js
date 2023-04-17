@@ -81,6 +81,7 @@ function Add_aricle_cart(event){
    let price_product = Shop_product.getElementsByClassName('price_unity_product')[0].innerText; 
    let image_product = Shop_product.getElementsByClassName('product_image')[0].src; 
    Add_Product_toCart(title_product,price_product,image_product); 
+
    UpdateCart_cont();
 }
 
@@ -141,6 +142,7 @@ function UpdateCart_cont(){
         Total = Total + (price * __qte);
 
         var Total_roud = Math.round(Total);
+        console.log(Total);
 
         document.getElementsByClassName('article_price_total')[0].innerHTML = Total + 'DA'; 
     }

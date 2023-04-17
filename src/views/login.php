@@ -24,6 +24,15 @@ echo '<h1 class="rest_top_elementCent">login</h1>';
         if($_GET['error'] == 'empty fields'){
             echo'<div class="error_log_section">Error: empty fields !!</div>';
         }
+        else if($_GET['error'] == 'invalid email address'){ 
+            echo'<div class="error_log_section">Error: invalid email address</div>';
+        }
+        else if($_GET['error'] == 'invalid_user_infos_submited !!'){
+            echo'<div class="error_log_section">user infos not valid</div>';
+        }
+        else if($_GET['error'] == 'invalid_password !!'){ 
+            echo'<div class="error_log_section">Error: Wrong password !!</div>';
+        }
     }
     ?>
     </div>
