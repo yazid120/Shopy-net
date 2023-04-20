@@ -49,6 +49,14 @@ function ready(){
 
 //buy Shops 
 function buy_itemsFunc(){
+    //verify session 3th part allow
+    axios.get('http://localhost/Shopy-net/src/views/action/session.php')
+    .then(response =>{
+        const user_session = response.data;
+        console.log('session response : ',user_session); 
+    }).catch(
+        error => console.log(error)
+    );
   alert('select payment method paiment'); 
 }
 

@@ -142,13 +142,12 @@ function login_user($connection,$email,$password){
     exit();
     }
 }
-
-function logged_user($id){ 
-    $id = $_SESSION['id']; 
-    if($_SESSION['id']){
-      $return_result = false; 
+//session based function
+function logged_user(){ 
+    if(!isset($_SESSION['id'])){
+      $return_result = 'session user not logged'; 
     }else{ 
-      $return_result = true; 
+      $return_result = 'session user logged'; 
     }
     return $return_result; 
 }
