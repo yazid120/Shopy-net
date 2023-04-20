@@ -51,7 +51,7 @@ let head_Object =[
             <form method="GET" action="" class="formul_search_classd">
                 <div class="find_srch_product">
                   <input type="text" class="search_box_classic" placeholder="Trouver un produit, un service , un offre"
-                  aria-label="Search" id="search_bar"/>
+                  aria-label="Search" id="search_bar" onkeyup="Search()"/>
                   <img class="" src="http://localhost/Shopy-net/src/views/images/search.png" style="width:20px; cursor:pointer;
                   padding:0.2rem"/>
                 </div>
