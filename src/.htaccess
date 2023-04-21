@@ -7,3 +7,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*)$ index.php?uri=$1 [QSA,L]
+
+<IfModule mod_rewrite.c>
+  Header add Access-Control-Allow-Origin: "*"
+  Header add Access-Control-Allow-Methods: "GET, POST, OPTIONS,PUT,DELETE"
+  Header add Access-Control-Allow-Headers: "Content-Type" 
+
+  RewriteEngine on 
+  RewriteBase /
+</IfModule>

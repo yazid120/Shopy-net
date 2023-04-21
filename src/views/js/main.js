@@ -50,14 +50,18 @@ function ready(){
 //buy Shops 
 function buy_itemsFunc(){
     //verify session 3th part allow
-    axios.get('http://localhost/Shopy-net/src/views/action/session.php')
+    axios.get('http://localhost/Shopy-net/src/views/action/session_api.php')
     .then(response =>{
         const user_session = response.data;
-        console.log('session response : ',user_session); 
+        console.log(response.data); 
+        if(user_session == 'session user not logged'){
+           window.location.replace('/login');
+        }else{
+            window.location.replace('/payement');
+        }
     }).catch(
         error => console.log(error)
     );
-  alert('select payment method paiment'); 
 }
 
 

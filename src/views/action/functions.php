@@ -145,9 +145,9 @@ function login_user($connection,$email,$password){
 //session based function
 function logged_user(){ 
     if(!isset($_SESSION['id'])){
-      $return_result = 'session user not logged'; 
+      $return_result = false; 
     }else{ 
-      $return_result = 'session user logged'; 
+      $return_result = true; 
     }
     return $return_result; 
 }

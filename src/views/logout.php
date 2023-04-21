@@ -5,5 +5,5 @@ session_start();
 #destroy session
 session_unset();
 session_destroy(); 
-header('location: ');
+header('location: /');
 ?>
