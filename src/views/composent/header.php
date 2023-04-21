@@ -2,9 +2,6 @@
 if(session_status() == 1)
 session_start(); 
 
-
-//var_dump($_SESSION);
-
 define('AUTHOR_NAME','kevin_mak');
 ?>
 <html>

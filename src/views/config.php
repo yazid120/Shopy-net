@@ -10,4 +10,6 @@ define('DIRNAME',explode('/',$_SERVER['PHP_SELF'])[1]);
 
 define('REQUEST_METHOD',$_SERVER['REQUEST_METHOD']);
 
+define('AUTHOR_NAME','kevin_mak');
+
 ?>

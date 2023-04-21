@@ -97,7 +97,11 @@ INSERT INTO `product` (id, id_cat_prod, name_prod, description, price_unit, imag
 (6, 4, 'Nespresso Machine InissiaKrups', 'Machine a café Nespresso', 21.000, 'Nespresso_InissiaKrups_Machine.jpg', 8, CURRENT_TIMESTAMP),
 (7, 7, 'Montre garmin fenix 7', 'garmin fenix 7 classic couleur noir',32.000,'Garminfenix7.jpeg', 6 ,CURRENT_TIMESTAMP), 
 (8, 2, 'Logitech G502 HERO', 'Logitech G502 HERO Souris Gamer Filaire Haute Performance, Capteur Gaming HERO 25K, 25 600 PPP, RVB',
-14.000, 'Logitech_G502_Hero.jpg', 4 ,CURRENT_TIMESTAMP);
+14.000, 'Logitech_G502_Hero.jpg', 4 ,CURRENT_TIMESTAMP),
+(9, 4, 'RAYLAN Réfrigérateur 470 L','RAYLAN Réfrigérateur 470 L Noir Avec Distributeur No Frost Ref-nf 470 D B',
+111.500,'RAYLAN Réfrigerateur 470 L Black Avec Distributeur No Frost Ref-nf 470 D B.jpg',2, CURRENT_TIMESTAMP),
+(10, 1,'Sensyne 62','Sensyne 62 Trépied pour téléphone et perche à selfie, trépied extensible pour téléphone portable avec télécommande sans fil et support de téléphone',
+2.200,'51uZme3QCkL._AC_SX569_.jpg',8, CURRENT_TIMESTAMP);
 
 --
 -- CREATE `service` TABLE inside `Shopy_net` database
