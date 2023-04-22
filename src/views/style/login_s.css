@@ -32,7 +32,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    position: absolute; 
+    /* position: absolute;  */
+    z-index: 100;
 }
 .form_login_nd_registration .lab_form{
    font-weight: 600;

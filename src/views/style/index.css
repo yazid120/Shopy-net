@@ -245,6 +245,7 @@ gap: 11px;
   height: 6.5rem; 
   overflow: none;
   margin: 0rem auto -50px; 
+  margin-top: 2.8rem;
   position: absolute;
   z-index: 1000;  
 }

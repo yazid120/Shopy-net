@@ -39,12 +39,16 @@ let head_Object =[
      }
 ];
 </script>
+
     <nav class="menu_navigation">
         <div class="logo_main">
          <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"
          style="width:41%" id="Shopy_net_logo"/>
         </div>
         <div class="head_wrapp_menu">
+        <?php 
+        if(!empty($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != ''){
+           if($_SERVER['REQUEST_URI'] == '/'){?>
             <form method="GET" action="" class="formul_search_classd">
                 <div class="find_srch_product">
                   <input type="text" class="search_box_classic" placeholder="Trouver un produit, un service , un offre"
@@ -53,6 +57,7 @@ let head_Object =[
                   padding:0.2rem"/>
                 </div>
             </form>
+        <?php }}?>
             <ul class="elment_dir_header_local">
                 <li> 
                     <a href="/"> 
