@@ -10,10 +10,12 @@ $method = REQUEST_METHOD;
 
 switch($method){
     case'GET':
-    if(logged_user() !== true){
-      echo json_encode('session user not logged');
-    }else{
-      echo json_encode('logged user'); 
-    }
+      var_dump(logged_user());
+      echo $_SESSION['id'];
+    // if(logged_user() !== true){
+    //   echo json_encode('session user not logged');
+    // }else{
+    //   echo json_encode('logged user'); 
+    // }
 }
 ?>

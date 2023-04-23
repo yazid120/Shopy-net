@@ -53,8 +53,16 @@ let head_Object =[
                 <div class="find_srch_product">
                   <input type="text" class="search_box_classic" placeholder="Trouver un produit, un service , un offre"
                   aria-label="Search" id="search_bar" onkeyup="Search()"/>
+                
+                  <svg class="link_close_valex none" id="icon_close_search_val" xmlns="http://www.w3.org/2000/svg" 
+                  width="32" height="32" viewBox="0 0 24 24">
+                   <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 
+                    12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                   </svg>
+                 <div class="classic_search_icon">
                   <img class="" src="http://localhost/Shopy-net/src/views/images/search.png" style="width:20px; cursor:pointer;
                   padding:0.2rem"/>
+                </div>
                 </div>
             </form>
         <?php }}?>
@@ -84,9 +92,7 @@ let head_Object =[
         </div>
         <div class="inscription_container_infos">
             <?php 
-            
-              if(isset($_SESSION['id'])){ 
-                echo $_SESSION['id'];
+            if(isset($_SESSION['id'])){ 
             ?>
             <div>
                 <button class="inscr_btn">

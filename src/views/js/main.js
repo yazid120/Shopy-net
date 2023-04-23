@@ -54,11 +54,11 @@ function buy_itemsFunc(){
     .then(response =>{
         const user_session = response.data;
         console.log(response.data); 
-        if(user_session == 'session user not logged'){
-           window.location.replace('/login');
-        }else{
-            window.location.replace('/payement');
-        }
+        // if(user_session == 'session user not logged'){
+        //    window.location.href = ('/login');
+        // }else{
+        //     window.location.href = ('/payement');
+        // }
     }).catch(
         error => console.log(error)
     );

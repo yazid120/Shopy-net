@@ -36,6 +36,11 @@ $router->add('/contact',function(){
 $router->add('/profile',function(){
     require __DIR__ .'/views/profile.php';
 });
+
+$router->add('/payment',function(){
+    require __DIR__ .'/views/payement.php';
+}); 
+
 $router->resolve();
 
 

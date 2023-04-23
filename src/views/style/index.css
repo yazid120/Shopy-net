@@ -88,14 +88,21 @@ border: 2px solid var(--Black_Color);
 border-radius: 3px;
 }
 .search_box_classic{
-  border: none;
   height: 100%;
-  border-right: 1px solid var(--Black_Color);
+  border:0;
   width: 90%; 
+  padding: 8px; 
 }
 .search_box_classic:focus{
   outline: none;
 }
+.link_close_valex{
+  width: 22px; 
+  cursor: pointer;
+  margin: 0.4rem;
+}
+.link_close_valex:hover{
+  fill:rgb(139, 40, 40);}
 
 /*** cart article head ***/
 .shpping_cart_element{
@@ -281,4 +288,15 @@ width: 68%;
 .add_artCart_product{
   height: 2rem; 
   cursor: pointer;
+}
+
+
+
+
+/** basic display none | block value **/
+.none{
+  display: none;
+}
+.block{
+  display: flex;
 }
