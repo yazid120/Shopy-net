@@ -128,15 +128,13 @@ function login_user($connection,$email,$password){
       exit();
     }
     if($verify_pwd === true){ 
-     /*if(session_status() == 1)
-     @session_start();*/
-    session_start();
+    if(session_status() == 1)
+     @session_start();
     $_SESSION['id'] = $user_inputs_infos['id'];
     $_SESSION['email'] = $user_inputs_infos['email']; 
     $_SESSION['password'] = $user_inputs_infos['password'];
 
     #redirect to profile page (once successful logged in)
-    //var_dump($_SESSION); 
     $success_login = 'user logged in successfuly';
     header('location: http://localhost:8080/profile?success='.$success_login); 
     exit();
@@ -144,7 +142,7 @@ function login_user($connection,$email,$password){
 }
 //session based function
 function logged_user(){ 
-    if(isset($_SESSION['id'])){
+    if($_SESSION['id'] != null){
       $return_result = true; 
     }else{ 
       $return_result = false; 
@@ -152,28 +150,5 @@ function logged_user(){
     return $return_result; 
 }
 
- //echo $input_infos_result; 
-    /*$sql="SELECT password FROM `users` WHERE email = ? ;"; 
-    $stmt = mysqli_stmt_init($connection); 
-    if(!mysqli_stmt_prepare($stmt,$sql)){
-       header('location: http://localhost:8080/login?error=Technical_error');
-       exit();
-    }
-    mysqli_stmt_bind_param($stmt,'ss',$password,$email); 
-    mysqli_stmt_execute($stmt); 
-    
-    $result_pwd = mysqli_stmt_get_result($stmt); 
-    var_dump($result_pwd); 
-    var_dump(mysqli_fetch_assoc($result_pwd)); 
-    if($row = mysqli_fetch_assoc($result_pwd)){
-        $pwd_getted = $row; 
-    }
 
-    if($pwd_getted == $password){ 
-        $return_result = false; 
-    }else{
-        $result_pwd = true; 
-    }
-    echo $return_result; */
-   // mysqli_stmt_close($connection); 
 ?> 

@@ -1,7 +1,14 @@
 <?php 
-session_start();
-var_dump($_SESSION);  
-
+if(session_status() == PHP_SESSION_NONE)
+session_start();   
+function profile_set(){
+    if($_SESSION['id'] != null){
+        echo 'user alllowed profile'; 
+    }else{
+        echo 'user not allowed profile'; 
+    }
+}
+profile_set(); 
 include_once './views/composent/header.php';
 
 

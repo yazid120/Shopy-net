@@ -2,7 +2,7 @@
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
-include_once './src/views/composent/header.php';
+include_once './views/composent/header.php';
 
 ?>
 <body>

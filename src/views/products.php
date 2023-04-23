@@ -18,9 +18,9 @@ $product = mysqli_query($connection,$sql);
 <section class="container_products_article">
     <?php while($rows = mysqli_fetch_assoc($product)){?>
 <div class="products_elments_sets">
-  <img src="http://localhost/Shopy-net/src/views/images/<?=$rows['image_ur']?>" class="product_image"/>
-  <p class="title_product"><?=$rows['name_prod'];?></p>
-  <p class="price_unity_product"><?='<span>'.$rows['price_unit'].'</span> DA'?> </p>
+  <img src="http://localhost/Shopy-net/src/views/images/<?=htmlspecialchars($rows['image_ur'])?>" class="product_image"/>
+  <p class="title_product"><?= htmlspecialchars($rows['name_prod']);?></p>
+  <p class="price_unity_product"><?='<span>'.htmlspecialchars($rows['price_unit']).'</span> DA'?> </p>
   <button class="add_artCart_product" id="add_shop_article_btn">add to cart</button>
 </div>
 <?php }?>
