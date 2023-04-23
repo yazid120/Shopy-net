@@ -37,7 +37,7 @@ $router->add('/profile',function(){
     require __DIR__ .'/views/profile.php';
 });
 
-$router->add('/payement',function(){
+$router->add('/checkout',function(){
     require __DIR__ .'/views/payement.php';
 }); 
 

@@ -50,7 +50,13 @@ function ready(){
  function buy_itemsFunc(e){
     //verify session 3th part allow
     e.preventDefault();
-    
+    let cart_options = document.getElementsByClassName('cart_box'); 
+    let cart_optionsSize = cart_options.length; 
+
+  if(cart_optionsSize <= 0){
+        alert('please select prducts before cheking'); 
+    }
+    else{
     axios.get('https://localhost/Shopy-net/src/views/action/session_api.php')
     .then(response =>{
         const user_session = response.data;
@@ -58,12 +64,13 @@ function ready(){
         if(user_session == 'session user not logged'){
            //window.location.href = ('/login');
         }else{
-            //window.location.href = ('/payement');
+            window.location.href = ('/checkout');
             
         }
     }).catch(
         error => console.log(error)
     );
+   }
 }
 
 
@@ -156,7 +163,6 @@ function UpdateCart_cont(){
         Total = Total + (price * __qte);
 
         var Total_roud = Math.round(Total);
-        console.log(Total);
 
         document.getElementsByClassName('article_price_total')[0].innerHTML = Total + 'DA'; 
     }

@@ -42,8 +42,10 @@ let head_Object =[
 
     <nav class="menu_navigation">
         <div class="logo_main">
+        <a href="/">
          <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"
          style="width:41%" id="Shopy_net_logo"/>
+        </a>
         </div>
         <div class="head_wrapp_menu">
         <?php 
@@ -90,21 +92,30 @@ let head_Object =[
             style="width:23px"/>
             <span class="cart_par_st">cart</span>
         </div>
+        <?php if(isset($_SESSION['logged'])){?>
+           <div class="user_profile_elem">
+             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" 
+             style="fill: rgba(0, 0, 0, 1);"><path d="M7.5 6.5C7.5 8.981 9.519 11 12
+              11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7
+               3.141-7 7v1h17z"></path></svg>
+            </div>
+        <?php } ?>
         <div class="inscription_container_infos">
             <?php 
-            if(isset($_SESSION['id'])){ 
+            if(isset($_SESSION['logged'])){ 
             ?>
-            <div>
+            <div> 
+              <a href="/logout">
                 <button class="inscr_btn">
-                    <a href="/logout">
                  <script>document.write(head_Object[3].logout.name)</script>
-                </a>
                 </button>
+              </a>
             </div>
             <?php 
               }
               else{ 
             ?>
+
             <div>
               <a href='/register'>
                 <button class="inscr_btn">
