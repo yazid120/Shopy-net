@@ -44,21 +44,23 @@ function ready(){
     //buy articles button 
     let buy_button = document.getElementsByClassName('buy_shops_btn')[0];
     buy_button.addEventListener('click',buy_itemsFunc); 
-
 }
 
 //buy Shops 
-function buy_itemsFunc(){
+ function buy_itemsFunc(e){
     //verify session 3th part allow
-    axios.get('http://localhost/Shopy-net/src/views/action/session_api.php')
+    e.preventDefault();
+    
+    axios.get('https://localhost/Shopy-net/src/views/action/session_api.php')
     .then(response =>{
         const user_session = response.data;
         console.log(response.data); 
-        // if(user_session == 'session user not logged'){
-        //    window.location.href = ('/login');
-        // }else{
-        //     window.location.href = ('/payement');
-        // }
+        if(user_session == 'session user not logged'){
+           //window.location.href = ('/login');
+        }else{
+            //window.location.href = ('/payement');
+            
+        }
     }).catch(
         error => console.log(error)
     );

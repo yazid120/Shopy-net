@@ -1,7 +1,6 @@
 <?php 
 
 function get_uri(){
-
     return $_SERVER['REQUEST_URI'];
 }
 
@@ -31,7 +30,6 @@ public function resolve(){
             // break; 
         // }
     // }
-    
     // $matchValid_uri = in_array($uri,self::$uri_list); 
 
     $callback = $this->uriNormal[$uri] ?? false;
@@ -44,7 +42,6 @@ public function resolve(){
     }
 
 }
-
 
 }
 

@@ -85,8 +85,6 @@ function Create_user($connection,$name,$email,$sexe,$password){
 }
 
 
-
-
 /*** Login function ***/
 function empty_input_login($username,$password){
     $return_result = false; 
@@ -128,11 +126,12 @@ function login_user($connection,$email,$password){
       exit();
     }
     if($verify_pwd === true){ 
-    if(session_status() == 1)
-     @session_start();
+    if(session_status() == PHP_SESSION_NONE)
+     session_start();
     $_SESSION['id'] = $user_inputs_infos['id'];
     $_SESSION['email'] = $user_inputs_infos['email']; 
     $_SESSION['password'] = $user_inputs_infos['password'];
+    $_SESSION['logged'] = true; 
 
     #redirect to profile page (once successful logged in)
     $success_login = 'user logged in successfuly';
@@ -142,10 +141,15 @@ function login_user($connection,$email,$password){
 }
 //session based function
 function logged_user(){ 
-    if($_SESSION['id'] != null){
+    if(session_status() == PHP_SESSION_NONE)
+    session_start(); 
+    
+   if(isset($_SESSION)){
+     if($_SESSION['logged'] != null){
       $return_result = true; 
-    }else{ 
+     }else{ 
       $return_result = false; 
+     }
     }
     return $return_result; 
 }

@@ -1,4 +1,6 @@
 <?PHP  
+if(session_status() == PHP_SESSION_NONE)
+session_start(); 
 include_once './views/composent/header.php';
 ?>
 
@@ -40,8 +42,9 @@ include_once './views/composent/header.php';
     <span class="price_total" id="total_cart_price"><b>total:</b></span>
     <div class="article_price_total">0$</div>
    </div>
-
+  
    <button class="buy_shops_btn" id="buy_allShops"> buy now! </button>
+  
 </div>
 
 <?php 
