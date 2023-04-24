@@ -4,16 +4,18 @@ session_start();
 include_once './views/composent/header.php';
 ?>
 
-<div class="cart-box" id="cart_box_side"> 
+<body>
+<div class="cart-box none" id="cart_box_side"> 
     <!-- Close cart icon -->
 <div id="close_crt_vid" class="closing_cart_icon">
 <svg class="close_cart_btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
   <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 
-12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+</svg>
 </div>
 
     <div class="cart_title">
-      <h2>your shopping cart:</h2>
+      <h2>Your shopping Cart</h2>
     </div>
     <!-- datails cart (products) -->
     
@@ -47,6 +49,7 @@ include_once './views/composent/header.php';
   
 </div>
 
+</body>
 <?php 
 include_once __DIR__.'/products.php';
 ?>

@@ -1,4 +1,6 @@
 <?php
+if(session_status() == PHP_SESSION_NONE)
+session_start();
 require_once __DIR__ .'/router.php';
 require_once __DIR__ .'/install.php';
 
@@ -33,9 +35,17 @@ $router->add('/contact',function(){
   require __DIR__ .'/views/contact.php'; 
 }); 
 
+// Protected route (client side routes)
 $router->add('/profile',function(){
+ if(count($_SESSION) !== 0){
+   if($_SESSION['logged'] == true){
     require __DIR__ .'/views/profile.php';
+   }
+}else{
+   require __DIR__ .'/views/inauth_page.php';
+}
 });
+ 
 
 $router->add('/checkout',function(){
     require __DIR__ .'/views/payement.php';

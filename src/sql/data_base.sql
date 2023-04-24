@@ -161,5 +161,19 @@ DROP TABLE IF EXISTS `panier`;
 --
 DROP TABLE IF EXISTS `commande`; 
 CREATE TABLE `commande`(
-  `id` int()
-)
+  `id` int(12) NOT NULL,
+  `name` varchar(65) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `city` varchar(40) NOT NULL,
+  `stat` varchar(50) NOT NULL,
+  `zipcode` int(6) NOT NULL,
+  `paymode` varchar(50) NOT NULL,
+  `namecard` varchar(50) NOT NULL,
+  `numcard` int(30) NOT NULL,
+  `expmonth` varchar(40) NOT NULL,
+  `expyear` int(40) NOT NULL,
+  `date_commande` timestamp,
+  `code_commande` NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

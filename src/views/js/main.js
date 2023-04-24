@@ -52,7 +52,7 @@ function ready(){
     e.preventDefault();
     let cart_options = document.getElementsByClassName('cart_box'); 
     let cart_optionsSize = cart_options.length; 
-
+    
   if(cart_optionsSize <= 0){
         alert('please select prducts before cheking'); 
     }
@@ -64,8 +64,7 @@ function ready(){
         if(user_session == 'session user not logged'){
            //window.location.href = ('/login');
         }else{
-            window.location.href = ('/checkout');
-            
+            window.location.href = ('/checkout'); 
         }
     }).catch(
         error => console.log(error)
@@ -120,12 +119,14 @@ function Add_Product_toCart(title, price, image){
      }
     }
 
-
 let Cart_Shops = `
-       <img src="${image}" style="width:25%"  />
-          <svg class="remove_article" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
+       <img src="${image}" style="width:25%" />
+        <div>
+          <svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
             ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
-        12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
+        12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
+        </svg>
+        </div>
 
         <div class="cart_products_elements">
           <div class="article_name">${title}</div>
@@ -160,10 +161,14 @@ function UpdateCart_cont(){
         var price = parseFloat(article_price.innerHTML.replace('DA',''));
 
         var __qte = quantity_product.value; 
-        Total = Total + (price * __qte);
+        Total +=  (price * __qte);
+        if(__qte == 0)
+        Total = 0; 
+      
+        console.log(cart_detailSet);
 
         var Total_roud = Math.round(Total);
-
+    
         document.getElementsByClassName('article_price_total')[0].innerHTML = Total + 'DA'; 
     }
     return Total; 

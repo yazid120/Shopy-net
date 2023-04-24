@@ -43,14 +43,13 @@ include_once './views/composent/header.php';
                 <div class="flex">
                     <div class="inputBox">
                         <span>state :</span>
-                        <input type="text" placeholder="india">
+                        <input type="text" placeholder="Algeria">
                     </div>
                     <div class="inputBox">
                         <span>zip code :</span>
                         <input type="text" placeholder="123 456">
                     </div>
                 </div>
-
             </div>
 
             <div class="col">
