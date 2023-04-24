@@ -7,9 +7,13 @@ and find the affer de l'annes at shopy net.
 ## _You will find in this project Concepts such as:_ 
 
 ---
--Routing page in PHP
-*Login and Registration system
-
+- Routing page in PHP
+- Login and Registration system
+- Multiple back-ends for session and cache storage.
+- SQL DataBase design and creation
+- Database agnostic schema migrations.
+- Robust background job processing.
+- Admin Panel with privileges (CREATE,MODIFY,DELETE,UPDATE) Products.
 ---
 
 Classique php router: 
@@ -39,7 +43,7 @@ public function resolve(){
 }
 }
 ```
-index.php page access routing
+'index.php' page access routing
 ```$router->add('/' ,function(){
   require __DIR__. '/views/home.php';
 });
@@ -58,3 +62,9 @@ $router->add('/logout', function(){
 ```
 ---
 
+Login and registration system php mysqli authentication
+
+---
+'sign_up_auth.php'
+## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/views/images/search.png)
+---
