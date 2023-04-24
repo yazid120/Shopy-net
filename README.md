@@ -9,11 +9,7 @@ and find the affer de l'annes at shopy net.
 ---
 -Routing page in PHP.
 *Login and Registration system.
-*Multiple back-ends for session and cache storage.
--SQL DataBase design and creation
--Database agnostic schema migrations.
--Robust background job processing.
--Admin Panel with privileges (CREATE,MODIFY,DELETE,UPDATE) Products.
+
 ---
 
 Classique php router: 
