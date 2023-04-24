@@ -7,8 +7,8 @@ and find the affer de l'annes at shopy net.
 ## _You will find in this project Concepts such as:_ 
 
 ---
--Routing page in PHP.
-*Login and Registration system.
+-Routing page in PHP
+*Login and Registration system
 
 ---
 
