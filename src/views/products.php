@@ -2,8 +2,8 @@
 require_once __DIR__.'/action/db_conn.php'; 
 $session_stat = session_status(); 
 
-if($session_stat == 1){
-  //session_start();
+if($session_stat == PHP_SESSION_NONE){
+  session_start();
 }
 
 $sql ="SELECT * FROM `product`"; 
