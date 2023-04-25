@@ -1,8 +1,6 @@
 <?php 
 
-
 ?>
-
 <footer class="footer_nav_sider">
 <div>
     Copyright © Shopy_<span>net</span>.com 2023. All Right Reserved .
@@ -11,8 +9,10 @@
 <?php if($_SERVER['REQUEST_URI'] == '/'){?>
 <!-- js scripts -->
 <script src="views/js/main.js" defer></script>
-<!-- search js script-->
+<!-- search product bar js script-->
 <script src="views/js/search.js" defer></script>
+<!-- Categorie product js script -->
+<script src="views/js/categorie.js" defer></script>
 <?php }?>
 
 <!-- axios js integration -->

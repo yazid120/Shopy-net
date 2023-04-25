@@ -115,6 +115,68 @@ border-radius: 3px;
 .user_profile_elem:hover{
   background-color: #d6e7ece0;
 }
+
+/***** Management product categorie *****/
+.base_box_manage_search_product{
+ -webkit-box-sizing: border-box;
+ -webkit-box-direction: normal;
+ -webkit-box-orient: horizontal;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ gap: 0.2rem;
+ overflow: hidden;
+ margin: 0rem; 
+ padding: 0.2rem; 
+}
+.formulat_cat{
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+  width: 50%; 
+  height: auto; 
+  margin: 0.1rem; 
+  padding: 0.3rem; 
+  display: flex;
+  flex-direction: column;
+  gap:1.1rem; 
+}
+.base_box_manage_search_product
+.anum_max_min_price_prod{
+  display: flex;
+  gap: 1.285rem; 
+}
+.selection_cat_list{
+  width: 50%;
+  height: 2rem; 
+}
+.sub_part_cat{
+  width: 25%;
+  display: flex;
+  gap: 0.2rem;
+}
+.sub_part_cat label{
+  background: #c9b9ed5c;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14.5px; 
+}
+.price_cat_typo{
+  width: 47%;
+  height: 2.2rem;
+  margin: 0rem; 
+  padding: 0rem; 
+  padding-left: 0.1rem;
+}
+.submit_search_cat_btn{
+  width: 50%; 
+  height: 2rem;
+  cursor: pointer;
+  background-color: #aa8fe9ea;
+  border: 1px solid var(--Black_Color);
+  color: var(--White_Color); 
+  font-weight: 600;
+}
+
 /*** cart article head ***/
 .shpping_cart_element{
   -webkit-box-sizing: border-box;

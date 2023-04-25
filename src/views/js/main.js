@@ -122,7 +122,7 @@ function Add_Product_toCart(title, price, image){
 let Cart_Shops = `
        <img src="${image}" style="width:25%" />
         <div>
-          <svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
+          <svg class="remove_article list" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
             ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
         12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
         </svg>
@@ -135,6 +135,7 @@ let Cart_Shops = `
           <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
 `; 
+
 
 Cart_box_Shop.innerHTML = Cart_Shops;
 cart_items.append(Cart_box_Shop)
@@ -165,7 +166,11 @@ function UpdateCart_cont(){
         if(__qte == 0)
         Total = 0; 
       
-        console.log(cart_detailSet);
+        // update cart btn article number
+        let article_btn_number = document.getElementById('article_cart_quantity'); 
+        let article_btn_number_Value = article_btn_number.value; 
+        article_btn_number_Value = cart_boxes; 
+        console.log(cart_boxes.length);
 
         var Total_roud = Math.round(Total);
     
