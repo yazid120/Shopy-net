@@ -7,6 +7,7 @@ require_once '../Config/config.php';
 
 $PostData = file_get_contents('php://input');
 $request_prod = json_decode($PostData); 
+echo $request_prod; 
 $method_request = REQUEST_METHOD; 
 switch($method_request){
     case'GET':
@@ -25,3 +26,4 @@ switch($method_request){
       }
 }
 ?>
+

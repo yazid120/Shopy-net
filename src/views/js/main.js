@@ -167,10 +167,12 @@ function UpdateCart_cont(){
         Total = 0; 
       
         // update cart btn article number
-        let article_btn_number = document.getElementById('article_cart_quantity'); 
-        let article_btn_number_Value = article_btn_number.value; 
-        article_btn_number_Value = cart_boxes; 
-        console.log(cart_boxes.length);
+        let cart_boxes_lenght = cart_boxes.length; 
+        console.log(cart_boxes_lenght); 
+        if(cart_boxes_lenght == null){
+        document.getElementById('article_cart_quantity').innerHTML = 0; 
+        }
+        document.getElementById('article_cart_quantity').innerHTML = cart_boxes_lenght; 
 
         var Total_roud = Math.round(Total);
     
