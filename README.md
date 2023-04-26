@@ -67,6 +67,7 @@ $router->add('/logout', function(){
 Login and registration system php mysqli authentication
 
 ---
-'sign_up_auth.php'
+'Sign-up page'
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/views/images/search.png)
 ---
+'login page'
