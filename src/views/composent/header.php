@@ -3,7 +3,7 @@ if(session_status() == 1)
 session_start(); 
 
 define('AUTHOR_NAME','kevin_mak');
-echo $_SERVER['REQUEST_URI'];
+
 ?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
@@ -22,6 +22,11 @@ echo $_SERVER['REQUEST_URI'];
       if($_SERVER['PHP_SELF'] == '/index.php/login' || $_SERVER['PHP_SELF'] == '/index.php/register'){
         echo'<link rel="stylesheet" href="views/style/login_s.css"/>';
       }
+    ?>
+    <?php 
+    if($_SERVER['PHP_SELF'] == '/index.php/contact'){
+      echo'<link rel="stylesheet" href="views/style/contact.css"/>';
+    }
     ?>
 </head>
 <body>
@@ -137,7 +142,7 @@ let head_Object =[
               <a href='/register'>
                 <button class="inscr_btn">
                  <script>document.write(head_Object[3].registration.name)</script>
-            </button>
+                </button>
             </a>
             </div>
             <div>

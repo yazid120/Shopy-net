@@ -23,10 +23,6 @@ $router->add('/logout', function(){
     require __DIR__ .'/views/logout.php';
 }); 
 
-/*$router->add('/about',function(){
-    require __DIR__ .'/views/about.php';
-}); */
-
 $router->add('/infos',function(){
     require __DIR__ .'/views/infos.php';
 }); 
