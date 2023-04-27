@@ -3,19 +3,21 @@ if(session_status() == 1)
 session_start(); 
 
 define('AUTHOR_NAME','kevin_mak');
+echo $_SERVER['REQUEST_URI'];
 ?>
-<html>
+<html translate="yes" lang="en-US" dir="ltr">
 <head>
-    <meta charset="utf-8"/>
-    <title><?=APP_NAME?></title>
-    
+    <meta charset="utf-8" http-equiv="content-type"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="description" content="<?=APP_NAME?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="author" content="<?=AUTHOR_NAME?>"/>
-
+    <meta property="og:language" content="en"/>
+    <!-- Boxicons CDN Link for CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css media link -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    <title><?=APP_NAME?></title>
     <?php 
       if($_SERVER['PHP_SELF'] == '/index.php/login' || $_SERVER['PHP_SELF'] == '/index.php/register'){
         echo'<link rel="stylesheet" href="views/style/login_s.css"/>';

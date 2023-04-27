@@ -1,7 +1,7 @@
 <?php 
  
 $localhost = 'localhost';
-$user_name = 'admin'; 
+$user_name = 'root'; 
 $db_password = '1234'; 
 $db_name = 'Shopy_net'; 
 
