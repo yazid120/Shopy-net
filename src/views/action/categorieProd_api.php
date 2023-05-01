@@ -7,23 +7,28 @@ require_once '../Config/config.php';
 
 $PostData = file_get_contents('php://input');
 $request_prod = json_decode($PostData); 
-echo $request_prod; 
+$request_prod_data_value = $request_prod -> data; 
+
 $method_request = REQUEST_METHOD; 
 switch($method_request){
-    case'GET':
+    case'POST':
       if(isset($PostData)){
         $product_name = array(); 
-        $sql = "SELECT `name_prod` FROM `product` WHERE '$request_prod' = `product`.`cat_prod_name`"; 
+        $sql = "SELECT `name_prod` FROM `product` WHERE '$request_prod_data_value' = `product`.`cat_prod_name`"; 
         $response = mysqli_query($connection,$sql); 
         while($rows = mysqli_fetch_assoc($response)){
             $product_name[] = $rows['name_prod']; 
         }
-        $product_name_json = json_encode($product_name);
-        echo($product_name_json); 
-
+      if($request_prod_data_value == '---'){
+          echo(('no categorie prduct was chosed')); 
+        }
+      else{
+          $product_name_json = json_encode($product_name);
+          echo($product_name_json); 
+      }
         mysqli_free_result($response); 
         mysqli_close($connection);
-      }
+    }
 }
 ?>
 

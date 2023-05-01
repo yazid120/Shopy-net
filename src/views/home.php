@@ -54,6 +54,7 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
         <script>document.write(Categorie_Object[3].search_cat)</script>
       </button>
     </div>
+    <div class="num_result_search"><h2>result: <span> 0</span></h2></div>
   </form>
 </div>
 
