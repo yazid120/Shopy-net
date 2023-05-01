@@ -11,11 +11,12 @@ and find the affer de l'annes at shopy net.
 ---
 - Routing page in PHP
 - Login and Registration system
+  - Login authentication
 - Multiple back-ends for session and cache storage.
 - SQL DataBase design and creation
 - Database agnostic schema migrations.
 - Robust background job processing.
-- Admin Panel with privileges (CREATE,MODIFY,DELETE,UPDATE) Products.
+- Admin Panel with privileges (CREATE, MODIFY, DELETE, UPDATE) Products.
 ---
 
 Classique php router: 
@@ -60,6 +61,14 @@ $router->add('/login', function(){
 
 $router->add('/logout', function(){
     require __DIR__ .'/views/logout.php';
+}); 
+
+$router->add('/infos',function(){
+    require __DIR__ .'/views/infos.php';
+}); 
+
+$router->add('/contact',function(){
+  require __DIR__ .'/views/contact.php'; 
 }); 
 ```
 ---
