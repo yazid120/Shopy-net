@@ -77,19 +77,19 @@ let head_Object =[
         <?php }}?>
             <ul class="elment_dir_header_local">
                 <li> 
-                    <a href="/"> 
+                  <a href="/"> 
                     <script>document.write(head_Object[0].name)</script>
-                   </a>
+                  </a>
                </li>
                 <li> 
-                    <a href="/contact">
+                  <a href="/contact">
                         <script>document.write(head_Object[1].name)</script>
-                    </a>
+                  </a>
                 </li>
                 <li> 
-                    <a href="/infos"> 
+                  <a href="/infos"> 
                         <script>document.write(head_Object[2].name)</script>
-                    </a>
+                  </a>
                 </li>
             </ul>
         </div>
@@ -112,8 +112,8 @@ let head_Object =[
             <a>
           </div>
           <div class="profile_infos_setts_media">
-            <div class="">
-               <ul>
+            <div class="head_links_m">
+               <ul class="">
                 <li>profile</li>
                 <li>settings</li>
                 <li>products</li>
@@ -156,4 +156,4 @@ let head_Object =[
               }
             ?>
         </div>
-    </nav>
+  </nav>

@@ -36,7 +36,7 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
         <script>document.write(Categorie_Object[1].max_price_cat)</script>
       </label>
       <input type="text" class="price_cat_typo" id="maximum_price"
-      name="maximum_price_input"/>
+      name="maximum_price_input" value=""/>
     </div>
 <!-- minimum price categorie -->
     <div class="sub_part_cat">
@@ -44,7 +44,7 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
         <script>document.write(Categorie_Object[2].min_price_cat)</script>
       </label>
       <input type="text" class="price_cat_typo" id="minimum_price"
-      name="minimum_price_input"/>
+      name="minimum_price_input" value=""/>
     </div>
 </div class="sub_part_cat">
     <!--  Search categorie btn -->

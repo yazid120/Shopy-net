@@ -12,7 +12,6 @@ let search_in_value  = document.getElementById('search_bar');
  search_delete_reset_input.addEventListener('click' ,()=>{
     if(search_in_value.value != ''){
        search_in_value.value = '';
-    // console.log(search_in_value.value);
        search_delete_reset_input.classList.replace('block','none');
     }
    
@@ -26,10 +25,9 @@ let Search = function(){
     let all_product = document.querySelectorAll('.products_elments_sets');
     //name product
     let product_name = document.getElementsByClassName('title_product');
-
-    for(let i=0; i<product_name.length; i++){
+   for(let i=0; i<product_name.length; i++){
         var match_n_product = all_product[i].getElementsByClassName('title_product')[0];
-        console.log(search_up_val); 
+      //   console.log(search_up_val); 
         if(match_n_product){
            var Text_value = match_n_product.textContent || match_n_product.innerHTML; 
        
@@ -39,7 +37,6 @@ let Search = function(){
            else{
             all_product[i].style.display = 'none';
            }
- 
         //set search close icon block || none display
         if(search_in_value.value != '' && search_in_value.value.length > 0){
             search_delete_reset_input.classList.replace('none','block'); 

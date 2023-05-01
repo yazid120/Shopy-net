@@ -29,7 +29,7 @@ function ready(){
 
     //quantity update 
     let quantity_input = document.getElementsByClassName('quantity_article');  
-    for(let j= 0; j<quantity_input.length; j++){
+    for(let j=0; j<quantity_input.length; j++){
         var input = quantity_input[j];
         input.addEventListener('change',ChangeQte); 
     }

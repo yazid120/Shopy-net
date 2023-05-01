@@ -8,13 +8,16 @@ require_once '../Config/config.php';
 $PostData = file_get_contents('php://input');
 $request_prod = json_decode($PostData); 
 $request_prod_data_value = $request_prod -> data; 
+$request_prod_data_max_price = $request_prod -> max_price; 
+$request_prod_data_min_price = $request_prod -> min_price; 
 
 $method_request = REQUEST_METHOD; 
 switch($method_request){
     case'POST':
       if(isset($PostData)){
         $product_name = array(); 
-        $sql = "SELECT `name_prod` FROM `product` WHERE '$request_prod_data_value' = `product`.`cat_prod_name`"; 
+      $sql = "SELECT `name_prod` FROM `product` WHERE '$request_prod_data_value' = `product`.`cat_prod_name` 
+      AND '$request_prod_data_max_price' >= `product`.`price_unit` AND '$request_prod_data_min_price' <= `product`.`price_unit`"; 
         $response = mysqli_query($connection,$sql); 
         while($rows = mysqli_fetch_assoc($response)){
             $product_name[] = $rows['name_prod']; 

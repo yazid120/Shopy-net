@@ -47,7 +47,7 @@ MODIFY `date_inscr` timestamp DEFAULT CURRENT_TIMESTAMP;
 DROP TABLE IF EXISTS `admin`; 
 CREATE TABLE `admin`(
     `id` int(10) NOT NULL,
-    `name` varchar(28) NOT NULL, 
+    `name` varchar(28), 
     `email` varchar(30) NOT NULL, 
     `passsword` varchar(30) NOT NULL
 );
@@ -55,12 +55,11 @@ ALTER TABLE `admin`
  ADD PRIMARY KEY (`id`); 
 
 ALTER TABLE `admin` 
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;  
+MODIFY `id` int(10) NOT NULL;  
 
 --- optinel modify
-INSERT INTO `admin` VALUES(
-    (null,'ziad yazid','yazid.ziad2000@gmail.com','***')
-);
+INSERT INTO `admin` VALUES
+    (001,NULL,'yazid.ziad2000@gmail.com',MD5('1234'));
 
 
 --
