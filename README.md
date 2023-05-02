@@ -1,8 +1,10 @@
 # **Shopy-net**
-Shopy net platform E-commerce en Php / javascript
+Shopy net platform E-commerce en [PHP](https://www.php.net/) / [javascript](https://www.javascript.com/)
 
-our platform offers a variety of products for all users and for each category to create an account
-and find the affer de l'annes at shopy net.
+# Introduction
+
+[Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui offre une variété de services et produits pour tous 
+les utilisateurs et pour chaque catégorie pour créer un compte et retrouvez l'affer de l'annes sur shopy net.
 
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
 
