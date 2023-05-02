@@ -10,6 +10,8 @@ Shopy net E-Commerce en [PHP](https://www.php.net/) / [javascript](https://www.j
 [Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui propos une variété de services et produits pour tout type
 d'utilisateurs et pour chaque catégorie, créer un compte maintenant et trouver des offres imbattable sur shopy net.
 
+## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
+
 # Public cible 👥
 Shopy-net est fait pour tout le monde, On propos sur cette Platform de tout les genrs
 
@@ -21,7 +23,6 @@ Shopy-net est fait pour tout le monde, On propos sur cette Platform de tout les 
 - Apport d'un nouveau service àu clients et etre à jour
 - Maximum de sécurité du site 🔒
 
-## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
 
 ### Concepts et chapitres du projet:  
 
