@@ -1,5 +1,5 @@
 <p align="center"> <a href="https://github.com/yazid120/Shopy-net">
-<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" alt="Logo Downloads"/>
+<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/logo_shopynet_ecommerce.png" alt="Logo Downloads"/>
 </a></p>
 
 # **Shopy-net**
