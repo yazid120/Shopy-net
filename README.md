@@ -1,21 +1,34 @@
 <p align="center"> <a href="https://github.com/yazid120/Shopy-net">
-<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/logo_shopynet_ecommerce.png" alt="Logo Downloads"/>
+<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" alt="Logo Downloads"/>
 </a></p>
 
-# **Shopy-net**
+# **Shopy-net** 🛒
 Shopy net E-Commerce en [PHP](https://www.php.net/) / [javascript](https://www.javascript.com/)
 
 # Introduction
 
-[Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui offre une variété de services et produits pour tous 
-les utilisateurs et pour chaque catégorie pour créer un compte et retrouvez l'affer de l'annes sur shopy net.
+[Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui propos une variété de services et produits pour tout type
+d'utilisateurs et pour chaque catégorie, créer un compte maintenant et trouver des offres imbattable sur shopy net.
 
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
 
-## _You will find in this project Concepts such as:_ 
+# Public cible 👥
+Shopy-net est fait pour tout le monde, On propos sur cette Platform de tout les genrs
+
+# Nos Objectif 🎯
+- Satisfaire les clients au niveau des services et des prix 💲
+- Create un Processus d'achat rapide ⏱️ et flexible en afrique 
+- Service apres vente et client pour une assurance contre vole et SCAM ..
+- Mettre en disposition un Variété de produit Attirer des acheteurs de toutes les types
+- Apport d'un nouveau service àu clients et etre à jour
+- Maximum de sécurité du site 🔒
+
+
+### Concepts et chapitres du projet:  
 
 ---
 - Routing page in PHP
+  - Classe router `src/router.php`
 - Login and Registration system
   - Login authentication
 - Multiple back-ends for session and cache storage.
