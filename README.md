@@ -1,5 +1,9 @@
+<p align="center"> <a href="https://github.com/yazid120/Shopy-net">
+<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" alt="Logo Downloads"/>
+</a></p>
+
 # **Shopy-net**
-Shopy net platform E-commerce en [PHP](https://www.php.net/) / [javascript](https://www.javascript.com/)
+Shopy net E-Commerce en [PHP](https://www.php.net/) / [javascript](https://www.javascript.com/)
 
 # Introduction
 
