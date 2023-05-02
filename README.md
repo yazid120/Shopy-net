@@ -1,5 +1,5 @@
 <p align="center"> <a href="https://github.com/yazid120/Shopy-net">
-<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/logo_shopynet_ecommerce.png" alt="Logo Downloads"/>
+<img src="https://github.com/yazid120/Shopy-net/blob/main/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" alt="Logo Downloads"/>
 </a></p>
 
 # **Shopy-net**
@@ -7,12 +7,16 @@ Shopy net E-Commerce en [PHP](https://www.php.net/) / [javascript](https://www.j
 
 # Introduction
 
-[Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui offre une variété de services et produits pour tous 
-les utilisateurs et pour chaque catégorie pour créer un compte et retrouvez l'affer de l'annes sur shopy net.
+[Shopy net](https://github.com/yazid120/Shopy-net) est une plate-forme E-Commerce qui propos une variété de services et produits pour tout type
+d'utilisateurs et pour chaque catégorie, créer un compte maintenant et trouver des offres imbattable sur shopy net.
+# Nos Objectif
+
+
+#Public cible
 
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
 
-## _You will find in this project Concepts such as:_ 
+## _Concepts et chapitres du projet:_ 
 
 ---
 - Routing page in PHP
