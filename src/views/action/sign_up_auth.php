@@ -6,11 +6,18 @@ require_once './functions.php';
 #sign_up authentcation v 
 
 if(isset($_POST['submit'])){
-    $name = $_POST['user_name']; 
-    $email = $_POST['user_email']; 
-    $sexe = $_POST['sexe']; 
-    $password = $_POST['user_password']; 
-    $repassword = $_POST['repassword']; 
+
+  function row_Data($data){
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = strip_tags($data);
+    return $data;
+  }
+    $name = row_Data($_POST['user_name']); 
+    $email = row_Data($_POST['user_email']); 
+    $sexe = row_Data($_POST['sexe']); 
+    $password = row_Data($_POST['user_password']); 
+    $repassword = row_Data($_POST['repassword']); 
     //errors array 
     $error = array(); 
 

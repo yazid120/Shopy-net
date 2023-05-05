@@ -10,6 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css media link -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    <link rel="stylesheet" href="views/style/Scss/404_page_Style.css"/>
+    
     <link rel="stylesheet" href="assets/css/feathericon.min.css">
 
     <link rel="stylesheet" href="assets/plugins/morris/morris.css">
@@ -21,7 +23,7 @@
 <div class="header-left">
 
 <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" 
-alt="Logo" style="width:41%" id="Shopy_net_logo">
+alt="Logo" style="width:10%" id="Shopy_net_logo">
 </a>
 </div>
 

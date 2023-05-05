@@ -184,6 +184,10 @@ border-radius: 3px;
   align-items: center;
   justify-content: flex-start;
 }
+
+.num_result_search{
+  display: none;
+}
 /*** cart article head ***/
 .shpping_cart_element{
   -webkit-box-sizing: border-box;
@@ -201,7 +205,7 @@ border-radius: 3px;
 .shpping_cart_element .cart_aticle_qte{
   border-radius: 50%;
   background-color: #ff3131;
-  padding: 1px 6.5px;
+  padding: 3.5px 7.3px;
   display: flex;
   align-items: center;
   justify-content:center;
@@ -373,7 +377,7 @@ gap: 11px;
 }
 .products_elments_sets
 .product_image{
-  width: 50%;
+  width: 13rem;
 }
 .products_elments_sets{
 background-color: rgb(248, 248, 248);
