@@ -13,6 +13,9 @@ d'utilisateurs et pour chaque catégorie ,comme pour chaque site de vente en lig
 **Type de E-commerce :**
 (B2C) Business to consumer
 
+#C'set quoi une stratégie b2c?
+Une entreprise business to consumer (B2C) est par définition une entreprise qui cible des clients individuels particuliers. Une entreprise B2C vend donc des produits et/ou réalise des prestations de service directement à/pour des particuliers.
+
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-06-28.png)
 
 # Public cible 👥
