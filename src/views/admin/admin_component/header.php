@@ -1,6 +1,4 @@
 <?php 
-
-
 ?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>

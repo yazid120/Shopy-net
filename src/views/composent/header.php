@@ -3,7 +3,7 @@ if(session_status() == 1)
 session_start(); 
 
 define('AUTHOR_NAME','kevin_mak');
-
+var_dump($_SERVER); 
 ?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
