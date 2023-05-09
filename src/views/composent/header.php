@@ -15,7 +15,7 @@ define('AUTHOR_NAME','kevin_mak');
     <meta property="og:language" content="en"/>
     <!-- Boxicons CDN Link for CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Css media link -->
+    <!-- Css media link Default stylesheet -->
     <link rel="stylesheet" href="views/style/index.css"/>
     <title><?=APP_NAME?></title>
     <?php 
