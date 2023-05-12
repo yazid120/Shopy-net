@@ -3,7 +3,7 @@ if(session_status() == 1)
 session_start(); 
 
 define('AUTHOR_NAME','kevin_mak');
-var_dump($_SERVER); 
+
 ?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
@@ -105,14 +105,20 @@ let head_Object =[
             <p>
         </div>
         <?php if(isset($_SESSION['logged'])){?>
-           <div class="user_profile_elem">
-            <a href='/profile'>
-             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" 
-             style="fill: rgba(0, 0, 0, 1);"><path d="M7.5 6.5C7.5 8.981 9.519 11 12
-              11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7
-               3.141-7 7v1h17z"></path></svg>
-            <a>
-          </div>
+        <div class="user_profile_elem">
+            <button type="button" class="btn btn-sm btn-alt-secondary d-flex align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="rounded-circle" src="assets/media/avatars/avatar10.jpg" style="width: 21px;">
+          <span class="d-none d-sm-inline-block ms-2">John</span>
+          <svg fill="#979191" height="20px" width="20px" version="1.1" id="Layer_1" 
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+          viewBox="-16.5 -16.5 363.00 363.00" xml:space="preserve" stroke="#000000" stroke-width="26.4">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" 
+          stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" 
+          d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 
+          c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 
+          s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+        </div>
+
           <div class="profile_infos_setts_media">
             <div class="head_links_m">
                <ul class="">

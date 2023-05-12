@@ -6,134 +6,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- Boxicons CDN Link for CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Css media link -->
-    <link rel="stylesheet" href="views/style/index.css"/>
-    <link rel="stylesheet" href="views/style/Scss/404_page_Style.css"/>
+    <!-- <link rel="stylesheet" href="views/style/index.css"/> -->
+    <link rel="stylesheet" href="views/style/admin.css"/>
     
     <link rel="stylesheet" href="assets/css/feathericon.min.css">
 
     <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}header{height: 90px;background: #546FE7;}.inner-width{max-width: 1000px;padding: 0 10px;margin: auto;}.logo{float: left; padding: 27px 0;color: #fff;}
+.logo img{
+  height: 50px;
+}
+.navigation-menu{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+.navigation-menu a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+.navigation-menu a:hover{
+  background: #273b91;
+  color: #fff;
+  transform: scale(1.1);
+}
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+.home{
+  color: #fff;
+}
+a.aj_btn {
+  background: #273b91;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+a.aj_btn:hover{
+  background: #fff;
+  color: #273b91;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.menu-toggle-btn{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+@media screen and (max-width:900px) {
+  .menu-toggle-btn{
+    display: block !important;
 
-<div class="header">
+  }
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  .navigation-menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+  .navigation-menu a{
+    display: block;
+    margin: 10px 0;
+  }
+  .navigation-menu.active{
+    display: block;
+  }
+}
+</style>
+<header>
+      <div class="inner-width">
+      <div class="logo">
+        <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"
+         alt="logo_dash" class="logo_lissted_site"/>
+      </div>
 
-<div class="header-left">
-
-<img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" 
-alt="Logo" style="width:10%" id="Shopy_net_logo">
-</a>
-</div>
-
-<a href="javascript:void(0);" id="toggle_btn">
-<i class="fe fe-text-align-left"></i>
-</a>
-<div class="top-nav-search">
-<form>
-<input type="text" class="form-control" placeholder="Search here">
-<button class="btn" type="submit"><i class="fa fa-search"></i></button>
-</form>
-</div>
-
-<a class="mobile_btn" id="mobile_btn">
-<i class="fa fa-bars"></i>
-</a>
-
-
-<ul class="nav user-menu">
-
-<li class="nav-item dropdown noti-dropdown">
-<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-<i class="fa fa-bell"></i> <span class="badge badge-pill">3</span>
-</a>
-<div class="dropdown-menu notifications">
-<div class="topnav-dropdown-header">
-<span class="notification-title">Notifications</span>
-<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
-</div>
-<div class="noti-content">
-<ul class="notification-list">
-<li class="notification-message">
-<a href="#">
-<div class="media d-flex">
-<span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
-</span>
-<div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
-<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
-</div>
-</div>
-</a>
-</li>
-<li class="notification-message">
-<a href="#">
-<div class="media d-flex">
-<span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
-</span>
-<div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">International Software Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
-<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
-</div>
-</div>
-</a>
-</li>
-<li class="notification-message">
-<a href="#">
-<div class="media d-flex">
-<span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
-</span>
-<div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone XR</span></p>
-<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
-</div>
-</div>
-</a>
-</li>
-<li class="notification-message">
-<a href="#">
-<div class="media d-flex">
-<span class="avatar avatar-sm flex-shrink-0">
-<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
-</span>
-<div class="media-body flex-grow-1">
-<p class="noti-details"><span class="noti-title">Mercury Software Inc</span> added a new product <span class="noti-title">Apple MacBook Pro</span></p>
-<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
-</div>
-</div>
-</a>
-</li>
-</ul>
-</div>
-<div class="topnav-dropdown-footer">
-<a href="#">View all Notifications</a>
-</div>
-</div>
-</li>
-
-
-<li class="nav-item dropdown has-arrow">
-<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-<span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Seema Sisty"></span>
-</a>
-<div class="dropdown-menu">
-<div class="user-header">
-<div class="avatar avatar-sm">
-<img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
-</div>
-<div class="user-text">
-<h6>Seema Sisty</h6>
-<p class="text-muted mb-0">Administrator</p>
-</div>
-</div>
-<a class="dropdown-item" href="general.html">My Profile</a>
-<a class="dropdown-item" href="general.html">Account Settings</a>
-<a class="dropdown-item" href="login.html">Logout</a>
-</div>
-</li>
-
-</ul>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="#"><i class="fas fa-home home"></i> Home</a>
+          <a href="#"></i> About</a>
+          <a href="#"></i> Services</a>
+          <a href="#"></i> Skills</a>
+          <a href="#"></i> Contact</a>
+          <a href="#" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+            LOGIN</a>
+        </nav>
+      </div>
+</header>
 
 </div>

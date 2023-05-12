@@ -134,8 +134,8 @@ function login_user($connection,$email,$password){
     $_SESSION['logged'] = true; 
 
     #redirect to profile page (once successful logged in)
-    $success_login = 'user logged in successfuly';
-    header('location: http://localhost:8080/profile?success='.$success_login); 
+    // $success_login = 'user logged in successfuly';
+    header('location: http://localhost:8080/profile'); 
     exit();
     }
 }
