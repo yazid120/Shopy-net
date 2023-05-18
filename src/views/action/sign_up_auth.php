@@ -13,11 +13,11 @@ if(isset($_POST['submit'])){
     $data = strip_tags($data);
     return $data;
   }
-    $name = row_Data($_POST['user_name']); 
-    $email = row_Data($_POST['user_email']); 
-    $sexe = row_Data($_POST['sexe']); 
-    $password = row_Data($_POST['user_password']); 
-    $repassword = row_Data($_POST['repassword']); 
+    $name = row_Data(mysqli_real_escape_string($connection,$_POST['user_name'])); 
+    $email = row_Data(mysqli_real_escape_string($connection,$_POST['user_email'])); 
+    $sexe = row_Data(mysqli_real_escape_string($connection,$_POST['sexe'])); 
+    $password = row_Data(mysqli_real_escape_string($connection,$_POST['user_password'])); 
+    $repassword = row_Data(mysqli_real_escape_string($connection,$_POST['repassword'])); 
     //errors array 
     $error = array(); 
 

@@ -16,8 +16,8 @@ if(isset($_POST['login'])){
   $data = strip_tags($data);
   return $data;
 }
-$email = row_data($_POST['user_email']);
-$password = row_data($_POST['user_password']);
+$email = row_data(mysqli_real_escape_string($connection,$_POST['user_email']));
+$password = row_data(mysqli_real_escape_string($connection,$_POST['user_password']));
 
 $error = array();
 

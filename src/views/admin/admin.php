@@ -7,17 +7,17 @@ include_once __DIR__.'/admin_component/header.php';
 ?>
 
 <body>
-  <!--  Body Wrapper -->
-  <div class="container_admin">
+  <!--  Body Wrapper Side bar -->
+  <div class="side_bar_container_admin" id="mySidebar">
     <aside>
       <div class="side_bar">
-      <ul id="sidebarnav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+      <ul id="sidebarnav" class="side_bar_navigation">
             <li class="nav-small-cap">
-              <span class="material-icons-sharp">grid_view</span>
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="/admin" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -113,10 +113,11 @@ include_once __DIR__.'/admin_component/header.php';
           </ul>
       </div>
     </aside>
-    
   </div>
- 
+  <div id="main">
+    <button class="openbtn" onclick="openSidebar()">&#9776; Open Sidebar</button>
+  </div>
 
 <?php 
-// include_once __DIR__.'/admin_component/footer.php';
+ include_once __DIR__.'/admin_component/footer.php';
 ?>

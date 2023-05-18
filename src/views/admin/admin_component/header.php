@@ -11,9 +11,9 @@
     <!-- <link rel="stylesheet" href="views/style/index.css"/> -->
     <link rel="stylesheet" href="views/style/admin.css"/>
     
-    <link rel="stylesheet" href="assets/css/feathericon.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/feathericon.min.css"> -->
 
-    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <!-- <link rel="stylesheet" href="assets/plugins/morris/morris.css"> -->
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
@@ -22,7 +22,8 @@
   padding: 0;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-}header{height: 90px;background: #546FE7;}.inner-width{max-width: 1000px;padding: 0 10px;margin: auto;}.logo{float: left; padding: 27px 0;color: #fff;}
+}header{height: 90px;background: #B0C4F5D1;display: flex; align-items: center;
+justify-content: center;}.inner-width{max-width: 1200px;padding: 0 10px;margin: auto; display: flex; justify-content: space-between;align-items: center;margin: 0;width: 100%;}.logo{float: left;color: #fff;}
 .logo img{
   height: 50px;
 }
@@ -30,16 +31,17 @@
   float: right;
   display: flex;
   align-items: center;
-  min-height: 90px;
+  justify-content: space-between;
+  width: 60%;
 }
 .navigation-menu a{
   margin-left: 10px;
-  color: #ddd;
+  color: #000;
   text-transform: uppercase;
   font-size: 14px;
   padding: 12px 20px;
   border-radius: 4px;
-  transition: .3s linear;
+  transition: .2s linear;
 }
 .navigation-menu a:hover{
   background: #273b91;
@@ -54,10 +56,13 @@
   color: #fff;
 }
 .aj_btn {
-  background: #273b91;
+  background: #506eef;
   color: #fff;
   font-weight: 500;
   letter-spacing: 2px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .2s linear;
 }
 .aj_btn:hover{
   background: #fff;
@@ -77,7 +82,6 @@
 @media screen and (max-width:900px) {
   .menu-toggle-btn{
     display: block !important;
-
   }
   .navigation-menu{
     position: fixed;
@@ -117,19 +121,24 @@
 
         <i class="menu-toggle-btn fas fa-bars"></i>
         <nav class="navigation-menu">
-          <a href="#"></i> Dashboard</a>
+          <a href="/admin"> Dashboard</a>
           <a href="/admin/product_managment"></i> product managment</a>
           <a href="/admin/client_managment"></i> clints managment</a>
-          <a href="#"></i> Contact</a>
+          <a href="#"></i> Contact</a></nav>
         
-        <div>
         <?php
+        // if(isset($_SESSION['logged'])){
+        // if($_SESSION['logged'] == true){
         ?>
+        <div>
         <a href="#" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
-            LOGIN</a>
+            logout</a>
         </div>
+      <?php 
+    //   }
+    // }
+      ?> 
       
-      </nav>
       </div>
 </header>
 

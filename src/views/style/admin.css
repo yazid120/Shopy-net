@@ -1,4 +1,11 @@
-
+body{
+    margin: 0;
+    font-family: var(--HTDglobalefont);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: auto;
+    background-color: rgb(232, 234, 238);
+}
 li{
     display: list-item;
     text-align: -webkit-match-parent;
@@ -68,3 +75,92 @@ border-right: 1px solid rgb(229,234,239);
 .mb-7 {
     margin-bottom: 30px!important;
 }
+
+
+
+
+/********** Side bar style ***********/
+.side_bar_container_admin{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #353d42;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.side_bar_container_admin a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+.side_bar_container_admin .sidebar-link:hover {
+    color: #e2e2e2;
+    background-color: #929292;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+.side_bar_container_admin .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 32px;
+    margin-left: 50px;
+}
+
+.side_bar_navigation{
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem; 
+    padding: 0.3rem; 
+}
+
+@media screen and (max-height: 450px) {
+    .side_bar_container_admin {
+        padding-top: 15px;
+    }
+
+    .side_bar_container_admin a {
+        font-size: 18px;
+    }
+}
+
+.openbtn {
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #2b934859;
+    color: #010101;
+    padding: 10px 15px;
+    border: none;
+}
+
+
+
+/*** Footer admin style ***/
+.footer_nav_sider{
+    -webkit-box-direction: normal;
+    -webkit-box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    box-sizing: border-box; 
+    display: flex;
+    align-items:center;
+    justify-content: center; 
+    background-color:var(--Footer-Background-colorBg);
+    width: 100%; 
+    height: 6.5rem; 
+    overflow: none;
+    margin: 0rem auto -50px; 
+    margin-top: 2.8rem;
+    /* position: fixed;
+    bottom: 0; */
+    z-index: 1000;  
+  }

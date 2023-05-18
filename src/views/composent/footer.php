@@ -1,5 +1,6 @@
 
 <footer class="footer_nav_sider">
+<div class="foot_liste_wrapp">
 <div>
     Copyright © Shopy_<span>net</span>.com 2023. All Right Reserved .
 </div>
@@ -9,6 +10,7 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
  alt="" srcset="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png 563w,
   https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos-300x17.png 300w" 
   sizes="(max-width: 563px) 100vw, 563px">
+</div>
 </div>
 </footer>
 <?php if($_SERVER['REQUEST_URI'] == '/'){?>
