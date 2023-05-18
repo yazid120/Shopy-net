@@ -28,6 +28,11 @@ define('AUTHOR_NAME','kevin_mak');
       echo'<link rel="stylesheet" href="views/style/contact.css"/>';
     }
     ?>
+    <?php 
+     if(isset($_SESSION['logged'])){
+      echo'<link rel="stylesheet" href="views/style/profile.css"/>';
+     }
+    ?>
 </head>
 <body>
     <script type="text/javascript">
@@ -108,7 +113,9 @@ let head_Object =[
         <div class="user_profile_elem">
             <button type="button" class="btn btn-sm btn-alt-secondary d-flex align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img class="rounded-circle" src="assets/media/avatars/avatar10.jpg" style="width: 21px;">
+          
           <span class="d-none d-sm-inline-block ms-2">John</span>
+
           <svg fill="#979191" height="20px" width="20px" version="1.1" id="Layer_1" 
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
           viewBox="-16.5 -16.5 363.00 363.00" xml:space="preserve" stroke="#000000" stroke-width="26.4">

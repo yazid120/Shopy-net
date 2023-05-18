@@ -41,10 +41,21 @@ $router->add('/profile',function(){
    require __DIR__ .'/views/inauth_page.php';
 }
 });
+
+
 //Admin route
 $router->add('/admin',function(){
   require __DIR__.'/views/admin/admin.php';
 });
+
+$router->add('/admin/client_managment',function(){
+  require __DIR__.'/views/admin/client_managment.php';
+});
+
+$router->add('/admin/product_managment',function(){
+  require __DIR__.'/views/admin/product_managment.php';
+});
+
 
 $router->add('/checkout',function(){
     require __DIR__ .'/views/payement.php';

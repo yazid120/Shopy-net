@@ -53,13 +53,13 @@
 .home{
   color: #fff;
 }
-a.aj_btn {
+.aj_btn {
   background: #273b91;
   color: #fff;
   font-weight: 500;
   letter-spacing: 2px;
 }
-a.aj_btn:hover{
+.aj_btn:hover{
   background: #fff;
   color: #273b91;
   font-weight: 500;
@@ -117,14 +117,19 @@ a.aj_btn:hover{
 
         <i class="menu-toggle-btn fas fa-bars"></i>
         <nav class="navigation-menu">
-          <a href="#"><i class="fas fa-home home"></i> Home</a>
-          <a href="#"></i> About</a>
-          <a href="#"></i> Services</a>
-          <a href="#"></i> Skills</a>
+          <a href="#"></i> Dashboard</a>
+          <a href="/admin/product_managment"></i> product managment</a>
+          <a href="/admin/client_managment"></i> clints managment</a>
           <a href="#"></i> Contact</a>
-          <a href="#" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+        
+        <div>
+        <?php
+        ?>
+        <a href="#" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
             LOGIN</a>
-        </nav>
+        </div>
+      
+      </nav>
       </div>
 </header>
 
