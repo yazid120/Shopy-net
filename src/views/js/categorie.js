@@ -22,10 +22,13 @@ let data_post = {
   axios.post('http://localhost/Shopy-net/src/views/action/categorieProd_api.php',data_post)
     .then(response=>{
         console.log(response.data);
-    }).catch(error => console.log(error))
+    }).catch(
+        error => console.log(error)
+    )
     return selection_value 
 }
 }
+
 categorie_select_btn.addEventListener('click',function(event){
     event.preventDefault(); 
     let all_product = document.querySelectorAll('.products_elments_sets');

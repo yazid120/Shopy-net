@@ -295,8 +295,8 @@ gap: 11px;
   width: 100%; 
   display: flex; 
   align-items: center;
-  justify-content: flex-end;
-  border-top: 1px solid var(--Black_Color);
+  justify-content: center;
+  border-top: 2px solid var(--Black_Color);
 }
 .total_price_cart b{
   font-size: 24px; 
@@ -304,6 +304,9 @@ gap: 11px;
 .total_price_cart .price_total{
   font-size: 21px;
   margin: 0.3rem;  
+  display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .buy_shops_btn{
@@ -315,6 +318,8 @@ gap: 11px;
   background-color: rgb(91, 154, 248);
   border: 1px solid var(--Black_Color);
   border-radius: 3px;
+  margin-top: 2.1rem;
+  color: var(--White_Color);
 }
 
 .inscription_container_infos{

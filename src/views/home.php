@@ -70,10 +70,10 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 </div>
 
     <div class="cart_title">
+    <div class="items_count_cart"><p>items(<span id="items_con"><b>0</b></span>)</p></div>
       <h2>Your shopping Cart</h2>
     </div>
     <!-- datails cart (products) -->
-
     <div class="details_box_cart"> 
       <!--<div class="cart_box">
       <img src="http://localhost/Shopy-net/src/views/images/Ps4_Pro.jpg" style="width:25%"  />
@@ -93,10 +93,16 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
    
    <!-- Total price products -->
    <div class="total_price_cart">
-    <span class="price_total" id="total_cart_price"><b>total:</b></span>
+    <span class="price_total" id="total_cart_price"><b>Prix total</b><p>(Inc.Taxes):</p></span>
     <div class="article_price_total">0$</div>
    </div>
-  
+
+   <div class="code_pormo_part">
+    <input type="text" id="form1" class="" />
+    <label class="form-label" for="form1">code Promo</label>
+    <button type="button" class="">Apply</button>
+   </div>
+
    <button class="buy_shops_btn" id="buy_allShops"> Check out! </button>
   
 </div>

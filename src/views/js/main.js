@@ -128,7 +128,7 @@ let Cart_Shops = `
         12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
         </svg>
         </div>
-
+        
         <div class="cart_products_elements">
           <div class="article_name">${title}</div>
           <div class="article_price">${price} DA</div>
@@ -174,6 +174,8 @@ function UpdateCart_cont(){
         document.getElementById('article_cart_quantity').innerHTML = 0; 
         }
         document.getElementById('article_cart_quantity').innerHTML = cart_boxes_lenght; 
+
+        document.getElementById('items_con').innerHTML = cart_boxes_lenght;
 
         var Total_roud = Math.round(Total);
     
