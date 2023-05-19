@@ -45,7 +45,8 @@ Shopy-net est fait pour tout le monde, On propos sur cette Platform de tout les 
 ---
 
 Classique php router: 
-```class Router{
+```php
+class Router{
     public $uriNormal = array();
     public $uriStaticContent = array();
     public $uriRegex = array();
@@ -71,8 +72,10 @@ public function resolve(){
 }
 }
 ```
-'index.php' page access routing
-```$router->add('/' ,function(){
+
+`index.php` page access routing
+```php
+$router->add('/' ,function(){
   require __DIR__. '/views/home.php';
 });
 
@@ -101,10 +104,10 @@ $router->add('/contact',function(){
 Login and registration system php mysqli authentication
 
 ---
-'Sign-up page'
+`Sign-up page`
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-08-17.png)
 ---
-'login page'
+`login page`
 ## !['Image Link'](https://github.com/yazid120/Shopy-net/blob/main/src/img_README/Screenshot%20from%202023-04-24%2017-08-49.png)
 
 ---
