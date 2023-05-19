@@ -1,4 +1,4 @@
-const UseState = require('../.././js/UseState'); 
+// const UseState = require('../.././js/UseState'); 
 
 const openSidebar = () => {
     document.getElementById("mySidebar").style.width = "250px";
@@ -9,13 +9,6 @@ const closeSidebar = () => {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 };
-
-// if(document.readyState == 'loading'){
-//     document.addEventListener('DOMcontentloaded',get_users);
-//  }else{
-//     console.log(get_users());
-//  }
-
  
 // admin space users infos
 

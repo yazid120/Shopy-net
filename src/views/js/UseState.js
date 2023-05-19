@@ -1,4 +1,4 @@
-export function useState(defaultValue) {
+function useState(defaultValue) {
     // 👆🏻We create a function useState with a default value
     let value = defaultValue;
     function getValue() {

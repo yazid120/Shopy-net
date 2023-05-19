@@ -1,5 +1,3 @@
-<?php 
-?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
     <meta charset="utf-8" http-equiv="content-type"/>
@@ -10,8 +8,14 @@
     <!-- Css media link -->
     <!-- <link rel="stylesheet" href="views/style/index.css"/> -->
     <link rel="stylesheet" href="views/style/admin.css"/>
-
+    <?php
+     if($_SERVER['PHP_SELF'] == '/index.php/admin/product_managment' || $_SERVER['PHP_SELF']
+      == '/index.php/admin/product_managment'){
+      echo '<link rel="stylesheet" href="views/style/admin.css"/>';
+     }
+    ?>
     <title>Admin account</title>
+    
 </head>
 <header>
       <div class="inner-width">
