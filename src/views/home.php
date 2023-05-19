@@ -8,7 +8,6 @@ include_once './views/composent/header.php';
 $sql_cat = "SELECT * FROM `categories`";
 $categorie_prod = mysqli_query($connection,$sql_cat);
 ?>
-
 <body>
 <script type="text/javascript">
   let Categorie_Object = [
@@ -21,44 +20,17 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 
 <div class="base_box_manage_search_product">
   
-  <form action="" class="formulat_cat"><p>categorie product</p>
-    <select name="selection_categorie_product_list" id="production_list" class="selection_cat_list">
-    <option value="---">---</option>
+  <form action="" class="formulat_cat">
+    <h3>categorie produit</h3>
+  <div class="row_classic_categories">
     <?php while($rows = mysqli_fetch_assoc($categorie_prod)){ ?>
-      <option value="<?=$rows['cat_name']?>"><?=$rows['cat_name']?></option>
+     <button class="class_active_st" value="<?=$rows['cat_name']?>">
+      <?=$rows['cat_name']?>
+     </button>
     <?php }?>
-    </select>
-
-<div class="anum_max_min_price_prod">
-<!-- maximum price categorie -->
-    <div class="sub_part_cat">
-      <label for="maximum_price_input">
-        <script>document.write(Categorie_Object[1].max_price_cat)</script>
-      </label>
-      <input type="text" class="price_cat_typo" id="maximum_price"
-      name="maximum_price_input" value=""/>
-    </div>
-<!-- minimum price categorie -->
-    <div class="sub_part_cat">
-      <label for="minimum_price_input">
-        <script>document.write(Categorie_Object[2].min_price_cat)</script>
-      </label>
-      <input type="text" class="price_cat_typo" id="minimum_price"
-      name="minimum_price_input" value=""/>
-    </div>
-</div class="sub_part_cat">
-    <!--  Search categorie btn -->
-    <div class="anum_max_min_price_sub">
-      <button type="button" role="submit" class="submit_search_cat_btn" id="select_cat_button" 
-      role="button">
-        <script>document.write(Categorie_Object[3].search_cat)</script>
-      </button>
-    </div>
-    <div class="num_result_search"><h2>result: <span> 0</span></h2></div>
+  </div>
   </form>
 </div>
-
-
 
 <div class="cart-box" id="cart_box_side"> 
     <!-- Close cart icon -->
@@ -75,20 +47,7 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
     </div>
     <!-- datails cart (products) -->
     <div class="details_box_cart"> 
-      <!--<div class="cart_box">
-      <img src="http://localhost/Shopy-net/src/views/images/Ps4_Pro.jpg" style="width:25%"  />
-     
-        <svg class="remove_article" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
-            ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
-        12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path></svg>
-
-        <div class="cart_products_elements">
-          <div class="article_name">article name</div>
-          <div class="article_price">32000 DA</div>
-          
-          <input type="number" class="quantity_article" value="1" id=""/>
-        </div>
-      </div>-->
+      
     </div>
    
    <!-- Total price products -->
@@ -112,6 +71,17 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 include_once __DIR__.'/products.php';
 ?>
 
+<div>
+  <div>
+    <button>
+      PREVIOUS
+    </button>
+    <p>1/1</p>
+    <button>
+      NEXT
+    </button>
+  </div>
+</div>
 
 <?php 
 include_once './views/composent/footer.php';

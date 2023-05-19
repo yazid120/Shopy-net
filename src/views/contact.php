@@ -5,7 +5,6 @@ include_once './views/composent/header.php';
 
 ?> 
 <body>
-<h1>contact page</h1>
 <div class="listed_box_all_contact">
  <div class="container">
     <div class="content">

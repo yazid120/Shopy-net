@@ -36,9 +36,10 @@ categorie_select_btn.addEventListener('click',function(event){
     let products_name = document.getElementsByClassName('title_product');
     
         console.log(serach_json_products(event)); 
-    
-    
-    
-    let Filter_value = event.target.elements; 
-    
+
+    let Filter_value = event.target.elements;   
 }); 
+
+// Categories button 
+let buttons_categories = document.getElementsByClassName('.class_active_st'); 
+console.log(buttons_categories); 

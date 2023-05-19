@@ -1,7 +1,7 @@
 
 <footer class="footer_nav_sider">
 <div class="foot_liste_wrapp">
-<div>
+<div class="copyright_banner">
     Copyright © Shopy_<span>net</span>.com 2023. All Right Reserved .
 </div>
 <div class="listed_element_work_with">

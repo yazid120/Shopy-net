@@ -22,6 +22,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
  .container{
   width: 85%;
@@ -80,7 +81,7 @@ body{
 .content .right-side .topic-text{
   font-size: 23px;
   font-weight: 600;
-  color: #3e2093;
+  color: #209378cf;
 }
 .right-side .input-box{
   height: 50px;
@@ -116,12 +117,12 @@ body{
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: #3e2093;
+  background: #209378cf;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button input[type="submit"]:hover{
-  background: #5029bc;
+  background: #209378b9;
 }
 
 @media (max-width: 950px) {
