@@ -60,7 +60,7 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 
 
 
-<div class="cart-box none" id="cart_box_side"> 
+<div class="cart-box" id="cart_box_side"> 
     <!-- Close cart icon -->
 <div id="close_crt_vid" class="closing_cart_icon">
 <svg class="close_cart_btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">

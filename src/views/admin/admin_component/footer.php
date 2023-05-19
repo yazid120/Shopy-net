@@ -12,5 +12,9 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
 </footer> -->
 </body>
 
+
 <script src="views/admin/js/dashboard_admin.js" defer></script>
+<!-- chart js script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="views/admin/js/chart_grph.js" defer></script>
 <html>

@@ -14,6 +14,7 @@
     <!-- <link rel="stylesheet" href="assets/css/feathericon.min.css"> -->
 
     <!-- <link rel="stylesheet" href="assets/plugins/morris/morris.css"> -->
+    <title>Admin account</title>
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');

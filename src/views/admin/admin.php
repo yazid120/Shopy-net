@@ -118,6 +118,31 @@ include_once __DIR__.'/admin_component/header.php';
     <button class="openbtn" onclick="openSidebar()">&#9776; Open Sidebar</button>
   </div>
 
+  <!--- - Chart js graph admin - ---->
+  <h1>Graph track</h1>
+  <div class="chart_classic_wrapp_container">
+    <div class="boxi_01 box">
+     <canvas id="myChart"></canvas>
+    </div>
+    <div class="boxi_02 box">
+     <canvas id="myChart-02"></canvas>
+    </div>
+  </div>
+
+  <!-- Admin management fill (product-clients) -->
+  <h1>admin space </h1>
+  <div class="box_fomat_container_managment">
+    <div class="list_set_orders nlc_box">
+    <div class="banner_head_info">
+    <h2>Recent Orders</h2>
+     <span class="view_all">view all</span>
+    </div>
+    </div>
+    <div class="list_set_clients nlc_box">
+     <h2>Recent Customers</h2>
+    </div>
+  </div>
+
 <?php 
  include_once __DIR__.'/admin_component/footer.php';
 ?>

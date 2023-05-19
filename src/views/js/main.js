@@ -5,10 +5,11 @@ let Close_cartCont = document.getElementById('close_crt_vid');
 
 //Close and Display cart functionality (event).
 Close_cartCont.addEventListener('click', ()=>{
-    Cart_box.style.display = 'none'; 
+    Cart_box.style.width = '0'; 
+    Cart_box.style.padding = '0'; 
 });
 shop_head.addEventListener('click', ()=>{
-    Cart_box.style.display = 'flex'; 
+    Cart_box.style.width = '30%'; 
 });
 
 

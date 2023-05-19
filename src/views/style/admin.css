@@ -76,9 +76,6 @@ border-right: 1px solid rgb(229,234,239);
     margin-bottom: 30px!important;
 }
 
-
-
-
 /********** Side bar style ***********/
 .side_bar_container_admin{
     height: 100%;
@@ -86,7 +83,7 @@ border-right: 1px solid rgb(229,234,239);
     position: fixed;
     z-index: 1;
     left: 0;
-    background-color: #353d42;
+    background-color: #353d42db;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -133,7 +130,6 @@ border-right: 1px solid rgb(229,234,239);
         font-size: 18px;
     }
 }
-
 .openbtn {
     font-size: 1rem;
     cursor: pointer;
@@ -142,6 +138,65 @@ border-right: 1px solid rgb(229,234,239);
     padding: 10px 15px;
     border: none;
 }
+
+/*** Chart js style block ***/
+.chart_classic_wrapp_container{
+    position: relative; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px; 
+    padding: 20px; 
+    min-height: 200px;
+}
+.chart_classic_wrapp_container .box{
+    position: relative;
+    background: #fff;
+    padding: 20px; 
+    box-shadow: 0 7px 25px rgb(0, 0, 0,0.08);
+    border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+    .chart_classic_wrapp_container{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+
+/* management info banner */
+.box_fomat_container_managment{
+    position: relative; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px; 
+    padding: 20px; 
+    min-height: 200px;
+}
+.box_fomat_container_managment
+.nlc_box{
+    position: relative;
+    background: #fff;
+    padding: 20px; 
+    box-shadow: 0 7px 25px rgb(0, 0, 0,0.08);
+    border-radius: 20px;
+}
+.banner_head_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner_head_info
+.view_all{
+    padding: 5px 10px; 
+    background: #66a6f9;
+    border-radius: 5px; 
+    cursor: pointer;
+    color: #fff; 
+}
+
 
 
 

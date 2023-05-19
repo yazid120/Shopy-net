@@ -1,5 +1,5 @@
 <?php  
-require './db_conn.php';
+// require './db_conn.php';
 #partie function contient les script php du site
 
 function empty_inputs($userName,$email,$gender,$password){
