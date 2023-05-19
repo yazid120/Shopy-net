@@ -73,7 +73,7 @@ public function resolve(){
 }
 ```
 
-'index.php' page access routing
+`index.php` page access routing
 ```php
 $router->add('/' ,function(){
   require __DIR__. '/views/home.php';
