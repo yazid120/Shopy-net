@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "symfony/var-dumper": "^6.2"
+    },
+    "require": {
+        "stripe/stripe-php": "^10.13"
     }
 }

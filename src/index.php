@@ -19,6 +19,10 @@ $router->add('/login', function(){
     require __DIR__ .'/views/login.php';
 });
 
+$router->add('/Privacy', function(){
+  require __DIR__ .'/views/privacy_policy.php';
+});
+
 $router->add('/logout', function(){
     require __DIR__ .'/views/logout.php';
 }); 

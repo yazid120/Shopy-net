@@ -16,6 +16,7 @@ class ComposerStaticInita99b5f630ef0a4d024e609bcfe81b781
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'Stripe\\' => 7,
         ),
     );
 
@@ -27,6 +28,10 @@ class ComposerStaticInita99b5f630ef0a4d024e609bcfe81b781
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
         ),
     );
 
