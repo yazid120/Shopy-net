@@ -10,7 +10,7 @@ require_once __DIR__.'/functions.php';
 if(isset($_POST['login'])){
   
 //prevent SQL Injection by preventing slashes inside
- function row_Data($data){
+function row_Data($data){
   $data = trim($data);
   $data = stripcslashes($data);
   $data = strip_tags($data);
