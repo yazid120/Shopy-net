@@ -1,3 +1,5 @@
+// import { json } from "express";
+
 let shop_head = document.getElementById('shop_cart_dir');
 let Cart_box= document.getElementById('cart_box_side'); 
 let Close_cartCont = document.getElementById('close_crt_vid'); 
@@ -103,6 +105,15 @@ function Add_aricle_cart(event){
    let image_product = Shop_product.getElementsByClassName('product_image')[0].src; 
    Add_Product_toCart(title_product,price_product,image_product); 
 
+   //Json cart item object
+   console.log(title_product.length);
+   for(let i=0 ; i<title_product.length; i++){
+   var Cart_Local = {
+    title_item : title_product, 
+   }
+   }
+   localStorage.setItem('cart_storage',JSON.stringify(Cart_Local)); 
+
    UpdateCart_cont();
 }
 
@@ -169,7 +180,8 @@ function UpdateCart_cont(){
       
         // update cart btn article number
         let cart_boxes_lenght = cart_boxes.length; 
-        console.log(cart_boxes_lenght); 
+        // console.log(cart_boxes_lenght); 
+
         if(cart_boxes_lenght == null){
         document.getElementById('article_cart_quantity').innerHTML = 0; 
         }
@@ -183,4 +195,3 @@ function UpdateCart_cont(){
     }
     return Total; 
 }
-//console.log(UpdateCart_cont());

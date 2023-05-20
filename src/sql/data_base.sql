@@ -85,6 +85,9 @@ ADD KEY `id_cat_prod` (`id_cat_prod`);
 ALTER TABLE `product`
 MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `product` 
+ADD `code_prod` INT(11) NOT NULL AFTER `id_cat_prod`; 
+
 --
 -- CREATE `service` TABLE inside `Shopy_net` database
 --
