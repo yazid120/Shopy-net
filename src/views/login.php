@@ -10,6 +10,9 @@ echo '<h1 class="rest_top_elementCent">login</h1>';
 </div>
     <form action="http://localhost/Shopy-net/src/views/action/login_auth.php" method="POST" 
         class="form_login_nd_registration log">
+        <div>
+        <span>Creat votre compte Shopy net</span>
+      </div>
     <div class="error_success_wrapp_handle">
     <!-- SUCCESSFUL SUBMITON REDIRECTION login-->
     <?php 
@@ -43,10 +46,10 @@ echo '<h1 class="rest_top_elementCent">login</h1>';
      <label for="user_password" class="lab_form">User Password</label>
      <input type="password" name="user_password" class="sign_logs_Boxes" id="usr_passwrdBox" />
 
-     <div>
-       <p><a> dont have an account yet !!</a></p>
-    </div>
      <button type="submit" name="login" class="log_strtProced">Login</button>
+     <div>
+       <p> dont have an account yet ?<a href="/register">Sign up</a></p>
+    </div>
 </form>
 </section>
 <?php 

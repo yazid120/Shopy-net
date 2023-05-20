@@ -105,9 +105,9 @@ let head_Object =[
             <span class="cart_par_st">cart</span> -->
             <img class="cart_article_icon" src="http://localhost/Shopy-net/src/views/images/sac-de-courses.png" 
             style="width:33px;"/>
-            <p>
-            <span class="cart_aticle_qte" id="article_cart_quantity">0</span>
-            <p>
+            
+            <span class="cart_aticle_qte" id="article_cart_quantity"><p>0</p></span>
+            
         </div>
         <?php if(isset($_SESSION['logged'])){?>
         <div class="user_profile_elem">

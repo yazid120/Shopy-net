@@ -11,6 +11,9 @@ echo '<h1 class="rest_top_elementCent">register</h1>';
 </div>
     <form action="http://localhost/Shopy-net/src/views/action/sign_up_auth.php" method="POST" 
         class="form_login_nd_registration">
+      <div>
+        <span>Creat votre compte Shopy net</span>
+      </div>
     <div class="error_success_wrapp_handle">
     <?php 
     if(isset($_GET['error'])){
@@ -34,10 +37,10 @@ echo '<h1 class="rest_top_elementCent">register</h1>';
     ?>
     </div>
     <div>
-     <label for="user_name" class="lab_form">User name</label>
+     <label for="user_name" class="lab_form">Full name</label>
      <input type="text" name="user_name" class="sign_logs_Boxes"/>
 
-     <label for="user_email" class="lab_form">User email</label>
+     <label for="user_email" class="lab_form">Email</label>
      <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
     </div>
      <label for="sexe" class="lab_form">sexe</label>
@@ -54,11 +57,20 @@ echo '<h1 class="rest_top_elementCent">register</h1>';
 
      <label for="repassword" class="lab_form">re-Password</label>
      <input type="password" name="repassword" class="sign_logs_Boxes" id="usr_repassword" />
-     <div>
-       <p><a> already have an account !!</a></p>
-    </div>
 
+     <div>
+      <div>
+        <input type="checkbox" name=""/>
+        <span>
+        Get emails from Stripe about product updates, industry news, and events. </br>If you change your mind, 
+        you can unsubscribe at any time. Privacy Policy
+        </span>
+      </div>
+     </div>
      <button type="submit" class="log_strtProced" name="submit">register</button>
+     <div class="already_have_acc">
+       <p > already have an account ?<a href="/login"> Sign in</a></p>
+    </div>
 </form>
 </section>
 <?php 

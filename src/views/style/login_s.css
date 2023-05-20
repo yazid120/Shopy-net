@@ -34,6 +34,8 @@ body{
     gap: 0.8rem;
     /* position: absolute;  */
     z-index: 100;
+    padding: 3rem; 
+    box-shadow: 2px 2px 15px 1px #bababa;
 }
 .form_login_nd_registration .lab_form{
    font-weight: 600;
