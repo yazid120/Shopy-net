@@ -138,11 +138,56 @@ INSERT INTO `categories` (id,cat_name) VALUES
 (5,'livre & e-books'),
 (6,'vêtements et accessoires'),
 (7,'montre et bijoux'); 
+
 --
 -- CREATE `panier` TABLE inside `Shopy_net` database
 --
 DROP TABLE IF EXISTS `panier`; 
+CREATE TABLE `panier`(
+  `id` int(11) NOT NULL, 
+  `session_client` varchar(18) NOT NULL,
+  `id_client` int(20) NOT NULL,
+  `id_produit` int(12) NOT NULL, 
+  `quantity` int(8)
+)ENGINE=innoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+ALTER TABLE `panier` 
+CHANGE `id_client` `id_client` BIGINT(20) NOT NULL; 
+
+ALTER TABLE `panier`
+  ADD PRIMARY KEY(`id`), 
+  ADD FOREIGN KEY(`id_client`) REFERENCES `users` (`id`) ON DELETE CASCADE, 
+  ADD FOREIGN KEY(`id_produit`) REFERENCES `product` (`id`) ON DELETE CASCADE;
+
+--
+-- CREATE `transcation` TABLE inside `Shopy_net` database
+--
+DROP TABLE IF EXISTS `transcation`; 
+CREATE TABLE `transcation`(
+  `id` int(10) NOT NULL, 
+  `id_pan` int(10),
+  `num_cart` int(16),
+  `date_exp_cart` DATE, 
+  `titulaire_car` varchar(50), 
+  `ccv` int(6), 
+  `date_transacation` timestamp DEFAULT CURRENT_TIMESTAMP
+)ENGINE=innoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci; 
+
+ALTER TABLE `transcation`
+  ADD PRIMARY KEY(`id`), 
+  ADD FOREIGN KEY(`id_pan`) REFERENCES `panier`(`id`) ON DELETE CASCADE; 
+
+
+
+CREATE TABLE `payement method`(
+  `id` int(3) NOT NULL, 
+  ``
+)
+4242 4242 4242 4242 - Visa
+4000 0566 5566 5556 - Visa (debit)
+5555 5555 5555 4444 - Mastercard
+5200 8282 8282 8210 - Mastercard (debit)
+3782 822463 10005 - American Express
 
 --
 -- CREATE `commande` TABLE inside `Shopy_net` database 
@@ -165,3 +210,5 @@ CREATE TABLE `commande`(
   `date_commande` timestamp,
   `code_commande` NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+

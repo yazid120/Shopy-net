@@ -16,10 +16,18 @@ class PayementStripe{
   }
 
   public function StartPayement($cart){
+     $cart_id = $cart->getId(); 
      $session = CheckoutSession::create([
-            'mode'=>'payement', 
+            'mode'=>'payment', 
             'success_url'=>'http://localhost:8080/successful_payement',
-            'cancel_url'=>'http://localhost:8080/canceled_payemnt'
+            'cancel_url'=>'http://localhost:8080/canceled_payemnt',
+            'billing_address_collection' => 'required',
+            'shipping_address_collection' =>[
+              'allowed_countries' => ['FR']
+            ],
+            'metadata'=>[
+              'cart_id' =>$cart_id
+            ],
      ]);
   }
 }

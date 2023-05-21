@@ -1,4 +1,4 @@
-import { UseState,UseEffect } from "https://localhost/Shopy-net/src/views/js/UseState.js";
+// import { UseState } from "https://localhost/Shopy-net/src/views/js/UseState.js";
 
 
 const openSidebar = () => {
@@ -19,9 +19,9 @@ function FetchUsers(){ axios.get('http://localhost/Shopy-net/src/views/admin/adm
        console.log(error); 
 });
 }
-const [State,FetchUser] = UseState(FetchUsers());
+// const [State,FetchUser] = UseState(FetchUsers());
 
-console.log(State()); 
+// console.log(State()); 
 
 
 

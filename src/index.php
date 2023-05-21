@@ -60,6 +60,14 @@ $router->add('/admin/product_managment',function(){
   require __DIR__.'/views/admin/product_managment.php';
 });
 
+$router->add('/admin/product_list',function(){
+  require_once __DIR__.'/views/admin/Product_list.php'; 
+});
+
+$router->add('/admin/client_list',function(){
+  require_once __DIR__.'/views/admin/Client_list.php'; 
+}); 
+
 
 $router->add('/checkout',function(){
     require __DIR__ .'/views/payement.php';

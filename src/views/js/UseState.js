@@ -26,7 +26,7 @@ export const notReact = (function() {
     if (hasChanged) callback();
   }
 
-  return {useState, useEffect, init, render, addOnClick};
+  // return {useState, useEffect, init, render, addOnClick};
 })();
 
 export function UseEffect(){
