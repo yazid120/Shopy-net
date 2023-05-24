@@ -25,6 +25,7 @@ let Search = function(){
     let all_product = document.querySelectorAll('.products_elments_sets');
     //name product
     let product_name = document.getElementsByClassName('title_product');
+   
    for(let i=0; i<product_name.length; i++){
         var match_n_product = all_product[i].getElementsByClassName('title_product')[0];
       //   console.log(search_up_val); 

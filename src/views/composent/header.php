@@ -15,6 +15,8 @@ define('AUTHOR_NAME','kevin_mak');
     <meta name="author" content="<?=AUTHOR_NAME?>"/>
     <meta property="og:language" content="en"/>
     <!-- Boxicons CDN Link for CSS -->
+    <link rel="icon" href="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png" 
+    type="icon/jpg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css media link Default stylesheet -->
     <link rel="stylesheet" href="views/style/index.css"/>
