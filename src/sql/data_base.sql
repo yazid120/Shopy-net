@@ -63,6 +63,29 @@ INSERT INTO `admin` VALUES
 
 
 --
+-- CREATE `user_role` TABLE inside `Shopy_net` database
+--
+CREATE TABLE `user_role`(
+  `id` int(8) NOT NULL,
+  `id_user` int(20) NOT NULL,
+  `role` varchar(10) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `user_role` 
+CHANGE `id_user` `id_user` BIGINT(20) NOT NULL; 
+
+ALTER TABLE `user_role`
+ADD PRIMARY KEY(`id`);
+
+ALTER TABLE `user_role`
+ADD FOREIGN KEY(`id_user`) REFERENCES `users`(`id`) ON DELETE CASCADE; 
+
+ALTER TABLE `user_role` 
+MODIFY `id` int(8) NOT NULL AUTO_INCREMENT;  
+
+
+ 
+--
 -- CREATE `product` TABLE inside `Shopy_net` database
 --
 DROP TABLE IF EXISTS `product`;

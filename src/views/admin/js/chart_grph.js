@@ -3,7 +3,7 @@ const ctx_02 = document.getElementById('myChart-02').getContext('2d');
 
 
 new Chart(ctx_02, {
-  type: 'bar',
+  type: 'line',
   data: {
     labels: ['janvier', 'Fevrier', 'mars', 'avril', 'may', 'juin'],
     datasets: [{

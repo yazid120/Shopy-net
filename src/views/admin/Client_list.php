@@ -7,30 +7,31 @@ $connection = $Db_Object ->connect();
 
 $admin_Object = new adminDisplay($connection); 
 $user_Display = $admin_Object->DisplayUSER($connection); 
-var_dump($user_Display);
+$user_array = (json_decode($user_Display, true));
+var_dump($user_array); 
 ?> 
 <body>
   <h2>list des Clients</h2>
 <div class="client_display_Object"> 
-<table>
-<tr>
+<table border="1">
+<thead>
     <th>id</th>
     <th>nom</th>
-    <th>email</th>
-    <th>sexe</th>
-    <th>pwd</th>
-    <th>date incription</th>
-</tr>
-
+</thead>
+<tbody>
 <?php 
-$num_users = count($user_Display); 
-$i=0;
-while($i< $num_users){
-  echo '<tr><td>'.implode($user_Display[$i]).'<td></tr>'; 
-  $i++;
-}
-?> 
- 
+ echo count($user_array);
+$i= 0;
+for($i= 0; $i<count($user_array); $i++):
+?>
+<tr>
+  <?='<td>'.$user_array[$i]['id'].'<td>';?>
+  <?= '<td>'.$user_array[$i]['user_name'].'<td>';?>
+</tr>
+<?php endfor;?> 
+</tbody>
 </table>
+
+
 </div>
 </body>

@@ -62,8 +62,33 @@ function user_infosExistense($connection,$email){
   }
   #close statement connexion
   mysqli_stmt_close($connection); 
-
 } 
+
+
+
+function UserRoleCreation($connection,$id,$email){ 
+  $role_user = ''; 
+  $user_inputs_infos = user_infosExistense($connection,$email,$email);
+  if($user_inputs_infos['email'] == 'yazid.ziad2000@gmail.com'){
+   $role_user = 'admin';
+  }else{
+    $role_user = 'client';
+  }
+  $sql="INSERT INTO `user_role`(id_user,role) VALUES(?,?);";
+  $stmt = mysqli_stmt_init($connection); 
+
+  if(!mysqli_stmt_prepare($stmt,$sql)){
+    header('location: http://localhost:8080/register?error=Error_Technical_error_Statement'); 
+    exit(); 
+  }
+  mysqli_stmt_bind_param($stmt,'ss',$id,$role_user); 
+  mysqli_stmt_execute($stmt); 
+   
+} 
+
+function UserRoleSelection($connection){
+    $sql ='SELECT `role` FROM users JOIN user_role ON `users`.`id` = `user_role`.`id_user`'; 
+}
 
 function Create_user($connection,$name,$email,$sexe,$password){
     $success_message= 'user created successfuly'; 
@@ -78,6 +103,11 @@ function Create_user($connection,$name,$email,$sexe,$password){
     
     mysqli_stmt_bind_param($stmt,'ssss',$name,$email,$sexe,$hashed_pwd); 
     mysqli_stmt_execute($stmt); 
+    $id= mysqli_insert_id($connection);
+
+    #create role user
+    UserRoleCreation($connection,$id,$email); 
+
     mysqli_stmt_close($stmt); 
     #redirect user to login page once created
     header('location: http://localhost:8080/login?success='.$success_message); 
