@@ -3,6 +3,7 @@ if(session_status() == PHP_SESSION_NONE)
 session_start(); 
 
 require_once __DIR__.'/action/db_conn.php'; 
+require_once __DIR__.'/action/Db_Class_conn.php';
 include_once './views/composent/header.php';
 
 $sql_cat = "SELECT * FROM `categories`";
@@ -70,16 +71,16 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 <?php 
 include_once __DIR__.'/products.php';
 ?>
-
-<div>
-  <div>
-    <button>
-      PREVIOUS
-    </button>
+<?php 
+$Db_Object = new Db_connect(); 
+$connection_s = $Db_Object->connect(); 
+$Page_num = (int)$connection_s->query('SELECT COUNT(`id`) FROM `product` ORDER BY id`')->fetch(PDO::FETCH_NUM)[0];
+?>
+<div class="pagination_elemant_container">
+  <div class="page_pagination">
+    <button>PREVIOUS</button>
     <p>1/1</p>
-    <button>
-      NEXT
-    </button>
+    <button>NEXT</button>
   </div>
 </div>
 

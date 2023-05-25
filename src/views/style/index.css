@@ -545,3 +545,14 @@ background-color: #ffffff;
 .block{
   display: flex;
 }
+
+/* Pagination product home page */
+.pagination_elemant_container{
+  display: flex;
+  flex-direction: row;
+}
+.page_pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
