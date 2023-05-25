@@ -38,25 +38,27 @@ echo '<h1 class="rest_top_elementCent">register</h1>';
     </div>
     <div>
      <label for="user_name" class="lab_form">Full name</label>
-     <input type="text" name="user_name" class="sign_logs_Boxes"/>
+     <input type="text" name="user_name" class="sign_logs_Boxes border border-slate-200"/>
 
      <label for="user_email" class="lab_form">Email</label>
-     <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
+     <input type="text" name="user_email" class="sign_logs_Boxes border border-slate-200" id="usr_mailBox"/>
     </div>
      <label for="sexe" class="lab_form">sexe</label>
      <div>
      <label>homme</label>
-     <input type="radio" name="sexe" value="homme" />
+     <input type="radio" name="sexe" value="homme" class="border border-slate-200" />
 
      <label>femme</label>
-     <input type="radio" name="sexe" value="femme" />
+     <input type="radio" name="sexe" value="femme" class="border border-slate-200" />
      </div>
 
      <label for="user_password" class="lab_form">User Password</label>
-     <input type="password" name="user_password" class="sign_logs_Boxes" id="usr_passwrdBox" />
+     <input type="password" name="user_password" class="sign_logs_Boxes border border-slate-200" 
+     id="usr_passwrdBox" />
 
      <label for="repassword" class="lab_form">re-Password</label>
-     <input type="password" name="repassword" class="sign_logs_Boxes" id="usr_repassword" />
+     <input type="password" name="repassword" class="sign_logs_Boxes border border-slate-200"
+      id="usr_repassword" />
 
      <div>
       <div>

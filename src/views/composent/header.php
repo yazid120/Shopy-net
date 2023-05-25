@@ -20,6 +20,8 @@ define('AUTHOR_NAME','kevin_mak');
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css media link Default stylesheet -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
+
     <title><?=APP_NAME?></title>
     <?php 
       if($_SERVER['PHP_SELF'] == '/index.php/login' || $_SERVER['PHP_SELF'] == '/index.php/register'){
@@ -155,17 +157,16 @@ let head_Object =[
               }
               else{ 
             ?>
-
             <div>
               <a href='/register'>
-                <button class="inscr_btn">
+                <button class="inscr_btn bg-black text-white rounded-md">
                  <script>document.write(head_Object[3].registration.name)</script>
                 </button>
             </a>
             </div>
             <div>
             <a href="/login">
-                <button class="inscr_btn">
+                <button class="inscr_btn bg-black text-white rounded-md">
                     <script> document.write(head_Object[3].login.name)</script>
                </button>
             </a>

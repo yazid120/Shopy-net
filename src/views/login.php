@@ -41,10 +41,11 @@ echo '<h1 class="rest_top_elementCent">login</h1>';
     ?>
     </div>
      <lable for="user_email" class="lab_form">User email</lable>
-     <input type="text" name="user_email" class="sign_logs_Boxes" id="usr_mailBox"/>
+     <input type="text" name="user_email" class="sign_logs_Boxes border border-slate-200" id="usr_mailBox"/>
 
      <label for="user_password" class="lab_form">User Password</label>
-     <input type="password" name="user_password" class="sign_logs_Boxes" id="usr_passwrdBox" />
+     <input type="password" name="user_password" class="sign_logs_Boxes border border-slate-200" 
+     id="usr_passwrdBox" />
 
      <button type="submit" name="login" class="log_strtProced">Login</button>
      <div>

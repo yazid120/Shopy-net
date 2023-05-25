@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World');
 @import url("https://fonts.googleapis.com/css?family=Courgette:400,700&display=swap");
@@ -374,9 +377,8 @@ justify-content: center;
 .inscr_btn{
   box-sizing: border-box;
   width: 5rem; 
-  height: 2.4rem; 
+  height: 2.7rem; 
   cursor: pointer;
-  color: var(--Black_Color);
 }
 .inscription_container_infos
 .inscr_btn a{
@@ -438,7 +440,7 @@ background-color: rgb(248, 248, 248);
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-around;
 padding: 10px;
 margin: 2.2rem;
 width: 80%;
@@ -545,14 +547,10 @@ background-color: #ffffff;
 .block{
   display: flex;
 }
-
 /* Pagination product home page */
 .pagination_elemant_container{
   display: flex;
   flex-direction: row;
-}
-.page_pagination{
-  display: flex;
   align-items: center;
   justify-content: center;
 }
