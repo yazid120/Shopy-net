@@ -1,8 +1,17 @@
 // import { json } from "express";
-
 let shop_head = document.getElementById('shop_cart_dir');
 let Cart_box= document.getElementById('cart_box_side'); 
 let Close_cartCont = document.getElementById('close_crt_vid'); 
+
+let strcart = localStorage.getItem('cart_storage');
+
+//localStorage.removeItem('cart_storage'); 
+
+if(localStorage.getItem('cart_storage')==null){
+    localStorage.setItem('cart_storage',"[]");
+}
+
+
 //let Cart_shop_box = document.querySelector('.details_box_cart'); 
 
 //Close and Display cart functionality (event).
@@ -94,6 +103,10 @@ function ChangeQte(event){
   UpdateCart_cont(); 
 }
 
+function AddStorage(title,price,image){
+  
+}
+
 //add article to cart
 function Add_aricle_cart(event){
    let button_Add = event.target; 
@@ -106,14 +119,28 @@ function Add_aricle_cart(event){
    Add_Product_toCart(title_product,price_product,image_product); 
 
    //Json cart item object
-   console.log(title_product.length);
+   console.log(Shop_product.getElementsByClassName('title_product')[0].innerText);
+ 
    for(let i=0 ; i<title_product.length; i++){
    var Cart_Local = {
     title_item : title_product, 
+    price : price_product, 
+    image: image_product
+    
    }
    }
-   localStorage.setItem('cart_storage',JSON.stringify(Cart_Local)); 
 
+   
+
+
+   let locqltemp = localStorage.getItem('cart_storage');//[]
+   console.log(locqltemp);
+   let objlocalstoge = JSON.parse(locqltemp);
+   console.log(objlocalstoge);
+   objlocalstoge.push(Cart_Local);
+   let local = localStorage.setItem('cart_storage',JSON.stringify(objlocalstoge)); 
+   //localStorage.name_productname_productname_product
+   
    UpdateCart_cont();
 }
 

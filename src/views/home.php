@@ -72,9 +72,9 @@ $categorie_prod = mysqli_query($connection,$sql_cat);
 include_once __DIR__.'/products.php';
 ?>
 <?php 
-$Db_Object = new Db_connect(); 
+/*$Db_Object = new Db_connect(); 
 $connection_s = $Db_Object->connect(); 
-$Page_num = (int)$connection_s->query('SELECT COUNT(`id`) FROM `product` ORDER BY id`')->fetch(PDO::FETCH_NUM)[0];
+$Page_num = (int)$connection_s->query('SELECT COUNT(`id`) FROM `product` ORDER BY id`')->fetch(PDO::FETCH_NUM)[0];*/
 ?>
 <div class="pagination_elemant_container">
   <div class="page_pagination">
