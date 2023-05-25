@@ -6,6 +6,17 @@ class adminDisplay{
 
  public $connection; 
 
+public function DisplayUserbyRole($connection){
+try{
+  $sql='SELECT * FROM `user_info` ORDER BY `id` ASC'; 
+  $result_fetch = $connection->query($sql); 
+  $userFetched_r = $result_fetch ->fetchAll(PDO::FETCH_ASSOC);
+  return $userFetched_r; 
+}catch(PDOException $e){
+  die('error: exception connection'). $e->getMessage(); 
+}
+}
+
 public function DisplayUSER($connection){
 try{
     $sql = 'SELECT * FROM `users` ORDER BY `id` ASC'; 

@@ -83,9 +83,12 @@ ADD FOREIGN KEY(`id_user`) REFERENCES `users`(`id`) ON DELETE CASCADE;
 ALTER TABLE `user_role` 
 MODIFY `id` int(8) NOT NULL AUTO_INCREMENT; 
 
+--
+-- CREATION OF A VIEW OF user info that group both users an user_role tables 
+--
 CREATE VIEW `user_info` AS SELECT `users`.`id`, `users`.`user_name`, `users`.`email`, `users`.`gender`,
 `users`.`password`, `users`.`date_inscr`,`user_role`.`role` FROM `users` INNER JOIN `user_role` ON 
-`users`.`id` = `user_role`.`id_role` 
+`users`.`id` = `user_role`.`id_user` 
 GROUP BY `users`.`id`, `users`.`user_name`, `users`.`email`, `users`.`gender`,
 `users`.`password`, `users`.`date_inscr`,`user_role`.`role`; 
 

@@ -2,8 +2,26 @@
 if(session_status() == PHP_SESSION_NONE)
 session_start();
 
-include_once __DIR__.'/admin_component/header.php';
+require_once __DIR__.'/../action/Db_Class_conn.php'; 
+require_once __DIR__.'/../action/db_conn.php';
+require_once __DIR__.'/../action/adminDisplayClass.php';
 
+
+
+
+$Db_Object = new Db_connect(); 
+$connection_s = $Db_Object->connect(); 
+
+$Admin_Object = new adminDisplay();
+$admin_Display = $Admin_Object->DisplayUserbyRole($connection_s); 
+
+
+$sql='SELECT * FROM `user_info` ORDER BY `id` ASC'; 
+$result_fetch = mysqli_query($connection,$sql);
+?>
+
+<?php
+include_once __DIR__.'/admin_component/header.php';
 ?>
 
 <body>
@@ -118,6 +136,66 @@ include_once __DIR__.'/admin_component/header.php';
     <button class="openbtn" onclick="openSidebar()">&#9776; Open Sidebar</button>
   </div>
 
+<div class="classic_row">
+  <div class="card">
+      <div class="d-flex align-items-end row">
+        <div class="col-sm-7">
+          <div class="card-body">
+            <h5 class="card-title text-primary">administrateur yazid! 🎉</h5>
+            <p class="mb-4">You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in your profile.</p>
+
+            <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
+          </div>
+        </div>
+        <div class="col-sm-5 text-center text-sm-left">
+          <div class="card-body pb-0 px-0 px-md-4">
+            <img src="../assets/img/illustrations/man-with-laptop-light.png" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+            <div class="card-title d-flex align-items-start justify-content-between">
+              <div class="avatar flex-shrink-0">
+                <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">
+              </div>
+              <div class="dropdown">
+                <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                  <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                </div>
+              </div>
+            </div>
+            <span>Sales</span>
+            <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
+    </div>
+
+    <div class="card-body">
+            <div class="card-title d-flex align-items-start justify-content-between">
+              <div class="avatar flex-shrink-0">
+                <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">
+              </div>
+              <div class="dropdown">
+                <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                  <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                  <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                </div>
+              </div>
+            </div>
+            <span>Sales</span>
+            <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
+    </div>
+</div>
+
   <!--- - Chart js graph admin - ---->
   <h1>Graph track</h1>
   <div class="chart_classic_wrapp_container">
@@ -131,6 +209,7 @@ include_once __DIR__.'/admin_component/header.php';
 
   <!-- Admin management fill (product-clients) -->
   <h1>admin space </h1>
+
   <div class="box_fomat_container_managment">
     <div class="list_set_orders nlc_box">
     <div class="banner_head_info">
@@ -138,11 +217,60 @@ include_once __DIR__.'/admin_component/header.php';
      <span class="view_all">view all</span>
     </div>
     </div>
-    <div class="list_set_clients nlc_box">
-     <h2>Recent Customers</h2>
-    </div>
-  </div>
 
+    <div class="list_set_clients nlc_box">
+    <div class="banner_head_info">
+     <h2>Recent Customers</h2>
+     <span class="view_all">view all</span>
+    </div>
+    <table class="table table-hover table-center">
+   <thead>
+  <tr>
+    <th>User Id</th>
+    <th>User Name</th>
+    <th class="text-center">email</th>
+    <th class="text-center">sexe</th>
+    <th class="text-center">date inscription</th>
+    
+  </tr>
+</thead>
+
+<tbody>
+<?php
+echo($admin_Display);
+?>
+</tbody>
+</table>
+
+  </div>
+</div>
+
+<div id="table" onload="Table();">
+
+</div>
+<script type="text/javascript">
+  console.log(GetUsers());
+   function GetUsers(){
+    axios.get('https://localhost/Shopy-net/src/views/action/adminDisplayClass.php')
+    .then(response =>{
+      console.log(response.data); 
+    })
+   }
+
+  function Table(){
+    const xhttp = new XMLHttpRequest; 
+    xhttp.onload = function(){
+      document.getElementById('table').innerHTML = this.responseText; 
+    }
+    xhttp.open('GET','https://localhost/Shopy-net/src/views/action/adminDisplayClass.php');
+    xhttp.send();
+  }
+
+  setInterval(function(){
+    Table();
+  },1);
+
+</script>
 
 <?php 
  include_once __DIR__.'/admin_component/footer.php';

@@ -14,7 +14,7 @@ body{
   padding: 0;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-}header{height: 90px;background: #B0C4F5D1;display: flex; align-items: center;
+}header{height: 90px;background: #FFFFFFD1;display: flex; align-items: center;
 justify-content: center;}.inner-width{max-width: 1200px;padding: 0 10px;margin: auto; display: flex; justify-content: space-between;align-items: center;margin: 0;width: 100%;}.logo{float: left;color: #fff;}
 .logo img{
   height: 50px;
@@ -293,8 +293,31 @@ border-right: 1px solid rgb(229,234,239);
     cursor: pointer;
     color: #fff; 
 }
+.list_inclu{
+  font-size: 14px;
+}
 
-
+.classic_row{
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1*var(--bs-gutter-y));
+  margin-right: calc(-0.5*var(--bs-gutter-x));
+  margin-left: calc(-0.5*var(--bs-gutter-x));
+  gap: 1rem; 
+  padding: 5px 45px;
+}
+.card{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #d9dee3;
+    border-radius: 0.5rem;
+}
 
 
 /*** Footer admin style ***/
