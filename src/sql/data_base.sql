@@ -92,6 +92,20 @@ CREATE VIEW `user_info` AS SELECT `users`.`id`, `users`.`user_name`, `users`.`em
 GROUP BY `users`.`id`, `users`.`user_name`, `users`.`email`, `users`.`gender`,
 `users`.`password`, `users`.`date_inscr`,`user_role`.`role`; 
 
+--
+-- CREATE `Contact` TABLE inside `Shopy_net` database
+--
+CREATE TABLE `contact`(
+  `id` int(8) NOT NULL, 
+  `name` varchar(45) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `subject` varchar(65) NOT NULL,
+  `Message` TEXT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `contact`
+ADD PRIMARY KEY(`id`);
+
 
  
 --
@@ -119,6 +133,8 @@ MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `product` 
 ADD `code_prod` INT(11) NOT NULL AFTER `id_cat_prod`; 
+
+
 
 --
 -- CREATE `service` TABLE inside `Shopy_net` database

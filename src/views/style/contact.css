@@ -6,16 +6,8 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
-/*body{
-  min-height: 100vh;
-  width: 100%;
-  background: #c8e8e9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
 body{
-    background: #c8e8e9;
+    background: #e6e6e696;
 }
 .listed_box_all_contact{
   width: 100%;
@@ -24,19 +16,19 @@ body{
   justify-content: center;
   margin-top: 2rem;
 }
- .container{
-  width: 85%;
+ .container-con{
+  width: 75%;
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 } 
- .container .content{
+ .container-con .content{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .content .left-side{
+.container-con .content .left-side{
   width: 25%;
   height: 100%;
   display: flex;
@@ -74,14 +66,14 @@ body{
   font-size: 14px;
   color: #afafb6;
 }
-.container .content .right-side{
+.container-con .content .right-side{
   width: 75%;
   margin-left: 75px;
 }
 .content .right-side .topic-text{
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 600;
-  color: #209378cf;
+  color: #3d87b4e5;
 }
 .right-side .input-box{
   height: 50px;
@@ -109,6 +101,7 @@ body{
 .right-side .button{
   display: inline-block;
   margin-top: 12px;
+  width: 100%;
 }
 .right-side .button input[type="submit"]{
   color: #fff;
@@ -120,6 +113,7 @@ body{
   background: #209378cf;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 }
 .button input[type="submit"]:hover{
   background: #209378b9;

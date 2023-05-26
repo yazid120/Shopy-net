@@ -12,6 +12,8 @@
     --Footer-Background-colorBg: #c4d9e0; 
     --red_Color: rgb(255, 15, 15); 
     --blue_log_Color: rgb(84, 143, 255); 
+    --button-height: 44px;
+    --button-width: 144px;
     --Center: 'center'; 
     --HTDglobalefont:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,
   "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; 
@@ -237,7 +239,7 @@ border-radius: 3px;
 .shpping_cart_element .cart_aticle_qte{
   border-radius: 50%;
 background-color: #ff3131;
-padding: 3px 8px;
+padding: 2px 8px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -416,7 +418,13 @@ font-weight: 600;
 margin-bottom: 0.1rem;
 font-size: 14px;
 }
-
+.flexible_app_link{
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+margin: 0.6rem; 
+margin-left: 3.6rem;
+}
 /*** products style ***/ 
 .container_products_article{
   -webkit-box-sizing: border-box; 
@@ -476,9 +484,11 @@ background-color: #ffffff;
 }
 .container form{
   padding:20px;
-  width:700px;
+  width:600px;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  margin-top: 1rem;
+  border-radius: 4px;
 }
 .container form .row{
   display: flex;

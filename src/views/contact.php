@@ -6,7 +6,7 @@ include_once './views/composent/header.php';
 ?> 
 <body>
 <div class="listed_box_all_contact">
- <div class="container">
+ <div class="container-con">
     <div class="content">
       <div class="left-side">
         <div class="address details">
@@ -33,17 +33,24 @@ include_once './views/composent/header.php';
         <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
       <!--- - FORM Contact Shopy net - --->
         <form action="/contact" method="POST">
+        <label>Name :</label>
         <div class="input-box">
-          <input type="text" placeholder="Enter your name">
+          <input type="text" placeholder="Enter your name" autocomplete="off" tabindex="-1">
         </div>
+        <label>Email :</label>
         <div class="input-box">
-          <input type="text" placeholder="Enter your email">
+          <input type="text" placeholder="Enter your email" autocomplete="off" tabindex="-1">
         </div>
+        <label>Subject :</label>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your Subject" autocomplete="off" tabindex="-1">
+        </div>
+        <label>Message :</label>
         <div class="input-box message-box">
           <textarea></textarea>
         </div>
         <div class="button">
-          <input type="submit" value="Send" >
+          <input type="submit" value="Send" autocomplete="off" tabindex="-1">
         </div>
       </form>
     </div>

@@ -6,18 +6,12 @@ require_once __DIR__.'/../action/Db_Class_conn.php';
 require_once __DIR__.'/../action/db_conn.php';
 require_once __DIR__.'/../action/adminDisplayClass.php';
 
-
-
-
 $Db_Object = new Db_connect(); 
 $connection_s = $Db_Object->connect(); 
 
+#Recent Customers (Client method)
 $Admin_Object = new adminDisplay();
-$admin_Display = $Admin_Object->DisplayUserbyRole($connection_s); 
 
-
-$sql='SELECT * FROM `user_info` ORDER BY `id` ASC'; 
-$result_fetch = mysqli_query($connection,$sql);
 ?>
 
 <?php
@@ -226,7 +220,7 @@ include_once __DIR__.'/admin_component/header.php';
     <table class="table table-hover table-center">
    <thead>
   <tr>
-    <th>User Id</th>
+    <th class="px-6">User Id</th>
     <th>User Name</th>
     <th class="text-center">email</th>
     <th class="text-center">sexe</th>
@@ -234,10 +228,9 @@ include_once __DIR__.'/admin_component/header.php';
     
   </tr>
 </thead>
-
 <tbody>
 <?php
-echo($admin_Display);
+echo $Admin_Object->DisplayUserbyRole($connection_s); 
 ?>
 </tbody>
 </table>
@@ -245,18 +238,11 @@ echo($admin_Display);
   </div>
 </div>
 
-<div id="table" onload="Table();">
 
+
+<div id="table" onload="Table();">
 </div>
 <script type="text/javascript">
-  console.log(GetUsers());
-   function GetUsers(){
-    axios.get('https://localhost/Shopy-net/src/views/action/adminDisplayClass.php')
-    .then(response =>{
-      console.log(response.data); 
-    })
-   }
-
   function Table(){
     const xhttp = new XMLHttpRequest; 
     xhttp.onload = function(){

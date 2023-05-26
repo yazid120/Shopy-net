@@ -12,6 +12,22 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
   sizes="(max-width: 563px) 100vw, 563px">
 </div>
 </div>
+
+<div class="flexible_app_link">
+  <h3>Get our app</h3>
+  <div>
+    <a href="">
+    <img src="http://localhost/Shopy-net/src/views/images/Apple_store.png" style="width:9rem"/>
+    </a>
+  </div>
+  <div>
+    <a href="">
+    <img src="http://localhost/Shopy-net/src/views/images/play_store.png" style="width:9rem"/>
+    </a>
+  </div>
+  
+</div>
+   
 </footer>
 <?php if($_SERVER['REQUEST_URI'] == '/'){?>
 <!-- js scripts -->

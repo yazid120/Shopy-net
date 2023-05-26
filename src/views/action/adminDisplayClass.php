@@ -10,8 +10,15 @@ public function DisplayUserbyRole($connection){
 try{
   $sql='SELECT * FROM `user_info` ORDER BY `id` ASC'; 
   $result_fetch = $connection->query($sql); 
-  $userFetched_r = $result_fetch ->fetchAll(PDO::FETCH_ASSOC);
-  return $userFetched_r; 
+  // $userFetched_r = $result_fetch ->fetchAll(PDO::FETCH_ASSOC);
+  while($row = $result_fetch->fetch()){
+    echo '<tr><td>'.$row['id'].'</td>'.
+    '<td>'.$row['user_name'].'</td>'.
+    '<td>'.$row['email'].'</td>'.
+    '<td>'.$row['gender'].'</td>'.
+    '<td>'.$row['date_inscr'].'</td>'.
+    '</tr>';
+  }
 }catch(PDOException $e){
   die('error: exception connection'). $e->getMessage(); 
 }

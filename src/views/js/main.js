@@ -126,18 +126,13 @@ function Add_aricle_cart(event){
     title_item : title_product, 
     price : price_product, 
     image: image_product
-    
    }
    }
-
-   
-
-
    let locqltemp = localStorage.getItem('cart_storage');//[]
    console.log(locqltemp);
    let objlocalstoge = JSON.parse(locqltemp);
    console.log(objlocalstoge);
-   objlocalstoge.push(Cart_Local);
+//    objlocalstoge.push(Cart_Local);
    let local = localStorage.setItem('cart_storage',JSON.stringify(objlocalstoge)); 
    //localStorage.name_productname_productname_product
    
