@@ -106,6 +106,8 @@ CREATE TABLE `contact`(
 ALTER TABLE `contact`
 ADD PRIMARY KEY(`id`);
 
+ALTER TABLE `contact` CHANGE `id` `id` INT(8) NOT NULL AUTO_INCREMENT; 
+
 
  
 --

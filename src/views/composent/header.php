@@ -4,7 +4,6 @@ if(session_status() == 1)
 session_start(); 
 
 define('AUTHOR_NAME','kevin_mak');
-
 ?>
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
@@ -21,7 +20,6 @@ define('AUTHOR_NAME','kevin_mak');
     <!-- Css media link Default stylesheet -->
     <link rel="stylesheet" href="views/style/index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
-
     <title><?=APP_NAME?></title>
     <?php 
       if($_SERVER['PHP_SELF'] == '/index.php/login' || $_SERVER['PHP_SELF'] == '/index.php/register'){
@@ -53,7 +51,7 @@ let head_Object =[
      logout:{ 
         name:'logout',id:'logout_module',class:'insc_wrapp_mod'
      }
-     }
+    }
 ];
 </script>
 
@@ -105,14 +103,10 @@ let head_Object =[
         </div>
 
         <div class="shpping_cart_element" id="shop_cart_dir">
-            <!-- <img class="cart_article_list" src="http://localhost/Shopy-net/src/views/images/shopping-cart.png"
-            style="width:23px"/>
-            <span class="cart_par_st">cart</span> -->
             <img class="cart_article_icon" src="http://localhost/Shopy-net/src/views/images/sac-de-courses.png" 
             style="width:33px;"/>
             
             <span class="cart_aticle_qte" id="article_cart_quantity"><p>0</p></span>
-            
         </div>
         <?php if(isset($_SESSION['logged'])){?>
         <div class="user_profile_elem">
@@ -148,7 +142,8 @@ let head_Object =[
             ?>
             <div> 
               <a href="/logout">
-                <button class="inscr_btn">
+                <button class="inscr_btn border-solid border-2 border-sky-500 rounded-md
+                hover:bg-black-text-sky">
                  <script>document.write(head_Object[3].logout.name)</script>
                 </button>
               </a>

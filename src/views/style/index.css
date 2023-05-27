@@ -476,11 +476,10 @@ background-color: #ffffff;
 }
 .container{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #b5dbd7 50%, #278eaeb5 40.1%);
 }
 .container form{
   padding:20px;
