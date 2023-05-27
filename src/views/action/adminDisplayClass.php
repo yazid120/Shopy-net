@@ -26,11 +26,17 @@ try{
 
 public function DisplayUSER($connection){
 try{
-    $sql = 'SELECT * FROM `users` ORDER BY `id` ASC'; 
+    $sql = 'SELECT * FROM `user_info` ORDER BY `id` ASC'; 
     $result_fetch = $connection ->query($sql);
-    $userResult = $result_fetch ->fetchAll(PDO::FETCH_ASSOC);
-    return json_encode($userResult);
-   
+    while($row = $result_fetch->fetch()){
+      echo '<tr><td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['id'].'</td>'.
+      '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['user_name'].'</td>'.
+      '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['email'].'</td>'.
+      '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['gender'].'</td>'.
+      '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['date_inscr'].'</td>'.
+      '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['role'].'</td>'.
+      '</tr>';
+    }
 }catch(PDOException $e)
 {
  die('Error: User display error') . $e->getMessage(); 

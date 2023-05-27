@@ -1,10 +1,10 @@
 <?php 
 include_once __DIR__.'/admin_component/header.php';
-
 ?>
-<body>
+
 <h1>product managment</h1>
-<form>
+<div class="wrapp-content-contact">
+<form action="" method="POST" class="managment_FormWrapp">
     <label>Nom produit</label>
     <input type="text" name="name_product" /> 
 
@@ -20,5 +20,14 @@ include_once __DIR__.'/admin_component/header.php';
 
     <label>quatite disponible produit</label>
     <input type="number" name="quantity_product" /> 
+
+    <div>
+        <button type="submit" name="add_prod">Add product</button>
+    </div>
 </form>
-</body>
+</div>
+
+
+<?php 
+include_once __DIR__.'/admin_component/footer.php';
+?>

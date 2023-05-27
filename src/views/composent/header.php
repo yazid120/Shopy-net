@@ -19,6 +19,7 @@ define('AUTHOR_NAME','kevin_mak');
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Css media link Default stylesheet -->
     <link rel="stylesheet" href="views/style/index.css"/>
+    <!-- Css Tailwind -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
     <title><?=APP_NAME?></title>
     <?php 

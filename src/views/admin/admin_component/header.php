@@ -6,16 +6,16 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Css media link -->
-    <!-- <link rel="stylesheet" href="views/style/index.css"/> -->
     <link rel="stylesheet" href="views/style/admin.css"/>
+    <!-- Css Tailwind -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
     <?php
      if($_SERVER['PHP_SELF'] == '/index.php/admin/product_managment' || $_SERVER['PHP_SELF']
-      == '/index.php/admin/product_managment'){
-      echo '<link rel="stylesheet" href="views/style/admin.css"/>';
+      == '/index.php/admin/client_managment'){
+      echo '<link rel="stylesheet" href="../../views/style/admin.css"/>';
      }
     ?>
     <title>Admin account</title>
-    
 </head>
 <header>
       <div class="inner-width">

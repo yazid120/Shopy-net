@@ -11,7 +11,6 @@ $connection_s = $Db_Object->connect();
 
 #Recent Customers (Client method)
 $Admin_Object = new adminDisplay();
-
 ?>
 
 <?php
@@ -218,7 +217,7 @@ include_once __DIR__.'/admin_component/header.php';
      <span class="view_all">view all</span>
     </div>
     <table class="table table-hover table-center">
-   <thead>
+<thead>
   <tr>
     <th class="px-6">User Id</th>
     <th>User Name</th>
