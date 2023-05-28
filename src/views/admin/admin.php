@@ -130,7 +130,7 @@ include_once __DIR__.'/admin_component/header.php';
   </div>
 
 <div class="classic_row">
-  <div class="card">
+  <div class="card p-2">
       <div class="d-flex align-items-end row">
         <div class="col-sm-7">
           <div class="card-body">
@@ -148,7 +148,7 @@ include_once __DIR__.'/admin_component/header.php';
       </div>
     </div>
 
-    <div class="card-body">
+    <div class="card-body bg-white p-2 rounded-md">
             <div class="card-title d-flex align-items-start justify-content-between">
               <div class="avatar flex-shrink-0">
                 <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">
@@ -168,7 +168,7 @@ include_once __DIR__.'/admin_component/header.php';
             <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
     </div>
 
-    <div class="card-body">
+    <div class="card-body bg-white p-2 rounded-md">
             <div class="card-title d-flex align-items-start justify-content-between">
               <div class="avatar flex-shrink-0">
                 <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">

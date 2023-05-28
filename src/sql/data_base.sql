@@ -41,6 +41,9 @@ MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `users`
 MODIFY `date_inscr` timestamp DEFAULT CURRENT_TIMESTAMP; 
 
+ALTER TABLE `users` CHANGE `password` `password` VARCHAR(65)
+ CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL; 
+
 --
 -- CREATE `admin` TABLE inside `Shopy_net` database
 --
@@ -84,13 +87,21 @@ ALTER TABLE `user_role`
 MODIFY `id` int(8) NOT NULL AUTO_INCREMENT; 
 
 --
--- CREATION OF A VIEW OF user info that group both users an user_role tables 
+-- CREATION OF A VIEW OF user info that group both users and user_role tables `user_info`
 --
 CREATE VIEW `user_info` AS SELECT `users`.`id`, `users`.`user_name`, `users`.`email`, `users`.`gender`,
-`users`.`password`, `users`.`date_inscr`,`user_role`.`role` FROM `users` INNER JOIN `user_role` ON 
+`users`.`password`, `users`.`date_inscr`,`users`.`gender`, FROM `users` INNER JOIN `user_role` ON 
 `users`.`id` = `user_role`.`id_user` 
 GROUP BY `users`.`id`, `users`.`user_name`, `users`.`email`, `users`.`gender`,
 `users`.`password`, `users`.`date_inscr`,`user_role`.`role`; 
+
+--
+-- CREATION OF A VIEW OF user info that group both users and transaction tables 
+--
+CREATE VIEW `commande_user` AS SELECT `users`.`id`,`users`.`user_name`, `users`.`email`,`users`.`gender`,
+`transacation`.`id`, 
+`transacation`.`date_transacation`
+FROM `users` INNER JOIN `transaction` ON `users`.`id`;
 
 --
 -- CREATE `Contact` TABLE inside `Shopy_net` database
@@ -136,6 +147,8 @@ MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `product` 
 ADD `code_prod` INT(11) NOT NULL AFTER `id_cat_prod`; 
 
+ALTER TABLE `product` CHANGE `name_prod` `name_prod` VARCHAR(70) 
+CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL; 
 
 
 --
@@ -210,10 +223,10 @@ ALTER TABLE `panier`
   ADD FOREIGN KEY(`id_produit`) REFERENCES `product` (`id`) ON DELETE CASCADE;
 
 --
--- CREATE `transcation` TABLE inside `Shopy_net` database
+-- CREATE `transacation` TABLE inside `Shopy_net` database
 --
-DROP TABLE IF EXISTS `transcation`; 
-CREATE TABLE `transcation`(
+DROP TABLE IF EXISTS `transacation`; 
+CREATE TABLE `transacation`(
   `id` int(10) NOT NULL, 
   `id_pan` int(10),
   `num_cart` int(16),
@@ -223,7 +236,7 @@ CREATE TABLE `transcation`(
   `date_transacation` timestamp DEFAULT CURRENT_TIMESTAMP
 )ENGINE=innoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci; 
 
-ALTER TABLE `transcation`
+ALTER TABLE `transacation`
   ADD PRIMARY KEY(`id`), 
   ADD FOREIGN KEY(`id_pan`) REFERENCES `panier`(`id`) ON DELETE CASCADE; 
 
