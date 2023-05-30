@@ -159,6 +159,7 @@ function login_user($connection,$email,$password){
     if(session_status() == PHP_SESSION_NONE)
      session_start();
     $_SESSION['id'] = $user_inputs_infos['id'];
+    $_SESSION['user_name'] = $user_inputs_infos['user_name'];
     $_SESSION['email'] = $user_inputs_infos['email']; 
     $_SESSION['password'] = $user_inputs_infos['password'];
     $_SESSION['logged'] = true; 
