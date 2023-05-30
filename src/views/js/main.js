@@ -88,7 +88,8 @@ function ready(){
 //remove item cart
 function removeCart_item(event){
     let removerButton = event.target; 
-    let c = removerButton.parentElement.parentElement.parentElement.remove();
+    let c = removerButton.parentElement.parentElement.parentElement;
+    console.log(c);
     UpdateCart_cont();
 }
 
@@ -163,8 +164,6 @@ let Cart_Shops = `
           <!-- product quantity -->
           <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
-        
-        
 `; 
 
 

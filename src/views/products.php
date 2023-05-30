@@ -1,10 +1,12 @@
 <?php 
 require_once __DIR__.'/action/db_conn.php'; 
 require_once __DIR__.'/action/Db_Class_conn.php';
+require_once __DIR__.'/action/PanierProduit.php';
 $session_stat = session_status(); 
 if($session_stat == PHP_SESSION_NONE){
   session_start();
 }
+
 
 $Db_Object = new Db_connect(); 
 $connection_s = $Db_Object->connect(); 
@@ -30,11 +32,13 @@ if($current_page > $numberPage){
 </div>
 <section class="container_products_article">
     <?php while($rows= $Posts_prod->fetch()){?>
+      
 <div class="products_elments_sets">
   <img src="http://localhost/Shopy-net/src/views/images/<?=htmlspecialchars($rows['image_ur'])?>" class="product_image"/>
-  <p class="title_product" style="margin:0"><?= htmlspecialchars($rows['name_prod']);?></p>
-  <p class="price_unity_product"><?='<span>'.htmlspecialchars($rows['price_unit']).'</span> DA'?> </p>
-  <button class="add_artCart_product" id="add_shop_article_btn">Add to cart</button>
+  <p class="title_product" style="margin:0" name="libelle_produit"><?= htmlspecialchars($rows['name_prod']);?></p>
+  <p class="price_unity_product" name="prix_produit"><?='<span>'.htmlspecialchars($rows['price_unit']).'</span> DA'?></p>
+  <button class="add_artCart_product" id="add_shop_article_btn" name="add_product" type="submit">
+    Add to cart</button>
 </div>
 <?php }
 #Free memorie result and close connection
@@ -69,5 +73,16 @@ $connection = null
 	</nav>
 </div>
 </div>
-
+<?php
+$Panier_Object= new Panier(); 
+$Creation_Panier = $Panier_Object->creation_panier(); 
+ 
+if(isset($_POST['add_product'])){
+  $nom_produit = $_POST['libelle_produit'];
+  $prix_produit = $_POST['prix_produit'];
+  $qte_produit = $_POST['qte_produit'];  
+  
+  $Creation_Panier = $Panier_Object->ajouter_produit_panier($nom_produit,$prix_produit,$qte_produit);
+}
+?>
 
