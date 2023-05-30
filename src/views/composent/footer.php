@@ -35,7 +35,7 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
 <!-- search product bar js script-->
 <script src="views/js/search.js" defer></script>
 <!-- Categorie product js script -->
-<script src="views/js/categorie.js" defer></script>
+<!-- <script src="views/js/categorie.js" defer></script> -->
 
 <?php } else if($_SERVER['REQUEST_URI'] == '/contact'){?>
 <script type="module" src="views/js/mail/index.js" defer></script>

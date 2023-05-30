@@ -322,12 +322,9 @@ gap: 11px;
 .close_cart_btn:hover{
   fill: var(--red_Color);
 }
-.remove_article{
-  cursor: pointer;
-  fill: #f35a5a; 
-  position: absolute;
-  top: 8rem; 
+.list{
   right: 5rem;
+  top: 9rem;
 }
 .remove_article:hover{
   fill: #f54b4b; 

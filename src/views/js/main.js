@@ -88,7 +88,7 @@ function ready(){
 //remove item cart
 function removeCart_item(event){
     let removerButton = event.target; 
-    removerButton.parentElement.parentElement.remove();
+    let c = removerButton.parentElement.parentElement.parentElement.remove();
     UpdateCart_cont();
 }
 
@@ -103,9 +103,6 @@ function ChangeQte(event){
   UpdateCart_cont(); 
 }
 
-function AddStorage(title,price,image){
-  
-}
 
 //add article to cart
 function Add_aricle_cart(event){
@@ -119,8 +116,6 @@ function Add_aricle_cart(event){
    Add_Product_toCart(title_product,price_product,image_product); 
 
    //Json cart item object
-   console.log(Shop_product.getElementsByClassName('title_product')[0].innerText);
- 
    for(let i=0 ; i<title_product.length; i++){
    var Cart_Local = {
     title_item : title_product, 
@@ -128,13 +123,13 @@ function Add_aricle_cart(event){
     image: image_product
    }
    }
-   let locqltemp = localStorage.getItem('cart_storage');//[]
-   console.log(locqltemp);
-   let objlocalstoge = JSON.parse(locqltemp);
-   console.log(objlocalstoge);
-//    objlocalstoge.push(Cart_Local);
-   let local = localStorage.setItem('cart_storage',JSON.stringify(objlocalstoge)); 
-   //localStorage.name_productname_productname_product
+//    let locqltemp = localStorage.getItem('cart_storage');//[]
+//    console.log(locqltemp);
+//    let objlocalstoge = JSON.parse(locqltemp);
+//    console.log(objlocalstoge);
+// //    objlocalstoge.push(Cart_Local);
+//    let local = localStorage.setItem('cart_storage',JSON.stringify(objlocalstoge)); 
+//    //localStorage.name_productname_productname_product
    
    UpdateCart_cont();
 }
@@ -155,26 +150,28 @@ function Add_Product_toCart(title, price, image){
 
 let Cart_Shops = `
        <img src="${image}" style="width:25%" />
-        <div>
-          <svg class="remove_article list" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" 
-            ><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
-        12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
+       <div class="delete_product flex items-center">
+          <svg class="cursor-pointer list" xmlns="http://www.w3.org/2000/svg" 
+          width="28" height="28" viewBox="0 0 24 24" 
+            style="fill: #f54b4b;"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
+           12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
         </svg>
-        </div>
-        
+        </div> 
         <div class="cart_products_elements">
           <div class="article_name">${title}</div>
-          <div class="article_price">${price} DA</div>
+          <div class="article_price">${price} </div>
           <!-- product quantity -->
           <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
+        
+        
 `; 
 
 
 Cart_box_Shop.innerHTML = Cart_Shops;
 cart_items.append(Cart_box_Shop)
 
-Cart_box_Shop.getElementsByClassName('remove_article')[0].
+Cart_box_Shop.getElementsByClassName('list')[0].
 addEventListener('click',removeCart_item); 
 
 Cart_box_Shop.getElementsByClassName('quantity_article')[0].
