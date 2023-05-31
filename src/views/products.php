@@ -7,21 +7,33 @@ if($session_stat == PHP_SESSION_NONE){
   session_start();
 }
 
-
 $Db_Object = new Db_connect(); 
 $connection_s = $Db_Object->connect(); 
 $product = (int)$connection_s->query('SELECT COUNT(`id`) FROM `product` ORDER BY `id`')->fetch(PDO::FETCH_NUM)[0];
 
+
 $current_page = (int)($_GET['page'] ?? 1);
+
 if($current_page<=0){
   throw new Exception('Page selectioner non valider');
 }
+
 #Nombre de page de produit Total
 $numberPage = ceil($product/8); 
 
 #Maximum de produit afficher par page
-$max_productPerPage= 8; 
-$Posts_prod = $connection_s->query("SELECT * FROM `product` ORDER BY `date_added` DESC LIMIT $max_productPerPage"); 
+$max_productPerPage= 8;
+#primary page
+$page_premire = ($current_page * $max_productPerPage) - $max_productPerPage;
+
+echo $page_premire;
+$sql_max_prod = "SELECT * FROM `product` ORDER BY `date_added` DESC LIMIT :max_product, :page_primer";
+$Posts_prod = $connection_s->prepare($sql_max_prod); 
+
+$Posts_prod->bindValue(':max_product',$max_productPerPage,PDO::PARAM_INT); 
+$Posts_prod->bindValue(':page_primer',$page_premire,PDO::PARAM_INT); 
+
+$Posts_prod ->execute();  
 if($current_page > $numberPage){
   echo'<script>alert("Page non existent")</script>';
 }
@@ -50,7 +62,7 @@ $connection = null
 	<nav aria-label="Page navigation example">
 		<ul class="inline-flex -space-x-px">
 			<li>
-				<a href="#"
+				<a href="/?page=<?=$current_page - 1?>"
 					class="bg-black border border-gray-300 text-gray-500 hover:bg-gray-100 
           hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 
           dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
@@ -59,14 +71,14 @@ $connection = null
        for($i=1; $i<=$numberPage; $i++):
      echo
 			 '<li>
-				<a href="#"
+				<a href="/?page='.$i .'"
 					class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight
            py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 
            dark:hover:text-white">'.$i.'</a>
 			</li>';
       endfor;?>
 			<li>
-				<a href="#"
+				<a href="./?page=<?=$current_page + 1?>"
 					class="bg-black border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
 			</li>
 		</ul>

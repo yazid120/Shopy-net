@@ -38,7 +38,8 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
 <!-- <script src="views/js/categorie.js" defer></script> -->
 <?php } else if($_SERVER['REQUEST_URI'] == '/contact'){?>
 <script type="module" src="views/js/mail/index.js" defer></script>
-<?php }else if($_SERVER['REQUEST_URI'] == '/profile'){?>
+<?php }?>
+<?php if(isset($_SESSION['logged'])){?>
 <script src="views/js/profile.js" defer></script>
 <?php }?>
 <!-- axios js integration -->

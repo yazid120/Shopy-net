@@ -114,15 +114,17 @@ let head_Object =[
             <span class="cart_aticle_qte" id="article_cart_quantity"><p>0</p></span>
         </div>
         <?php if(isset($_SESSION['logged'])){?>
+        
         <a href="/profile">
-        <div class="user_profile_elem" id="profile_icon" >
-          <img class="rounded-circle" src="http://localhost/Shopy-net/src/views/images/profile/user.png">
+        <div class="user_profile_elem flex flex-col items-center justify-center" id="profile_icon" >
+          <img class="rounded-circle" src="http://localhost/Shopy-net/src/views/images/profile/user.png"
+          style="width:36px; height:36px">
           <span class="d-none d-sm-inline-block ms-2"><?php echo $userName ?? ''?></span>
         </div>
         </a>
 
           <div class="profile_infos_setts_media">
-            <div class="head_links_m absolute bg-white rounded hidden">
+            <div class="head_links_m fixed bg-white hidden rounded" style="right: 16rem;top: 6.5rem;">
                <ul class="list_box p-2">
                 <li>profile</li>
                 <li>settings</li>
