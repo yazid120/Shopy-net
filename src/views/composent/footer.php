@@ -14,7 +14,6 @@ src="https://q4y2k3w9.rocketcdn.me/wp-content/uploads/2022/04/footer-logos.png" 
 </div>
 
 <div class="flexible_app_link">
-  <h3>Get our app</h3>
   <div>
     <a href="">
     <img src="http://localhost/Shopy-net/src/views/images/Apple_store.png" style="width:9rem"/>

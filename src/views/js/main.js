@@ -5,11 +5,12 @@ let Close_cartCont = document.getElementById('close_crt_vid');
 
 let strcart = localStorage.getItem('cart_storage');
 
-//localStorage.removeItem('cart_storage'); 
+localStorage.removeItem('cart_storage'); 
 
 if(localStorage.getItem('cart_storage')==null){
     localStorage.setItem('cart_storage',"[]");
 }
+
 
 
 //let Cart_shop_box = document.querySelector('.details_box_cart'); 
@@ -30,6 +31,20 @@ if(document.readyState == 'loading'){
 }else{
     ready();
 }
+
+function setCart_items(product){
+   localStorage.setItem('cart_storage',JSON.stringify(product)); 
+}
+function getCart_items(){
+    return JSON.parse(localStorage.getItem('cart_storage')); 
+}
+function add_Basket(product){
+  let basket = getCart_items(); 
+  basket.push(product);
+  setCart_items(basket);
+}
+console.log(getCart_items());
+
 
 function ready(){
     let remove_cartItem_btn = document.getElementsByClassName('remove_article');
@@ -84,12 +99,11 @@ function ready(){
    }
 }
 
-
 //remove item cart
 function removeCart_item(event){
     let removerButton = event.target; 
-    let c = removerButton.parentElement.parentElement.parentElement;
-    console.log(c);
+    let c = removerButton.parentElement.parentElement.remove();
+    // console.log(c);
     UpdateCart_cont();
 }
 
@@ -124,13 +138,7 @@ function Add_aricle_cart(event){
     image: image_product
    }
    }
-//    let locqltemp = localStorage.getItem('cart_storage');//[]
-//    console.log(locqltemp);
-//    let objlocalstoge = JSON.parse(locqltemp);
-//    console.log(objlocalstoge);
-// //    objlocalstoge.push(Cart_Local);
-//    let local = localStorage.setItem('cart_storage',JSON.stringify(objlocalstoge)); 
-//    //localStorage.name_productname_productname_product
+   add_Basket(Cart_Local); 
    
    UpdateCart_cont();
 }
@@ -151,13 +159,11 @@ function Add_Product_toCart(title, price, image){
 
 let Cart_Shops = `
        <img src="${image}" style="width:25%" />
-       <div class="delete_product flex items-center">
           <svg class="cursor-pointer list" xmlns="http://www.w3.org/2000/svg" 
           width="28" height="28" viewBox="0 0 24 24" 
             style="fill: #f54b4b;"><path d="M6 7H5v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7H6zm4 
            12H8v-9h2v9zm6 0h-2v-9h2v9zm.618-15L15 2H9L7.382 4H3v2h18V4z"></path>
         </svg>
-        </div> 
         <div class="cart_products_elements">
           <div class="article_name">${title}</div>
           <div class="article_price">${price} </div>

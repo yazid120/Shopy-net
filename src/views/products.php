@@ -27,11 +27,11 @@ $max_productPerPage= 8;
 $page_premire = ($current_page * $max_productPerPage) - $max_productPerPage;
 
 echo $page_premire;
-$sql_max_prod = "SELECT * FROM `product` ORDER BY `date_added` DESC LIMIT :max_product, :page_primer";
+$sql_max_prod = "SELECT * FROM `product` ORDER BY `date_added` DESC LIMIT :max_product";
 $Posts_prod = $connection_s->prepare($sql_max_prod); 
 
 $Posts_prod->bindValue(':max_product',$max_productPerPage,PDO::PARAM_INT); 
-$Posts_prod->bindValue(':page_primer',$page_premire,PDO::PARAM_INT); 
+// $Posts_prod->bindValue(':page_primer',$page_premire,PDO::PARAM_INT); 
 
 $Posts_prod ->execute();  
 if($current_page > $numberPage){

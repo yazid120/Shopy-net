@@ -474,16 +474,16 @@ background-color: #ffffff;
 .container{
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   padding:25px;
   min-height: 100vh;
+  gap: 2rem;
 }
 .container form{
   padding:20px;
-  width:600px;
+  width: 50%;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  margin-top: 1rem;
   border-radius: 4px;
 }
 .container form .row{
