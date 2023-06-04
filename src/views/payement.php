@@ -9,9 +9,7 @@ include_once './views/composent/header.php';
 <script>
     let product = localStorage.getItem(('cart_storage')); 
     let list_product_parsed = JSON.parse(product); 
-    for(i=0; i<list_product_parsed.length; i++){
-        console.log(list_product_parsed[i]['title_item']);
-    }
+    
     
 </script>
 <body>
@@ -27,6 +25,7 @@ include_once './views/composent/header.php';
  <div class="container">
     <div class="product_cartItems_wrapp h-56 w-6/12 bg-white p-4 rounded"> 
         <h2 class="text-2xl">produit panier</h2>
+        
       <div class="items_product_container">
         
       </div>
@@ -103,4 +102,6 @@ include_once './views/composent/header.php';
     </form>
 
 </div>    
-</body>
+<?php 
+include_once './views/composent/footer.php';
+?>

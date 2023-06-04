@@ -104,7 +104,7 @@ if(isset($_POST['Send_Contact'])){
     </div>
   </div>
 </div>
-</body>
+
 
 <?php 
 include_once './views/composent/footer.php';
