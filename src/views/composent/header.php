@@ -169,3 +169,7 @@ let head_Object =[
             ?>
         </div>
   </nav>
+  <script type="text/javascript" >
+      let bascket_StarageElement = JSON.parse(localStorage.getItem('cart_storage'));
+      document.getElementById('article_cart_quantity').innerHTML = bascket_StarageElement.length; 
+  </script>

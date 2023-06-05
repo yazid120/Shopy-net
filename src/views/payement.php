@@ -23,9 +23,9 @@ include_once './views/composent/header.php';
     </div>
 
  <div class="container">
-    <div class="product_cartItems_wrapp h-56 w-6/12 bg-white p-4 rounded"> 
-        <h2 class="text-2xl">produit panier</h2>
-        
+    <div class="product_cartItems_wrapp w-6/12 bg-white p-4 overflow-y-scroll rounded" style="height: 35rem;background-color: #6495ed5c;"> 
+        <h2 class="text-2xl text-center mb-8">produit panier</h2>
+
       <div class="items_product_container">
         
       </div>

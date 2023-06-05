@@ -560,3 +560,21 @@ background-color: #ffffff;
   align-items: center;
   justify-content: center;
 }
+
+
+.item_num_list{
+  padding: 1rem; background-color: var(--White_Color); margin:0.6rem; border-radius: 4px;
+}
+.cart_products_elements_pay{
+  display: flex;
+  flex-direction: column;  gap: 13px;
+}
+.item_num_list{
+ display: flex;
+gap: 3.5rem; 
+align-items: center;
+}
+.delete_item{
+  height: 3rem;
+  width: 7rem;
+}

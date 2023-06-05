@@ -6,14 +6,14 @@ function Display_basketPay(image,title,price){
     let wrapp_prod_pay = document.getElementsByClassName('items_product_container')[0];
 
     let list_cart_infos = `
-    <img src="${image}" style="width:25%" />
-
+    <img src="${image}" style="width:20%" />
         <div class="cart_products_elements_pay">
-          <div class="article_name_pay">${title}</div>
+          <div class="article_name_pay font-semibold">${title}</div>
           <div class="article_price_pay">${price} </div>
           <!-- product quantity -->
           <input type="number" class="quantity_article_pay" value="1" max="5"/>
     </div>
+    <button class="delete_item p-2 bg-red-600 rounded">Delete item</button>
     `;
 
     wrapp_type.innerHTML = list_cart_infos; 
@@ -29,4 +29,16 @@ function Sett_cartInfos(){
     }
 }
 
+function get_bascket(){
+    let product__ = localStorage.getItem(('cart_storage')); 
+    let basket_store = JSON.parse(product__); 
+    return basket_store; 
+}
 
+function deleteCart_Item(event){
+   let removerButton = event.target; 
+   console.log(removerButton); 
+}
+document.getElementsByClassName('delete_item')[0].addEventListener('click',deleteCart_Item); 
+
+  
