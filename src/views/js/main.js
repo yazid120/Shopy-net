@@ -175,6 +175,7 @@ function Add_Product_toCart(title, price, image){
     }
 
 let Cart_Shops = `
+    
        <img src="${image}" style="width:25%" />
           <svg class="cursor-pointer list" xmlns="http://www.w3.org/2000/svg" 
           width="28" height="28" viewBox="0 0 24 24" 
@@ -187,6 +188,7 @@ let Cart_Shops = `
           <!-- product quantity -->
           <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
+
 `; 
 
 

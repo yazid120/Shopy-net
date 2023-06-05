@@ -6,6 +6,7 @@ function Display_basketPay(image,title,price){
     let wrapp_prod_pay = document.getElementsByClassName('items_product_container')[0];
 
     let list_cart_infos = `
+    <div class="item_cart_shop" data-title_item="${title}">
     <img src="${image}" style="width:20%" />
         <div class="cart_products_elements_pay">
           <div class="article_name_pay font-semibold">${title}</div>
@@ -14,6 +15,7 @@ function Display_basketPay(image,title,price){
           <input type="number" class="quantity_article_pay" value="1" max="5"/>
     </div>
     <button class="delete_item p-2 bg-red-600 rounded">Delete item</button>
+    </div>
     `;
 
     wrapp_type.innerHTML = list_cart_infos; 
@@ -27,6 +29,7 @@ function Sett_cartInfos(){
     for(let i=0; i<length_product__; i++){
     Display_basketPay(product_ifos__[i]['image'],product_ifos__[i]['title_item'],product_ifos__[i]['price']);
     }
+    deleteCart_Item();
 }
 
 function get_bascket(){
@@ -35,10 +38,29 @@ function get_bascket(){
     return basket_store; 
 }
 
-function deleteCart_Item(event){
-   let removerButton = event.target; 
-   console.log(removerButton); 
-}
-document.getElementsByClassName('delete_item')[0].addEventListener('click',deleteCart_Item); 
 
-  
+
+function deleteCart_Item(){
+  let deleteButton = document.querySelectorAll('.delete_item');
+  let localStorageProducts = localStorage.getItem('cart_storage');
+
+  for (let i = 0; i < deleteButton.length; i++) {
+  // Get all remove buttons
+  let buttons_delete = deleteButton[i];
+  // Link to his parent
+  let myData = deleteButton[i].closest('.item_cart_shop');
+  let getStorageProducts = JSON.parse(localStorageProducts);
+
+  buttons_delete.addEventListener("click",() =>
+{
+      getStorageProducts.forEach(localStorageProducts =>{
+            if(localStorageProducts.title_item !== myData.dataset.title_item){
+                // Delete the product
+                myData.remove();
+                localStorage.setItem('cart_storage',(JSON.stringify([localStorageProducts])));      
+            }
+                  
+      })
+})
+}
+}
