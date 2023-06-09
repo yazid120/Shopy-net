@@ -27,9 +27,16 @@ function Sett_cartInfos(){
     var product_ifos__= JSON.parse(product__); 
     let length_product__ = JSON.parse(product__).length; 
     for(let i=0; i<length_product__; i++){
-    Display_basketPay(product_ifos__[i]['image'],product_ifos__[i]['title_item'],product_ifos__[i]['price']);
+        Display_basketPay(product_ifos__[i]['image'],product_ifos__[i]['title_item'],product_ifos__[i]['price']);
     }
     deleteCart_Item();
+
+    //quantity update 
+    let quantity_input = document.getElementsByClassName('quantity_article');  
+    for(let j=0; j<quantity_input.length; j++){
+        var input = quantity_input[j];
+        input.addEventListener('change',ChangeQte); 
+    }
 }
 
 function get_bascket(){
@@ -38,13 +45,11 @@ function get_bascket(){
     return basket_store; 
 }
 
-
-
 function deleteCart_Item(){
   let deleteButton = document.querySelectorAll('.delete_item');
   let localStorageProducts = localStorage.getItem('cart_storage');
 
-  for (let i = 0; i < deleteButton.length; i++) {
+  for (let i = 0; i <deleteButton.length; i++) {
   // Get all remove buttons
   let buttons_delete = deleteButton[i];
   // Link to his parent
@@ -54,13 +59,23 @@ function deleteCart_Item(){
   buttons_delete.addEventListener("click",() =>
 {
       getStorageProducts.forEach(localStorageProducts =>{
-            if(localStorageProducts.title_item !== myData.dataset.title_item){
+            if(localStorageProducts.title_item == myData.dataset.title_item){
                 // Delete the product
                 myData.remove();
-                localStorage.setItem('cart_storage',(JSON.stringify([localStorageProducts])));      
+                // localStorage.setItem('cart_storage',(JSON.stringify([localStorageProducts])));      
             }
-                  
       })
 })
 }
 }
+
+//change quatity of an article
+function ChangeQte(event){
+    var input = event.target; 
+    var input_Value = input.value;
+    if(isNaN(input_Value) || input_Value <=0){
+      input.value = 1; 
+      alert('you can not submit a null numbre');
+    }
+    UpdateCart_cont(); 
+  }

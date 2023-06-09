@@ -124,12 +124,33 @@ let head_Object =[
         </a>
 
           <div class="profile_infos_setts_media">
-            <div class="head_links_m fixed bg-white hidden rounded" style="right: 16rem;top: 6.5rem;">
+            <div class="head_links_m fixed bg-white rounded" style="right: 14rem;top: 6.5rem; width:11.5rem">
                <ul class="list_box p-2">
-                <li>profile</li>
-                <li>settings</li>
-                <li>products</li>
-                <li>about</li>
+                
+                <div class="list-set">
+                  <img src="http://localhost/Shopy-net/src/views/images/profile/utilisateur.png" alt="">
+                   <li class="cl-list w-full	text-lg cursor-pointer p-1">profile</li>
+                </div>
+
+                <div class="list-set">
+                  <img src="http://localhost/Shopy-net/src/views/images/profile/parametres.png" alt="">
+                <li class="cl-list w-full	cursor-pointer">parametre</li>
+                </div>
+
+                <div class="list-set">
+                  <img src="http://localhost/Shopy-net/src/views/images/profile/chariot.png" alt="">
+                <li class="cl-list w-full	cursor-pointer">mes achats</li>
+                </div>
+
+                <div class="list-set">
+                  <img src="http://localhost/Shopy-net/src/views/images/profile/mettre-a-jour.png" alt="">
+                <li class="cl-list w-full	cursor-pointer">produit</li>
+                </div>
+
+                <div class="list-set">
+                  <img src="http://localhost/Shopy-net/src/views/images/profile/a-propos-de-nous.png" alt="">
+                <li class="cl-list w-full	cursor-pointer">infos</li>
+                </div>
                </ul>
             </div>
           </div>
@@ -169,7 +190,8 @@ let head_Object =[
             ?>
         </div>
   </nav>
-  <script type="text/javascript" >
+  <script type="text/javascript">
       let bascket_StarageElement = JSON.parse(localStorage.getItem('cart_storage'));
-      document.getElementById('article_cart_quantity').innerHTML = bascket_StarageElement.length; 
+      document.getElementById('article_cart_quantity').innerHTML = bascket_StarageElement.length ?? 0;
+    
   </script>

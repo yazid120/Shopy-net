@@ -1,0 +1,13 @@
+.list_box{
+display: flex;
+flex-direction: column;
+gap: 0.7rem;
+}
+.list-set{
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 3px;
+}
+.list-set:hover{
+    background-color: rgb(196, 196, 196);
+}

@@ -9,8 +9,6 @@ include_once './views/composent/header.php';
 <script>
     let product = localStorage.getItem(('cart_storage')); 
     let list_product_parsed = JSON.parse(product); 
-    
-    
 </script>
 <body>
     <script type="text/javascript">

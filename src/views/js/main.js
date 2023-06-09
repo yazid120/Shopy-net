@@ -10,10 +10,19 @@ let strcart = localStorage.getItem('cart_storage');
 if(localStorage.getItem('cart_storage')==null){
     localStorage.setItem('cart_storage',"[]");
 }
+// let expire = (24*60*60); 
+    // console.log(Date.now()+expire*1000);
+    // localStorage.setItem('cart_storage','Expiration',Date.now()+expire*1000)
+function Set_expiredCart_storage(key){
+ const storage_cart_str = localStorage.getItem(key); 
+ if(!storage_cart){
+    return null; 
+ }
+ let storage_cart = JSON.parse(storage_cart_str); 
+ const current_time = new Date();
+}
 
 
-
-//let Cart_shop_box = document.querySelector('.details_box_cart'); 
 
 //Close and Display cart functionality (event).
 Close_cartCont.addEventListener('click', ()=>{
@@ -80,6 +89,8 @@ function ready(){
     //buy articles button 
     let buy_button = document.getElementsByClassName('buy_shops_btn')[0];
     buy_button.addEventListener('click',buy_itemsFunc); 
+
+    // Setproduct_cart()
 }
 
 //buy Shops 
@@ -142,13 +153,23 @@ function Add_aricle_cart(event){
    let price_product = Shop_product.getElementsByClassName('price_unity_product')[0].innerText; 
    let image_product = Shop_product.getElementsByClassName('product_image')[0].src; 
    
+   
    let Shoping_items = getCart_items(); 
    for(let i=0; i<lengthgetCart_items();i++){
-    Add_Product_toCart(Shoping_items[i]['title_item'],Shoping_items[i]['price'],Shoping_items[i]['image']);
+    if(Shoping_items[i]['title_item'] == title_product){
+        alert('product already selected');
+        return;
+    }else{
+        Add_Product_toCart(Shoping_items[i]['title_item'],Shoping_items[i]['price'],Shoping_items[i]['image']);
+    setTimeout(() => {
+        history.go(0);
+    }, 0);
+    
+    }
    }
    
    //Json cart item object
-   for(let i=0 ; i<title_product.length; i++){
+   for(let i=0 ; i<=title_product.length; i++){
    var Cart_Local = {
     title_item : title_product, 
     price : price_product, 
@@ -160,6 +181,15 @@ function Add_aricle_cart(event){
    UpdateCart_cont();
 }
 
+// function Setproduct_cart(){
+//     let product__ = localStorage.getItem(('cart_storage')); 
+//     var product_ifos__= JSON.parse(product__); 
+//     let length_product__ = JSON.parse(product__).length; 
+//     for(let i=0; i<length_product__; i++){
+//         Add_Product_toCart(product_ifos__[i]['image'],product_ifos__[i]['title_item'],product_ifos__[i]['price']);
+//     }
+// }
+
 //part 02: insertion article to cart
 function Add_Product_toCart(title, price, image){
     var Cart_box_Shop = document.createElement('div');
@@ -167,15 +197,10 @@ function Add_Product_toCart(title, price, image){
     let cart_items = document.getElementsByClassName('details_box_cart')[0]; 
     let items_title = cart_items.getElementsByClassName('article_name');
 
-    for(let i=0; i<items_title.length; i++){
-     if(items_title[i].innerText == title){
-        alert('item already selected');
-       return; 
-     }
-    }
+    let items_nameCart = localStorage.getItem('cart_storage'); 
+    let array_items_nameCart = JSON.parse(items_nameCart);
 
 let Cart_Shops = `
-    
        <img src="${image}" style="width:25%" />
           <svg class="cursor-pointer list" xmlns="http://www.w3.org/2000/svg" 
           width="28" height="28" viewBox="0 0 24 24" 
@@ -188,7 +213,6 @@ let Cart_Shops = `
           <!-- product quantity -->
           <input type="number" class="quantity_article" value="1" max="5"/>
         </div>
-
 `; 
 
 
@@ -235,12 +259,11 @@ function UpdateCart_cont(){
     }
 
     // return Total; 
-    
     let cart_items_count_storage = localStorage.getItem('cart_storage');
     let  cart_StorageCount = JSON.parse(cart_items_count_storage).length;
 
-    if(cart_StorageCount == null){
-        document.getElementById('article_cart_quantity').innerHTML = 0; 
-    }
+    // if(cart_StorageCount == null){
+    //     document.getElementById('article_cart_quantity').innerHTML = 0; 
+    // }
 
 }
