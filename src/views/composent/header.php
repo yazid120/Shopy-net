@@ -107,7 +107,7 @@ let head_Object =[
             </ul>
         </div>
 
-        <div class="shpping_cart_element" id="shop_cart_dir">
+        <div class="shpping_cart_element" id="shop_cart_dir" onclick="window.location.href = '/checkout'">
             <img class="cart_article_icon" src="http://localhost/Shopy-net/src/views/images/sac-de-courses.png" 
             style="width:33px;"/>
             

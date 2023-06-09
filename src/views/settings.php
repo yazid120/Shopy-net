@@ -1,5 +1,7 @@
 
-
+<?php 
+include_once './views/composent/header.php';
+?>
 
 <div class="container-fluid main" style="height:100vh;padding-left:0px;">
         
@@ -99,3 +101,6 @@
         </div>
     </div>
 </div>
+<?php 
+include_once './views/composent/footer.php';
+?>

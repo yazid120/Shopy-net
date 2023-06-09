@@ -32,7 +32,7 @@ function Sett_cartInfos(){
     deleteCart_Item();
 
     //quantity update 
-    let quantity_input = document.getElementsByClassName('quantity_article');  
+    let quantity_input = document.getElementsByClassName('quantity_article_pay');  
     for(let j=0; j<quantity_input.length; j++){
         var input = quantity_input[j];
         input.addEventListener('change',ChangeQte); 
@@ -61,8 +61,9 @@ function deleteCart_Item(){
       getStorageProducts.forEach(localStorageProducts =>{
             if(localStorageProducts.title_item == myData.dataset.title_item){
                 // Delete the product
+                console.log(getStorageProducts[i])
                 myData.remove();
-                // localStorage.setItem('cart_storage',(JSON.stringify([localStorageProducts])));      
+                // localStorage.remove('cart_storage',(JSON.stringify([localStorageProducts])));      
             }
       })
 })
@@ -77,5 +78,4 @@ function ChangeQte(event){
       input.value = 1; 
       alert('you can not submit a null numbre');
     }
-    UpdateCart_cont(); 
-  }
+}

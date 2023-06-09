@@ -46,6 +46,15 @@ $router->add('/profile',function(){
 }
 });
 
+//settings route
+$router->add('/profile/settings', function(){
+  if($_SESSION['logged'] == true){
+    require __DIR__ .'/views/settings.php';
+  }else{
+   require __DIR__ .'/views/inauth_page.php';
+}
+}); 
+
 
 //Admin route
 $router->add('/admin',function(){
