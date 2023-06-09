@@ -43,6 +43,7 @@ src="https://localhost/Shopy-net/src/views/images/footer-logos-signature.png" cl
 <?php if($_SERVER['REQUEST_URI'] == '/checkout'){?>
   <!-- bascket product payment js script-->
 <script src="views/js/basket.js" defer></script>
+<script src="views/js/payement.js" defer></script>
 <?php }?>
 
 

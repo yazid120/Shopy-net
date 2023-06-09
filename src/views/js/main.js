@@ -89,8 +89,6 @@ function ready(){
     //buy articles button 
     let buy_button = document.getElementsByClassName('buy_shops_btn')[0];
     buy_button.addEventListener('click',buy_itemsFunc); 
-
-    // Setproduct_cart()
 }
 
 //buy Shops 
@@ -127,7 +125,6 @@ function removeCart_item(event){
     for(let x=0; x<lengthgetCart_items; x++){
 
     }
-    // console.log(c);
     UpdateCart_cont();
 }
 

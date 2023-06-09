@@ -69,7 +69,6 @@ function deleteCart_Item(){
 })
 }
 }
-
 //change quatity of an article
 function ChangeQte(event){
     var input = event.target; 

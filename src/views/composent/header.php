@@ -115,21 +115,21 @@ let head_Object =[
         </div>
         <?php if(isset($_SESSION['logged'])){?>
         
-        <a href="/profile">
-        <div class="user_profile_elem flex flex-col items-center justify-center" id="profile_icon" >
+        
+        <div class="user_profile_elem flex flex-col items-center justify-center" id="profile_icon" style="cursor:pointer">
           <img class="rounded-circle" src="http://localhost/Shopy-net/src/views/images/profile/user.png"
           style="width:36px; height:36px">
           <span class="d-none d-sm-inline-block ms-2"><?php echo $userName ?? ''?></span>
         </div>
-        </a>
+       
 
           <div class="profile_infos_setts_media">
-            <div class="head_links_m fixed bg-white rounded" style="right: 14rem;top: 6.5rem; width:11.5rem">
+            <div class="head_links_m fixed bg-white hidden rounded" style="right: 13rem;top: 6.5rem; width:11.5rem; z-index:1;">
                <ul class="list_box p-2">
                 
                 <div class="list-set">
                   <img src="http://localhost/Shopy-net/src/views/images/profile/utilisateur.png" alt="">
-                   <li class="cl-list w-full	text-lg cursor-pointer p-1">profile</li>
+                   <li class="cl-list w-full	text-lg cursor-pointer">profile</li>
                 </div>
 
                 <div class="list-set">
@@ -149,7 +149,7 @@ let head_Object =[
 
                 <div class="list-set">
                   <img src="http://localhost/Shopy-net/src/views/images/profile/a-propos-de-nous.png" alt="">
-                <li class="cl-list w-full	cursor-pointer">infos</li>
+                  <li class="cl-list w-full	cursor-pointer">infos</li>
                 </div>
                </ul>
             </div>
