@@ -1,16 +1,21 @@
 
 
 let profile_Icon= document.getElementById('profile_icon');
-let  profile_list_banner =  document.getElementsByClassName('head_links_m'); 
+let  profile_list_banner =  document.querySelector('.list_box'); 
 
 profile_Icon.addEventListener('click',()=>{
     profile_list_banner.style.display ='block'; 
+});
+console.log(profile_list_banner);
+profile_list_banner.addEventListener('mouseover',()=>{
+      profile_list_banner.style.display ='block';   
 });
 profile_list_banner.addEventListener('mouseout',()=>{
     setTimeout(()=>{
       profile_list_banner.style.display ='none';   
     }, 2000);
 });
+
 
 
 function Display_Profile_Cart(){

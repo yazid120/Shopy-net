@@ -25,27 +25,7 @@ src="https://localhost/Shopy-net/src/views/images/footer-logos-signature.png" cl
   </div>
   
 </div>
-   
 </footer>
-<?php if($_SERVER['REQUEST_URI'] == '/'){?>
-<!-- js scripts -->
-<script src="views/js/main.js" defer></script>
-<!-- search product bar js script-->
-<script src="views/js/search.js" defer></script>
-<!-- Categorie product js script -->
-<!-- <script src="views/js/categorie.js" defer></script> -->
-<?php } else if($_SERVER['REQUEST_URI'] == '/contact'){?>
-<script type="module" src="views/js/mail/index.js" defer></script>
-<?php }?>
-<?php if(isset($_SESSION['logged'])){?>
-<script src="views/js/profile.js" defer></script>
-<?php }?>
-<?php if($_SERVER['REQUEST_URI'] == '/checkout'){?>
-  <!-- bascket product payment js script-->
-<script src="views/js/basket.js" defer></script>
-<script src="views/js/payement.js" defer></script>
-<?php }?>
-
 
 <!-- axios js integration -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

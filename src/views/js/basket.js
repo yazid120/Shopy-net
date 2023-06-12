@@ -61,9 +61,11 @@ function deleteCart_Item(){
       getStorageProducts.forEach(localStorageProducts =>{
             if(localStorageProducts.title_item == myData.dataset.title_item){
                 // Delete the product
-                console.log(getStorageProducts[i])
-                myData.remove();
-                // localStorage.remove('cart_storage',(JSON.stringify([localStorageProducts])));      
+                cart_Item = getStorageProducts.map(localStorageProducts =>localStorageProducts).indexOf(localStorageProducts); 
+                 getStorageProducts.splice(cart_Item, 1);
+                 console.log(cart_Item)
+                 myData.remove();
+                localStorage.setItem('cart_storage',JSON.stringify(getStorageProducts));      
             }
       })
 })
