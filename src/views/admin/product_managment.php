@@ -2,9 +2,8 @@
 include_once __DIR__.'/admin_component/header.php';
 ?>
 
-<h1>product managment</h1>
-<div class="wrapp-content-contact flex p-2">
-    <div class="">
+<div class="wrapp-content-contact flex p-2 mt-5">
+    <div class="background_prod_bann">
         <!-- <img src="https://localhost/Shopy-net/src/views/admin/img/profiles/12291270_Wavy_Tech-31_Single-04.jpg" alt=""/> -->
     </div>
 <form action="" method="POST" class="managment_FormWrapp">
@@ -25,7 +24,7 @@ include_once __DIR__.'/admin_component/header.php';
     <input type="number" name="quantity_product" /> 
 
     <div class="mt-5">
-        <button type="submit" name="add_prod" class="bg-green-500 rounded p-3">Add product</button>
+        <button type="submit" name="add_prod" class="bg-indigo-500 rounded p-3">Add product</button>
     </div>
 </form>
 </div>

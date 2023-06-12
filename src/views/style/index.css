@@ -584,3 +584,36 @@ align-items: center;
 justify-content: space-between;
 background-color: var(--White_Color); border-radius: 4px; padding: 1rem;
 }
+
+/* infos style */
+/* .help_ceter_bkground{
+  background-image: url('https://localhost/Shopy-net/src/views/images/6127616_22947-removebg-preview.png');
+  height: 100%;
+width: auto;
+background-repeat: no-repeat; 
+}*/
+.wrappe_help_center{
+  display: flex;
+flex-direction: column;
+}
+.help_ceter_bkground{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.search__help_bar{
+background-color: #fff;
+border: none;
+border-radius: .5rem;
+box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+box-sizing: border-box;
+color: #202124;
+display: block;
+font-size: 1rem;
+height: 48px;
+padding-left: 50px;
+width: 100%;
+-webkit-appearance: none;
+outline: none;
+line-height: 1;
+}

@@ -325,6 +325,13 @@ border-right: 1px solid rgb(229,234,239);
   box-sizing: border-box;
   display: flex;
 }
+.background_prod_bann{
+  background-image: url('https://localhost/Shopy-net/src/views/admin/img/profiles/12291270_Wavy_Tech-31_Single-04__3_-removebg-preview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 50%;
+}
 .managment_FormWrapp{
   display: flex;
   flex-direction: column;
