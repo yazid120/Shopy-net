@@ -48,7 +48,22 @@ public function DisplayProduct($connection){
   try{
    $sql = 'SELECT * FROM `product` ORDER BY `id` ASC';
    $result_fetch = $connection ->query($sql); 
-   return json_encode($result_fetch->fetchAll(PDO::FETCH_ASSOC));
+   while($row = $result_fetch->fetch()){
+    echo '<tr><td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['code_prod'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['cat_prod_name'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['name_prod'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['description'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['price_unit'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.
+    '<img src="http://localhost/Shopy-net/src/views/images/'.htmlspecialchars($row['image_ur']).'" 
+    class="w-5" style="width:5rem"/>'.'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500" align="center">'.$row['quantity'].'</td>'.
+    '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['date_added'].'</td>'.
+    '<td class="">
+    <button class="p-3 bg-green-500 rounded-md">Modify</button>
+    <button class="p-3 bg-red-500 rounded-md">Delete</button></td>'.
+    '</tr>';
+   }
 
   }catch(Exception $e)
   {

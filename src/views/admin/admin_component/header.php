@@ -10,10 +10,9 @@
     <!-- Css Tailwind -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
     <?php
-     if($_SERVER['PHP_SELF'] == '/index.php/admin/product_managment' || $_SERVER['PHP_SELF']
-      == '/index.php/admin/client_managment'){
+    
       echo '<link rel="stylesheet" href="../../views/style/admin.css"/>';
-     }
+     
     ?>
     <title>Admin account</title>
 </head>

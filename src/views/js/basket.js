@@ -63,9 +63,11 @@ function deleteCart_Item(){
                 // Delete the product
                 cart_Item = getStorageProducts.map(localStorageProducts =>localStorageProducts).indexOf(localStorageProducts); 
                  getStorageProducts.splice(cart_Item, 1);
-                 console.log(cart_Item)
                  myData.remove();
                 localStorage.setItem('cart_storage',JSON.stringify(getStorageProducts));      
+                setTimeout(()=>{
+                    history.go(0);
+                },0); 
             }
       })
 })

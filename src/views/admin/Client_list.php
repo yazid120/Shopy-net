@@ -1,37 +1,33 @@
 <?php 
+require_once __DIR__.'/../action/adminDisplayClass.php';
 require_once __DIR__.'/../action/Db_Class_conn.php';
-include_once __DIR__.'/../action/adminDisplayClass.php';
 
 $Db_Object = new Db_connect();
-$connection = $Db_Object ->connect();
+$connection_s = $Db_Object ->connect();
 
-$admin_Object = new adminDisplay($connection); 
-$user_Display = $admin_Object->DisplayUSER($connection); 
-$user_array = (json_decode($user_Display, true));
-var_dump($user_array); 
+$Admin_Object = new adminDisplay($connection_s); 
+
 ?> 
-<body>
-  <h2>list des Clients</h2>
-<div class="client_display_Object"> 
-<table border="1">
-<thead>
-    <th>id</th>
-    <th>nom</th>
-</thead>
-<tbody>
-<?php 
- echo count($user_array);
-$i= 0;
-for($i= 0; $i<count($user_array); $i++):
+<?php
+include_once __DIR__.'/admin_component/header.php';
 ?>
-<tr>
-  <?='<td>'.$user_array[$i]['id'].'<td>';?>
-  <?= '<td>'.$user_array[$i]['user_name'].'<td>';?>
-</tr>
-<?php endfor;?> 
-</tbody>
+
+<body>
+<h2 class="text-2xl m-5">list des Clients</h2>
+<table border="1" class="border-collapse border border-slate-500 min-w-full text-center 
+text-sm font-light dark:border-neutral-500">
+<thead>
+  <tr>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">User Id</th>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">User Name</th>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">email</th>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">sexe</th>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">date inscription</th>
+    <th col="scope" class="text-center border-r px-6 py-4 dark:border-neutral-500 bg-blue-200">user status</th>
+  </tr>
+</thead>
+    <?php 
+      echo $Admin_Object->DisplayUSER($connection_s);
+    ?>
 </table>
-
-
-</div>
 </body>

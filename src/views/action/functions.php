@@ -207,6 +207,11 @@ function get_cateagorieProductName($connection,$id_cat_prod){
 function AddProduct($connection,$id_cat_prod,$code_prod,$cat_prod_name,$name,$description,$price,$Image,$quantity){
  $sql="INSERT INTO `product`(id_cat_prod,code_prod,cat_prod_name,name_prod,description,price_unit,image_ur,quantity) 
  VALUES('$id_cat_prod','$code_prod','$cat_prod_name','$name','$description','$price','$Image','$quantity');";
+ $query = mysqli_query($connection,$sql);
+ if($query){
+  header('location: http://localhost:8080/admin/product_managment?success=product_added_successfuly');
+  exit(); 
+ }
 }
 
 ?> 

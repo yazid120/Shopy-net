@@ -40,7 +40,7 @@ include_once __DIR__.'/admin_component/header.php';
               <span class="hide-menu">Admin Display</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/admin/client_list" aria-expanded="false">
+              <a class="sidebar-link" href="/admin/client_managment" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>

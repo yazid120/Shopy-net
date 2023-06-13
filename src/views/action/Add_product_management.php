@@ -24,7 +24,10 @@ if(isset($_POST['add_prod'])){
      array_push($errors,$empty_prod_infos);
         header('location: http://localhost:8080/admin/product_managment?error='.$empty_prod_infos);
     endif;
-    
 
+    if(count($errors) <=0): 
+   
+    endif;
+    
 }
 ?>
