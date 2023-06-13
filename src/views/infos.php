@@ -11,9 +11,14 @@ include_once './views/composent/header.php';
     </div>
      <div class="search_helpwrapp" style="display: flex;flex-direction: column;align-items: center;">
         <p>Comment pouvons-nous vous aider?</p>
-        <div class="w-2/5">
+        <div class="Search__wrapp w-2/5" style="position: relative;">
+        <img class="search-nt" src="http://localhost/Shopy-net/src/views/images/search.png" style="width:20px; cursor:pointer;
+                  padding:0.2rem;position: absolute;top: 1.4rem;left: 1rem;" placeholder="Ecrivez une question"/>
             <input type="" class="search__help_bar mt-2" name=""/>
         </div>
+     </div>
+     <div class="w-full	h-8">
+
      </div>
     
 </section>

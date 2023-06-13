@@ -185,5 +185,28 @@ function logged_user(){
     return $return_result; 
 }
 
+function empty_product($name,$code,$description,$price,$quantity){
+  $return_result = true; 
+ if(empty($name)|| empty($code) || empty($description) || empty($price)|| empty($quantity)){
+  $return_result = false; 
+ }
+ else{
+  $return_result = true;
+ }
+ return $return_result; 
+}
+
+function get_cateagorieProductName($connection,$id_cat_prod){
+  $sql = "SELECT `cat_prod_name` FROM `prduct` WHERE `id_cat_prod` = '$id_cat_prod'"; 
+  $result_cat_prod = mysqli_query($connection,$sql);
+  $fetch_result = mysqli_fetch_assoc($result_cat_prod);
+  while($result = $fetch_result){
+    return $result; 
+  }
+}
+function AddProduct($connection,$id_cat_prod,$code_prod,$cat_prod_name,$name,$description,$price,$Image,$quantity){
+ $sql="INSERT INTO `product`(id_cat_prod,code_prod,cat_prod_name,name_prod,description,price_unit,image_ur,quantity) 
+ VALUES('$id_cat_prod','$code_prod','$cat_prod_name','$name','$description','$price','$Image','$quantity');";
+}
 
 ?> 
