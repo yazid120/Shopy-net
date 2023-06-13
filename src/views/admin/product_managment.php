@@ -7,7 +7,7 @@ include_once __DIR__.'/admin_component/header.php';
         <!-- <img src="https://localhost/Shopy-net/src/views/admin/img/profiles/12291270_Wavy_Tech-31_Single-04.jpg" alt=""/> -->
     </div>
   <form action="http://localhost/Shopy-net/src/views/action/Add_product_management.php" 
-    method="POST" class="managment_FormWrapp">
+    method="POST" class="managment_FormWrapp" enctype="multipart/form-data">
     <label>Nom produit</label>
     <input type="text" name="name_product" /> 
 
@@ -22,11 +22,12 @@ include_once __DIR__.'/admin_component/header.php';
     <input type="number" name="price_unit_product" /> 
 
     <label>image produit url</label>
-    <input type="file" name="image_product" accept="image/*" />
+    <input type="file" name="image_product" value="" />
 
     <label>quatite disponible produit</label>
     <input type="number" name="quantity_product" /> 
 
+    <label>categorie produit</label>
     <select name="categorie_product">
         <option value="1">Appareil électronique</option>
         <option value="2">informatique</option>

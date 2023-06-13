@@ -197,7 +197,7 @@ function empty_product($name,$code,$description,$price,$quantity){
 }
 
 function get_cateagorieProductName($connection,$id_cat_prod){
-  $sql = "SELECT `cat_prod_name` FROM `prduct` WHERE `id_cat_prod` = '$id_cat_prod'"; 
+  $sql = "SELECT `cat_prod_name` FROM `product` WHERE `id_cat_prod` = '$id_cat_prod'"; 
   $result_cat_prod = mysqli_query($connection,$sql);
   $fetch_result = mysqli_fetch_assoc($result_cat_prod);
   while($result = $fetch_result){
@@ -212,6 +212,14 @@ function AddProduct($connection,$id_cat_prod,$code_prod,$cat_prod_name,$name,$de
   header('location: http://localhost:8080/admin/product_managment?success=product_added_successfuly');
   exit(); 
  }
+}
+function Upload_product_image($product_name,$tmp_name){
+  $folder = $_SERVER['DOCUMENT_ROOT'].'/Shopy-net/src/views/images/'.$product_name;
+    if(move_uploaded_file($tmp_name,$folder)){
+        return true; 
+    }else{
+        echo false; 
+    }
 }
 
 ?> 

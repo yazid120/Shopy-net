@@ -22,7 +22,7 @@ if($current_page<=0){
 $numberPage = ceil($product/8); 
 
 #Maximum de produit afficher par page
-$max_productPerPage= 8;
+$max_productPerPage= 12;
 #primary page
 $page_premire = ($current_page * $max_productPerPage) - $max_productPerPage;
 
