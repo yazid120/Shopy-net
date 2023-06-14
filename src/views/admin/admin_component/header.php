@@ -35,7 +35,7 @@
         // if($_SESSION['logged'] == true){
         ?>
         <div>
-        <a href="#" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
+        <a href="/logout" class="aj_btn"> <i class="fas fa-lock" aria-hidden="true"></i>
             logout</a>
         </div>
       <?php 

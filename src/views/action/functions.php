@@ -142,6 +142,19 @@ function invalid_email_add($connection, $email){
     return $return_result; 
 }
 
+function role_user($connection, $email){
+  $sql = "SELECT `role` FROM `user_info` WHERE `email` = '$email'";
+  $query_role = mysqli_query($connection,$sql); 
+  if($query_role){
+   
+    while($row = mysqli_fetch_assoc($query_role)){
+      return $row; 
+    }
+  }else{
+    return false; 
+  }
+}
+
 function login_user($connection,$email,$password){
     $return_result =false; 
     $user_inputs_infos = user_infosExistense($connection,$email,$email);
@@ -156,16 +169,25 @@ function login_user($connection,$email,$password){
       exit();
     }
     if($verify_pwd === true){ 
+    // set role user
+      $role_assoc = role_user($connection, $email); 
+     
     if(session_status() == PHP_SESSION_NONE)
      session_start();
     $_SESSION['id'] = $user_inputs_infos['id'];
     $_SESSION['user_name'] = $user_inputs_infos['user_name'];
     $_SESSION['email'] = $user_inputs_infos['email']; 
     $_SESSION['password'] = $user_inputs_infos['password'];
+    $_SESSION['role_user'] = $role_assoc['role'];
     $_SESSION['logged'] = true; 
 
     #redirect to profile page (once successful logged in)
     // $success_login = 'user logged in successfuly';
+    if($role_assoc['role'] === 'admin'){
+      header('location: http://localhost:8080/admin'); 
+      exit(); 
+    }
+  
     header('location: http://localhost:8080/profile'); 
     exit();
     }

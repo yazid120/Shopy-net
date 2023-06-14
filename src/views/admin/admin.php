@@ -242,18 +242,18 @@ echo $Admin_Object->DisplayUserbyRole($connection_s);
 <div id="table" onload="Table();">
 </div>
 <script type="text/javascript">
-  function Table(){
-    const xhttp = new XMLHttpRequest; 
-    xhttp.onload = function(){
-      document.getElementById('table').innerHTML = this.responseText; 
-    }
-    xhttp.open('GET','https://localhost/Shopy-net/src/views/action/adminDisplayClass.php');
-    xhttp.send();
-  }
+  // function Table(){
+  //   const xhttp = new XMLHttpRequest; 
+  //   xhttp.onload = function(){
+  //     document.getElementById('table').innerHTML = this.responseText; 
+  //   }
+  //   xhttp.open('GET','https://localhost/Shopy-net/src/views/action/adminDisplayClass.php');
+  //   xhttp.send();
+  // }
 
-  setInterval(function(){
-    Table();
-  },1);
+  // setInterval(function(){
+  //   Table();
+  // },1);
 
 </script>
 

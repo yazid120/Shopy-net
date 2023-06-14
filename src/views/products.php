@@ -26,7 +26,7 @@ $max_productPerPage= 12;
 #primary page
 $page_premire = ($current_page * $max_productPerPage) - $max_productPerPage;
 
-echo $page_premire;
+
 $sql_max_prod = "SELECT * FROM `product` ORDER BY `date_added` DESC LIMIT :max_product";
 $Posts_prod = $connection_s->prepare($sql_max_prod); 
 

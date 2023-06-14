@@ -44,18 +44,16 @@ if(isset($_POST['add_prod'])){
     $catgorie_product__assoc = get_cateagorieProductName($connection,$id_categorie_product);
     $catgorie_product =  $catgorie_product__assoc['cat_prod_name']; 
 
-    var_dump($catgorie_product__assoc);
-echo $id_categorie_product;
 
-    // if(count($errors) <=0):
-    //  if(Upload_product_image($product_image_name,$product_image_tmp_name)){
-    //     AddProduct($connection,$id_categorie_product,$code_product,$catgorie_product,$name_product,
-    //     $description_product,$price_unit_product,$image_product,$quantity_product);
-    //    header('location:http://localhost:8080/admin/product_managment?success=Product_added'); 
-    //  }else{
-    //     header('location:http://localhost:8080/admin/product_managment?success=error_uploading_product'); 
-    //  }
-    // endif;
+    if(count($errors) <=0):
+     if(Upload_product_image($product_image_name,$product_image_tmp_name)){
+        AddProduct($connection,$id_categorie_product,$code_product,$catgorie_product,$name_product,
+        $description_product,$price_unit_product,$image_product,$quantity_product);
+       header('location:http://localhost:8080/admin/product_managment?success=Product_added'); 
+     }else{
+        header('location:http://localhost:8080/admin/product_managment?success=error_uploading_product'); 
+     }
+    endif;
     
 }
 ?>

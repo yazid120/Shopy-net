@@ -38,6 +38,8 @@ if(count($error) <= 0){
   login_user($connection,$email,$password); 
   exit();
 }
+$res = role_user($connection, $email);
+var_dump($res); 
 
 }
 ?>

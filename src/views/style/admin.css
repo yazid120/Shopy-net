@@ -17,7 +17,7 @@ body{
 }header{height: 90px;background: #FFFFFFD1;display: flex; align-items: center;
 justify-content: center;}.inner-width{max-width: 1200px;padding: 0 10px;margin: auto; display: flex; justify-content: space-between;align-items: center;margin: 0;width: 100%;}.logo{float: left;color: #fff;}
 .logo img{
-  height: 50px;
+  height: 95px;
 }
 .navigation-menu{
   float: right;

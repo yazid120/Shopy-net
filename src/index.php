@@ -12,11 +12,20 @@ $router->add('/' ,function(){
 });
 
 $router->add('/register' ,function(){
-    require __DIR__ .'/views/register.php';
+  if(!isset($_SESSION['logged'])){
+
+      require __DIR__ .'/views/register.php';
+  }else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
 });
 
 $router->add('/login', function(){
+  if(!isset($_SESSION['logged'])){
     require __DIR__ .'/views/login.php';
+  }else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
 });
 
 $router->add('/Privacy', function(){
@@ -37,7 +46,7 @@ $router->add('/contact',function(){
 
 // Protected route (client side routes)
 $router->add('/profile',function(){
- if(count($_SESSION) !== 0){
+  if(isset($_SESSION['logged'])){
    if($_SESSION['logged'] == true){
     require __DIR__ .'/views/profile.php';
    }
@@ -48,9 +57,10 @@ $router->add('/profile',function(){
 
 //settings route
 $router->add('/profile/settings', function(){
+ if(isset($_SESSION['logged'])){
   if($_SESSION['logged'] == true){
     require __DIR__ .'/views/settings.php';
-  }else{
+  }}else{
    require __DIR__ .'/views/inauth_page.php';
 }
 }); 
@@ -58,23 +68,52 @@ $router->add('/profile/settings', function(){
 
 //Admin route
 $router->add('/admin',function(){
+  if(isset($_SESSION['logged'])){
+  if($_SESSION['logged'] == true){
   require __DIR__.'/views/admin/admin.php';
+}}else{
+  require __DIR__ .'/views/inauth_page.php';
+}
 });
 
 $router->add('/admin/client_managment',function(){
-  require __DIR__.'/views/admin/client_managment.php';
+  if(isset($_SESSION['logged'])){
+    if($_SESSION['logged'] == true){
+    require __DIR__.'/views/admin/client_managment.php';
+  }}else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
+  
 });
 
 $router->add('/admin/product_managment',function(){
-  require __DIR__.'/views/admin/product_managment.php';
+  if(isset($_SESSION['logged'])){
+    if($_SESSION['logged'] == true){
+     require __DIR__.'/views/admin/product_managment.php';
+  }}else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
+  
 });
 
 $router->add('/admin/product_list',function(){
-  require_once __DIR__.'/views/admin/Product_list.php'; 
+  if(isset($_SESSION['logged'])){
+    if($_SESSION['logged'] == true){
+    require_once __DIR__.'/views/admin/Product_list.php'; 
+  }}else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
+  
 });
 
 $router->add('/admin/client_list',function(){
-  require_once __DIR__.'/views/admin/Client_list.php'; 
+  if(isset($_SESSION['logged'])){
+    if($_SESSION['logged'] == true){
+     require_once __DIR__.'/views/admin/Client_list.php';
+  }}else{
+    require __DIR__ .'/views/inauth_page.php';
+  }
+   
 }); 
 
 
