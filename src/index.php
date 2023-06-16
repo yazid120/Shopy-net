@@ -68,52 +68,45 @@ $router->add('/profile/settings', function(){
 
 //Admin route
 $router->add('/admin',function(){
-  if(isset($_SESSION['logged'])){
-  if($_SESSION['logged'] == true){
+  if($_SESSION['logged'] == true && $_SESSION['role_user'] == 'admin'){
   require __DIR__.'/views/admin/admin.php';
-}}else{
+}else{
   require __DIR__ .'/views/inauth_page.php';
 }
 });
 
 $router->add('/admin/client_managment',function(){
-  if(isset($_SESSION['logged'])){
-    if($_SESSION['logged'] == true){
+    if($_SESSION['logged'] == true && $_SESSION['role_user'] == 'admin'){
     require __DIR__.'/views/admin/client_managment.php';
-  }}else{
+  }else{
     require __DIR__ .'/views/inauth_page.php';
   }
-  
 });
 
 $router->add('/admin/product_managment',function(){
-  if(isset($_SESSION['logged'])){
-    if($_SESSION['logged'] == true){
+    if($_SESSION['logged'] == true && $_SESSION['role_user'] == 'admin'){
      require __DIR__.'/views/admin/product_managment.php';
-  }}else{
+  }else{
     require __DIR__ .'/views/inauth_page.php';
   }
   
 });
 
 $router->add('/admin/product_list',function(){
-  if(isset($_SESSION['logged'])){
-    if($_SESSION['logged'] == true){
+    if($_SESSION['logged'] == true && $_SESSION['role_user'] == 'admin'){
     require_once __DIR__.'/views/admin/Product_list.php'; 
-  }}else{
+  }else{
     require __DIR__ .'/views/inauth_page.php';
   }
   
 });
 
 $router->add('/admin/client_list',function(){
-  if(isset($_SESSION['logged'])){
-    if($_SESSION['logged'] == true){
+  if($_SESSION['logged'] == true && $_SESSION['role_user'] == 'admin'){
      require_once __DIR__.'/views/admin/Client_list.php';
-  }}else{
+  }else{
     require __DIR__ .'/views/inauth_page.php';
   }
-   
 }); 
 
 

@@ -1,3 +1,5 @@
+
+
 <html translate="yes" lang="en-US" dir="ltr">
 <head>
     <meta charset="utf-8" http-equiv="content-type"/>
@@ -10,17 +12,17 @@
     <!-- Css Tailwind -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.5.1/tailwind.min.css">
     <?php
-    
       echo '<link rel="stylesheet" href="../../views/style/admin.css"/>';
-     
     ?>
     <title>Admin account</title>
 </head>
 <header>
       <div class="inner-width">
       <div class="logo">
+        <a href="/admin">
         <img src="http://localhost/Shopy-net/src/views/images/homekevinDownloadsshopping-cart-removebg-preview.png"
          alt="logo_dash" class="logo_lissted_site"/>
+        </a>
       </div>
 
         <i class="menu-toggle-btn fas fa-bars"></i>

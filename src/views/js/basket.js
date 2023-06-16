@@ -37,6 +37,19 @@ function Sett_cartInfos(){
         var input = quantity_input[j];
         input.addEventListener('change',ChangeQte); 
     }
+
+    if(length_product__ =0){
+      let empty_cart= `
+      <div class="cart_empty_cap">
+        <p>Votre panier est vide</p>
+        <p>Trouvez les meilleur article disponible</p>
+      </div>
+      `;
+    
+      let wrapp_prod_pay_empty = document.getElementsByClassName('items_product_container')[0];
+      wrapp_prod_pay_empty.innerHTML = 'wrapp_prod_pay_empty'; 
+      wrapp_prod_pay_empty.append(empty_cart);
+    }
 }
 
 function get_bascket(){

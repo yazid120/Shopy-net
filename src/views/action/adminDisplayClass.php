@@ -49,7 +49,8 @@ public function DisplayProduct($connection){
    $sql = 'SELECT * FROM `product` ORDER BY `id` ASC';
    $result_fetch = $connection ->query($sql); 
    while($row = $result_fetch->fetch()){
-    echo '<tr><td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['code_prod'].'</td>'.
+    echo '<tr>
+    <td name="code_prod" class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['code_prod'].'</td>'.
     '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['cat_prod_name'].'</td>'.
     '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['name_prod'].'</td>'.
     '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['description'].'</td>'.
@@ -60,15 +61,26 @@ public function DisplayProduct($connection){
     '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500" align="center">'.$row['quantity'].'</td>'.
     '<td class="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">'.$row['date_added'].'</td>'.
     '<td class="">
-    <button class="p-3 bg-green-500 rounded-md">Modify</button>
-    <button class="p-3 bg-red-500 rounded-md">Delete</button></td>'.
-    '</tr>';
+  
+    <button type="submit" class="p-3 bg-green-500 rounded-md">Modify</button>
+    <button  class="p-3 bg-red-500 rounded-md" name="Delete">
+    <a href="https://localhost/Shopy-net/src/views/action/product_crud.php?code_prod='.$row['code_prod'].'">Delete</a>
+    </button></td></tr>';
    }
 
   }catch(Exception $e)
   {
     die('Error: product display error') . $e->getMessage();
   }
+}
+
+public function Delete_product($connection,$code_produit){
+  $sql="DELETE FROM `users` WHERE `product`.`code_prod`='$code_produit'";
+ if(mysqli_query($connection,$sql)){
+  return true; 
+ }else{
+  return false; 
+ }
 }
 
 }

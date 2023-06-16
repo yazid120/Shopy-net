@@ -244,4 +244,21 @@ function Upload_product_image($product_name,$tmp_name){
     }
 }
 
+function Delete_user($connection,$email){
+ $sql="DELETE FROM `users` WHERE `users`.`email`='$email'";
+ if(mysqli_query($connection,$sql)){
+  return true; 
+ }else{
+  return false; 
+ }
+}
+function Delete_product($connection,$code_produit){
+  $sql="DELETE FROM `product` WHERE `product`.`code_prod`='$code_produit'";
+ if(mysqli_query($connection,$sql)){
+  return true; 
+ }else{
+  return false; 
+ }
+}
+
 ?> 
